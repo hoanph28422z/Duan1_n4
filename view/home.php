@@ -603,12 +603,31 @@
                 <div class="row">
                     <div class="col-xl-12 text-center">
                         <div class="section-heading section-heading__black mb-55">
-                            <span class="sub-title">top grade</span>
-                            <h2 class="title">world top Grade</h2>
+                        <span class="sub-title">top 10</span>
+                            <h2 class="title">Top 10 products</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-none-30">
+                <?php
+
+                            foreach ($dstop10 as $ds) {
+
+                                extract($ds);
+
+                                $anh = $img_path.$hinh;
+                                $link_sp = "index.php?act=sanphamchitiet&idsp=".$ma_hh;
+
+                                echo '<div class="row margin-bottom10 top10">
+                                        <img src="'.$anh.'" alt="">
+                                        <a href="'.$link_sp.'">'.$te_hh.'</a>
+                                        </div>';
+                                            
+                                
+                            }
+
+
+                                ?>
+                <!-- <div class="row mt-none-30">
                     <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                         <div class="topgrade__item topgrade__item--2 text-center">
                             <div class="thumb">
@@ -657,7 +676,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- top grade area end -->
