@@ -2,6 +2,7 @@
         <div class="heading">
             <h2>Our Popular Products </h2>
         </div>
+        
         <?php
                     $i =0;
                     foreach ($spnews as $sp) {
@@ -23,7 +24,13 @@
 
                         <p>$ '.$don_gia.'</p>
                         <a href="'.$link_sp.'">'.$te_hh.'</a>
-
+                        <form action="index.php?act=addCART" method="post">
+                            <input type="hidden" name="id" value="'.$ma_hh.'">
+                            <input type="hidden" name="tensp" value="'.$te_hh.'">
+                            <input type="hidden" name="anh" value="'.$hinh.'">
+                            <input type="hidden" name="gia" value="'.$don_gia.'">
+                            <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Add to Cart">
+                    </form>
                         
 
                     </div>';

@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="/fame/style.css">
+    <link rel="stylesheet" href="../fame/style.css">
 </head>
 <body>
     <header>
@@ -27,4 +33,6 @@
         <div class="search-box">
             <input type="search" id="" placeholder="Search Header">
         </div>
-    </header>
+    </header>   
+</body>
+</html>

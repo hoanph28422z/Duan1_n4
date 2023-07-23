@@ -35,4 +35,3 @@
         </div>
     </section>
     <script src="../fame/main.js"></script>
-</body>
