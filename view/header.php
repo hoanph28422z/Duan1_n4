@@ -12,16 +12,16 @@
     <title>Document</title>
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="../fame/style.css">
+    <link rel="stylesheet" href="fame/style.css">
 </head>
 <body>
     <header>
         <a href="" class="logo">
-            <img src="../fame/img/logo.png" alt="">
+            <img src="fame/img/logo.png" alt="">
         </a>
         <i class="bx bx-menu" id="menu-icon"></i>
         <ul class="navbar">
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="../product/index.html">Products</a></li>
             <li><a href="#customers">Customers</a></li>
