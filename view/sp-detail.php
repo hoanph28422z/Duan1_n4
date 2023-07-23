@@ -30,10 +30,6 @@
                             <input type="hidden" name="gia" value="'.$don_gia.'">
                     <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Thêm vào giỏ hàng">
                     </form>';
-                    echo '<form method="post" action="">
-                    <input type="hidden" name="ma_hh" value="<?php echo $ma_hh; ?>" />
-                    <button type="submit">Mua ngay</button>
-                    </form>';
                      echo '<p style="margin-left: 30px;">'.$mo_ta.'</p>';
 
                 ?>
