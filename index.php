@@ -24,11 +24,9 @@
 
         switch ($act) {
 
-       
-
+            //Mua hàng
             
-
-
+            
             // trang sản phẩm chi tiết
 
             case 'sanphamchitiet':

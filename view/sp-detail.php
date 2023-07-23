@@ -22,7 +22,7 @@
                      echo '<p>- <strong>MÃ HÀNG HÓA:</strong> '.$ma_hh.'</p>'.'<br>';
                      echo '<p>- <strong>TÊN HÀNG HÓA:</strong> '.$te_hh.'</p>'.'<br>';
                      echo '<p>- <strong>GIÁ HÀNG HÓA:</strong> '.$don_gia.'</p>'.'<br>';
-                     echo ' <p class="margin-bottom">- <strong>GIẢM GIÁ HÀNG HÓA:</strong> '.$giam_gia.'</p>'.'<br>';
+                     echo ' <p class="margin-bottom"> <strong>SỐ LƯỢNG HÀNG HÓA:</strong> '.$so_luong.'</p>'.'<br>';
                      echo ' <form action="index.php?act=addCART" method="post">
                      <input type="hidden" name="id" value="'.$ma_hh.'">
                             <input type="hidden" name="tensp" value="'.$te_hh.'">
@@ -30,7 +30,10 @@
                             <input type="hidden" name="gia" value="'.$don_gia.'">
                     <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Thêm vào giỏ hàng">
                     </form>';
-                        
+                    echo '<form method="post" action="">
+                    <input type="hidden" name="ma_hh" value="<?php echo $ma_hh; ?>" />
+                    <button type="submit">Mua ngay</button>
+                    </form>';
                      echo '<p style="margin-left: 30px;">'.$mo_ta.'</p>';
 
                 ?>
