@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include_once "../model/pdo.php";
 include_once "../model/taikhoan.php";
 if(isset($_POST['ho_ten']) && isset($_POST['mat_khau']))
@@ -51,4 +51,4 @@ if(isset($_POST['ho_ten']) && isset($_POST['mat_khau']))
 }
 
 
-?>
+?> -->
