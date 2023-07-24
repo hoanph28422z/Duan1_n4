@@ -174,6 +174,68 @@
                     $dsbl = selectall_binhluan(0);
                     include_once "binhluan/list.php";
                     break;
+                
+                    // Hang hoa
+                    case'dsdh':
+
+                        if (isset($_POST['listOK']) && ($_POST['listOK'])){
+                            $kyw = $_POST['kyw'];
+                            $idKH = $_POST['idKH'];
+                        }else{
+                            $kyw = '';
+                            $idKH = 0;
+                        }
+        
+        
+        
+        
+        
+        
+                        $listbill = load_all_bill_byIDKH($kyw, $idKH);
+                        include_once "bill/list.php";
+                        break;
+        
+                    case 'xoadh':
+                        
+                        if (isset($_GET['id']) && ($_GET['id'] >0)) {
+                            xoaDH($_GET['id']);
+                        }
+        
+                        $listbill = load_all_bill_byIDKH(0);
+                        include_once "bill/list.php";
+                        break;
+        
+        
+                    case 'suadh':
+        
+                        if (isset($_GET['id']) && ($_GET['id'] >0)) {
+                            $id = $_GET['id'];
+                            $bill =  info_one_bill($_GET['id']);
+                            
+                            // var_dump($bill);
+                        }
+        
+                        $listbill = load_all_bill_byIDKH('', 0);
+                       
+                        include_once "bill/suadh.php";
+                        break;
+        
+        
+                    case 'capnhatdh':
+        
+                        if (isset($_POST['update']) && ($_POST['update'])) {
+                            
+                            capnhat_dh($_POST['trangthai'], $_POST['id']);
+                            $thongbao = "✔️ Cập nhật thành công!";
+                        
+                        }
+                        $bill =  info_one_bill($_POST['id']);
+                        $listbill = load_all_bill_byIDKH('', 0);
+                        include_once "bill/suadh.php";
+                        break; 
+
+
+
 
 
             
