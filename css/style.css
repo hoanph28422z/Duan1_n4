@@ -1,0 +1,1087 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: tahoma;
+    font-size: 1vw;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row{
+    float: left;
+    width: 100%;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.margin-bottom10{
+    margin-bottom: 10px;
+}
+
+.demo{
+    background-color: antiquewhite;
+    min-height: 100px;
+}
+
+.margin-right{
+    margin-right: 2%;
+}
+
+.header{
+    background-color: aquamarine;
+    border: 1px greenyellow solid;
+    font-size: 1vw;
+    color: blue;
+    border-radius: 5px;
+}
+
+
+.footer{
+    background-color: aquamarine;
+    border: 1px greenyellow solid;
+    font-size: 0.8vw;
+    color: blue;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+.header h1{
+    margin: 20px;
+    font-size: 1.3vw;
+    
+}
+
+
+.menu{
+    background-color: black;
+    color: blue;
+    border-radius: 5px;
+    color: #CCC;
+}
+
+.menu ul{
+    padding: 10px;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline;
+    padding: 0px 15px;
+}
+
+.menu ul li a{
+    color: #CCC;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.menu ul li a:hover{
+    color: white;
+    font-size: 1.1vw;
+}
+
+.box-right{
+    float: right;
+    width: 24%;
+}
+
+.box-left{
+    float: left;
+    width: 74%;
+}
+
+.box-title{
+    color: #333;
+    background-color: #EEE;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px #CCC solid;
+   
+
+}
+
+.box-content{
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.box-content2{
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    background-color: #EEE;
+}
+
+
+.box-bill{
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 50px;
+    padding: 10px;
+}
+
+.box-bill table{
+    margin-top: 5px;
+}
+
+
+
+.formBILL td input{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+
+.box-footer{
+    color: #333;
+    background-color: #EEE;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px #CCC solid;
+   
+}
+
+.box-banner{
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.box-banner img{
+    min-height: 300px;
+    
+}
+
+
+.box-sp{
+    float: left;
+    width: 30%;
+    min-height: 300px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.box-sp .image{
+    min-height: 200px;
+    text-align: center;
+}
+
+.image img{
+    width: 80%;
+    height: 220px;
+}
+
+.box-sp>a{
+    text-decoration: none;
+}
+
+
+/* box tài khoản */
+
+.formTAIKHOAN{
+    line-height: 150%;
+}
+
+.formTAIKHOAN input[type="text"], 
+.formTAIKHOAN input[type="password"], .form-content input[type="text"]
+{
+    width: 100%;
+    border: 1px solid #CCC;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.formTAIKHOAN input[type="checkbox"]
+{
+
+    border-radius: 5px;
+}
+
+.formTAIKHOAN input[type="submit"], .form-content input[type="submit"], .form-content input[type="reset"],
+.form-content input[type="button"]
+{
+
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #CCC solid;
+}
+
+
+.formTAIKHOAN input[type="submit"]:hover
+{
+    background-color: #CCC;
+}
+
+.formTAIKHOAN li a{
+    color: teal;
+    text-decoration: none;
+}
+
+.formTAIKHOAN li a:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+
+/* menu dọc */
+.menudoc ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menudoc ul li{
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 2px solid #EEE;
+}
+
+.menudoc ul li a{
+    color: #666;
+    text-decoration: none;
+}
+
+.menudoc ul li:hover{
+    background-color: #CCC;
+}
+
+.searchbox input[type="search"]{
+    width: 100%;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.top10 img{
+    width: 20%;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5;
+    border: 1px solid #CCC;
+}
+
+.top10 a{
+    color: #999;
+    text-decoration: none;
+}
+
+.top10 a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+
+/* header admin */
+
+.headeradmin{
+    background-color: #EEE;
+    border: 1px #ccc solid;
+    color: #666;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.headeradmin h1{
+    font-size: 2vw;
+}
+
+.form-title{
+    background-color: #EEE;
+    border: 1px #ccc solid;
+    color: #666;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.form-content{
+    padding: 20px 0pxs;
+}
+
+/* table form danh dách loại hàng */
+
+.form-dsLOAI table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-dsLOAI table th:nth-child(1){
+    width: 5%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-dsLOAI table th:nth-child(2){
+    width: 5%;
+    background-color: #CCC;
+}
+
+.form-dsLOAI table th:nth-child(3){
+    width: 18%;
+    background-color: #CCC;
+}
+
+.form-dsLOAI table th:nth-child(4){
+    width: 18%;
+    background-color: #CCC;
+}
+
+
+.form-dsLOAI table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}.form-dsLOAI table th:nth-child(6){
+    width: 5%;
+    background-color: #CCC;
+}.form-dsLOAI table th:nth-child(7){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+
+
+
+.form-dsLOAI table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+
+/* css quan ly hang hoa  */
+
+.form-quanlyhh{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 80px 80px;
+}
+
+
+.form-quanlyhh input[type="submit"], .form-quanlyhh input[type="reset"],
+.form-quanlyhh input[type="button"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #CCC solid;
+}
+
+.form-quanlyhh input[type="file"], .form-quanlyhh input[type="text"], .form-quanlyhh input[type="date"]
+{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.select{
+    width: 210px;
+    padding: 7px 10px;
+}
+
+.date{
+    width: 210px;
+    padding: 7px 10px;
+}
+
+.des{
+    float: left;
+}
+
+
+.button{
+    margin-top: 100px;
+    float: left;
+    margin-left: -690px;
+    
+}
+
+.padding{
+    border: 1px solid black;
+    width: 60%;
+    padding: 5px 10px;
+}
+
+
+/* table quản lí hàng */
+
+
+/* table form danh dách loại hàng */
+
+.form-dsHANG table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-dsHANG table th:nth-child(1){
+    width: 10%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-dsHANG table th:nth-child(2){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(3){
+    width: 30%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(4){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(5){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table th:nth-child(6){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table th:nth-child(7){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+.nutbam>ul>button{
+    padding: 5px 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.nutbam>ul{
+    text-align: center;
+}
+
+
+/* quản lý khách hàng */
+
+.form-quanlykh{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.form-quanlykh input[type="text"], .form-quanlykh input[type="password"],
+.form-quanlykh input[type="email"]{
+    width: 99%;
+    padding: 5px 10px;
+}
+
+.form-quanlykh input[type="file"]{
+    width: 100%;
+    padding: 3px 10px;
+    border: 1px solid black;
+}
+
+.kichhoat>.padding{
+    width: 99%;
+}
+
+.vaitro>.padding{
+    width: 100%;
+}
+
+.ok input[type="submit"],
+.ok input[type="reset"], 
+.ok input[type="button"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #CCC solid;
+}
+
+/* table dskh  */
+
+.form-dsKH table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-dsKH table th:nth-child(1){
+    width: 10%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-dsKH table th:nth-child(2){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsKH table th:nth-child(3){
+    width: 30%;
+    background-color: #CCC;
+}
+
+.form-dsKH table th:nth-child(4){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsKH table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.form-dsKH table th:nth-child(6){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsKH table th:nth-child(7){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsKH table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+/* css quản lý bình luận */
+
+
+.form-comment table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-comment table th:nth-child(1){
+    width: 48%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-comment table th:nth-child(2){
+    width: 12%;
+    background-color: #CCC;
+}
+
+.form-comment table th:nth-child(3){
+    width: 15%;
+    background-color: #CCC;
+}
+
+.form-comment table th:nth-child(4){
+    width: 15%;
+    background-color: #CCC;
+}
+
+.form-comment table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+
+
+.form-comment table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+
+/* css cho chi tiết bình luận  */
+
+.form-detailBinhluan table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-detailBinhluan table th:nth-child(1){
+    width: 10%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-detailBinhluan table th:nth-child(2){
+    width: 40%;
+    background-color: #CCC;
+}
+
+.form-detailBinhluan table th:nth-child(3){
+    width: 20%;
+    background-color: #CCC;
+}
+
+.form-detailBinhluan table th:nth-child(4){
+    width: 20%;
+    background-color: #CCC;
+}
+
+.form-detailBinhluan table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+
+
+.form-detailBinhluan table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+/* Slideshow */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev{
+    float: left;
+    margin-left: -382px;
+    
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* end slideshow */
+
+/* sản phẩm chi tiết */
+
+.spchitiet{
+    text-align: center;
+}
+
+/* css form đăng ký */
+
+.formDK form input[type='text'], input[type='email'],
+input[type='password']{
+    width: 300px;
+    padding: 5px 10px;
+}
+
+.formDK form input[type="submit"], input[type="reset"]{
+    padding: 5px 10px;
+}
+
+/* css bình luận */
+
+.binhluan table{
+    width: 100%;
+}
+
+.binhluan table td:nth-child(1){
+    width: 50%;
+    padding: 3px 10px;
+}
+
+.binhluan table td:nth-child(2){
+    width: 20%;
+}
+
+.binhluan table td:nth-child(3){
+    width: 30%;
+}
+
+
+/* css cho bảng giỏ hàng  */
+
+.tableCART table{
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    
+}
+
+.tableCART table td{
+    border: 1px solid gray;
+}
+
+.tableCART table th{
+    border: 1px solid black;
+    background-color: #717171;
+    color: white;
+    font-weight: 300;
+}
+
+
+.tableCART table td:nth-child(1){
+    width: 5%;
+    text-align: center;
+}
+
+.tableCART table td:nth-child(2){
+    width: 10%;
+    text-align: center;
+}
+
+
+.tableCART table td:nth-child(3){
+    width: 10%;
+    text-align: center;
+}
+
+
+.tableCART table td:nth-child(4){
+    width: 5%;
+    text-align: center;
+}
+
+
+
+.tableCART table td:nth-child(5){
+    width: 5%;
+    text-align: center;
+}
+
+
+
+.tableCART table td:nth-child(6){
+    width: 10%;
+    text-align: center;
+}
+
+
+
+
+.tableCART table td:nth-child(7){
+    width: 5%;
+    text-align: center;
+}
+
+/* css billformt  */
+
+
+/* table quản lí hàng */
+
+
+/* table form danh dách loại hàng */
+
+.form-dsHANG table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-dsHANG table th:nth-child(1){
+    width: 10%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-dsHANG table th:nth-child(2){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(3){
+    width: 30%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(4){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-dsHANG table th:nth-child(5){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table th:nth-child(6){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table th:nth-child(7){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-dsHANG table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+.nutbam>ul>button{
+    padding: 5px 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.nutbam>ul{
+    text-align: center;
+}
+
+
+/* quản lý khách hàng */
+
+.form-quanlykh{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.form-quanlykh input[type="text"], .form-quanlykh input[type="password"],
+.form-quanlykh input[type="email"]{
+    width: 99%;
+    padding: 5px 10px;
+}
+
+.form-quanlykh input[type="file"]{
+    width: 100%;
+    padding: 3px 10px;
+    border: 1px solid black;
+}
+
+.kichhoat>.padding{
+    width: 99%;
+}
+
+.vaitro>.padding{
+    width: 100%;
+}
+
+.ok input[type="submit"],
+.ok input[type="reset"], 
+.ok input[type="button"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #CCC solid;
+}
+
+/* table dsDONHANG  */
+
+.form-DH table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-DH table th:nth-child(1){
+    width: 5%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.form-DH table th:nth-child(2){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-DH table th:nth-child(3){
+    width: 20%;
+    background-color: #CCC;
+}
+
+.form-DH table th:nth-child(4){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.form-DH table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.form-DH table th:nth-child(6){
+    width: 15%;
+    background-color: #CCC;
+}
+
+
+.form-DH table th:nth-child(7){
+    width: 15%;
+    background-color: #CCC;
+}
+
+.form-DH table th:nth-child(8){
+    width: 20%;
+    background-color: #CCC;
+}
+
+
+.form-DH table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+.nutbam>ul>button{
+    padding: 5px 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.nutbam>ul{
+    text-align: center;
+}
+
+
+/* css cho bảng thống kê  */
+
+
+.list-thongke table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-thongke table th:nth-child(1){
+    width: 3%;
+    background-color: #CCC;
+    padding: 20px;
+}
+
+.list-thongke table th:nth-child(2){
+    width: 15%;
+    background-color: #CCC;
+}
+
+.list-thongke table th:nth-child(3){
+    width: 10%;
+    background-color: #CCC;
+}
+
+.list-thongke table th:nth-child(4){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.list-thongke table th:nth-child(5){
+    width: 10%;
+    background-color: #CCC;
+}
+.list-thongke table th:nth-child(6){
+    width: 10%;
+    background-color: #CCC;
+}
+
+
+.list-thongke table td{
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
+
+

@@ -71,7 +71,11 @@
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                     $tensanpham = $_POST['tenhang'];
                     $giasanpham = $_POST['giahang'];
+<<<<<<< HEAD
                     $giamgia = $_POST['giamgia'];
+=======
+                    $quantity = $_POST['so_luong'];
+>>>>>>> 675d96f3cbbd8b3cba2e58e7b70265f91f916754
                     $cate = $_POST['loaihang'];
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];

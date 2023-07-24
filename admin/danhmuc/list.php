@@ -1,5 +1,5 @@
 <div class="row">
-            <div class="row margin-bottom  form-title"><h1>DANH SÁCH TÀI KHOẢN</h1></div>
+            <div class="row margin-bottom  form-title"><h1>Quản lý loại hàng</h1></div>
 
             <div class="row form-content">
                 
@@ -7,30 +7,24 @@
                             <table>
                                     <tr>
                                         <th></th>
-                                        <th>MÃ TK</th>
-                                        <th>USERNAME</th>
-                                        <th>EMAIL</th>
-                                        <th>PASSWORD</th>
-                                        <th>ROLE</th>
+                                        <th>MÃ LOẠI</th>
+                                        <th>TÊN LOẠI</th>
                                         <th></th>
                                     </tr>
 
                                   
                                     <?php
-                                foreach ($dsTK as $tk) {
-                                    extract($tk);
-                                    $suatk = "index.php?act=suatk&makh=".$ma_kh;
-                                    $xoatk= "index.php?act=xoatk&makh=".$ma_kh;
+                                foreach ($dsdanhmuc as $dm) {
+                                    extract($dm);
+                                    $suadm = "index.php?act=suadm&id=".$ma_loai;
+                                    $xoadm = "index.php?act=xoadm&id=".$ma_loai;
                                     echo 
                                         '<tr>
                                         <td><input type="checkbox" name="" id=""></td>
-                                        <td>'.$ma_kh.'</td>
-                                        <td>'.$ho_ten.'</td>    
-                                        <td>'.$email.'</td>    
-                                        <td>'.$mat_khau.'</td>    
-                                        <td>'.$vai_tro.'</td>    
-                                        <td><a href="'.$suatk.'"><input type="button" value="Sửa"></a> 
-                                          <a href="'.$xoatk.'"><input type="button" value="Xóa"></a></td>
+                                        <td>'.$ma_loai.'</td>
+                                        <td>'.$ten_loai.'</td>    
+                                        <td><a href="'.$suadm.'"><input type="button" value="Sửa"></a> 
+                                          <a href="'.$xoadm.'"><input type="button" value="Xóa"></a></td>
                                         </tr>';
 
                                 }
@@ -44,7 +38,7 @@
                             <input type="button" value="Chọn tất cả">
                             <input type="button" value="Bỏ chọn tất cả">
                             <input type="button" value="Xóa các mục đã chọn">
-                        
+                            <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a>
                     </div>
 
                        
