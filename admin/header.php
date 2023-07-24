@@ -26,6 +26,7 @@
             <li><a href="index.php?act=addsp">Hàng hóa</a></li>
             <li><a href="index.php?act=dskh">Khách hàng</a></li>
             <li><a href="index.php?act=dsdh">Đơn hàng</a>
+            <li><a href="index.php?act=dsbl">Bình luận</a>
         </ul>
         <div class="header-icon">
             <i class="bx bx-cart-alt"></i>

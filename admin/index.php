@@ -158,7 +158,22 @@
                 break;
 
                 
+                // Binh luan
+                case 'dsbl':
 
+                    $dsbl = selectall_binhluan(0);
+                    include_once "binhluan/list.php";
+                    break;
+    
+                case 'xoabl':
+    
+                    if (isset($_GET['mabl']) && ($_GET['mabl'] > 0)) {
+                        $ma_bl = $_GET['mabl'];
+                        xoa_bl($ma_bl);
+                    }
+                    $dsbl = selectall_binhluan(0);
+                    include_once "binhluan/list.php";
+                    break;
 
 
             

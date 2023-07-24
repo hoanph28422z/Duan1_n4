@@ -48,11 +48,60 @@
                 include_once "view/sp-detail.php";
                 break;
 
+                case 'viewcart':
+
+                    include_once "view/viewcart.php";
+                    break;
+    
+    
+                case 'addCART':
+                    if (isset($_POST['addCART']) && ($_POST['addCART'])) {
+                        
+                            // do something with $_POST['id']
+                        
+                        $id = $_POST['id'];
+                        $tensp = $_POST['tensp'];
+                        $anh = $_POST['anh'];
+                        $gia = $_POST['gia'];
+                        $soluong = 1;
+                        $ttien = $soluong*$gia;
+                        $prodADD = [$id, $tensp, $anh, $gia, $soluong, $ttien];
+                        
+                        array_push($_SESSION['mycart'], $prodADD);
+    
+                        
+                        
+                    }
+                    include_once "view/viewcart.php";
+                    break;
+    
+                case 'delcart':
+    
+                    if (isset($_GET['idcart'])) {
+                        // hàm array_slice dùng để xoa mảng. Gồm 3 tham số: cái mảng, vị trí cần xóa, xóa bao nhiêu phần tử (ở đây 1 là chỉ xóa vị trí đó)
+                        array_slice($_SESSION['mycart'], $_GET['idcart'], 1);
+                        
+                    }else{
+                        $_SESSION['mycart'] = [];
+                    }
+    
+                    header('Location: index.php?act=viewcart');
+                    break;
+    
+
+
+
+
+
+                    
 
             default:
             include_once "view/home.php";
             break;
         }
+
+
+        
 
         
     }else{
