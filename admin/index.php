@@ -65,6 +65,97 @@
 
             /*  CONTRLLER CHO SẢN PHẨM  */
 
+            case 'addsp':
+                // Kiểm tra xem người người dùng đã click vào nút add hay chưa?
+               
+                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                    $tensanpham = $_POST['tenhang'];
+                    $giasanpham = $_POST['giahang'];
+                    $quantity = $_POST['so_luong'];
+                    $cate = $_POST['loaihang'];
+                    $date = $_POST['ngay'];
+                    $des = $_POST['mota'];
+                    $anh = $_FILES['hinhanh']['name'];
+
+                    $target_dir = "../upload/";
+                    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                      } else {
+                        // echo "Sorry, there was an error uploading your file.";
+                      }
+
+                    
+                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des);
+                    $thongbao = "Thêm thành công";
+                }
+               
+                $dsdanhmuc = selectall_cate();
+                // var_dump($dsdanhmuc);
+                include_once "sanpham/add.php";
+                break;
+
+            case 'listsp':
+                if (isset($_POST['listOK']) && ($_POST['listOK'])){
+                    $kyw = $_POST['kyw'];
+                    $iddm = $_POST['iddm'];
+                }else{
+                    $kyw = '';
+                    $iddm = 0;
+                }
+
+
+
+
+                $dssanpham = selectall_prod($kyw, $iddm);
+                $dsdanhmuc = selectall_cate();
+                include_once "sanpham/list.php";
+                break;
+            case 'xoasp':
+                if (isset($_GET['id'])&&$_GET['id']>0) {
+                    del_prod($_GET['id']);
+                }
+                
+                $dssanpham = selectall_prod('', 0);
+                include_once "sanpham/list.php";
+                break;
+            case 'suasp':
+                if (isset($_GET['id'])&&$_GET['id']>0) {
+                $sanpham = selectone_prod($_GET['id']);
+                }
+
+                $dsdanhmuc = selectall_cate();
+                
+                include_once 'sanpham/update.php';
+                break;
+
+            case 'updatesp':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                    $ma_hh = $_POST['id'];
+                    $tensanpham = $_POST['tenhang'];
+                    $giasanpham = $_POST['giahang'];
+                    $quantity = $_POST['so_luong'];
+                    $cate = $_POST['loaihang'];
+                    $date = $_POST['ngay'];
+                    $des = $_POST['mota'];
+                    $anh = $_FILES['hinhanh']['name'];
+
+                    $target_dir = "../upload/";
+                    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                      } else {
+                        // echo "Sorry, there was an error uploading your file.";
+                      }
+                    update_prod($tensanpham, $giasanpham, $giamgia, $anh ,$cate, $date, $des, $ma_hh);
+                    $thongbao = "Cập nhật thành công";
+
+                }
+
+                
+                $dssanpham = selectall_prod('', 0);
+                include_once "sanpham/list.php";
+                break;
 
                 
 
