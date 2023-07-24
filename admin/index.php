@@ -234,7 +234,17 @@
                         include_once "bill/suadh.php";
                         break; 
 
-
+                        // Thong ke
+                        case 'thongke':
+                            $listthongke = loadall_thongke(); 
+                            include_once "thongke/bangthongke.php";
+                            break;
+        
+        
+                        case 'bieudo':
+                            $listthongke = loadall_thongke(); 
+                            include_once "thongke/bieudo.php";
+                            break;
 
 
 
