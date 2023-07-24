@@ -90,6 +90,64 @@
     
 
 
+                                // Tiến hành đặt hàng
+
+            case 'bill':
+
+                include_once "view/bill.php";
+                break;
+
+            case 'billconfirm':
+                //Tạo đơn hàng / bill
+
+                if (isset($_POST['dongydathang']) && ($_POST['dongydathang'])) {
+
+                    // TẠO ĐƠN HÀNG 
+
+                    if (isset($_SESSION['info_user'])) {
+                        $idKH = $_SESSION['info_user']['ma_kh'];
+                    }else{
+                        $idKH = 0;
+                    }
+
+
+
+
+                    $name_bill = $_POST['person'];
+                    $email_bill = $_POST['email'];
+                    $ngay_dh_bill = date('h:i:s a d/m/Y');
+                    $tong_dh_bill= tongdonhang();
+                    $pttt_bill = $_POST['pttt'];
+
+                    $id_donhang = insert_bill($idKH, $name_bill, $email_bill, $pttt_bill ,$ngay_dh_bill, $tong_dh_bill);
+                    
+                    // insert into cart với $_SESSION['mycart'] và $id_donhang
+                    // TẠO GIỎ HÀNG
+                    foreach ($_SESSION['mycart'] as $cart) {
+                        insert_cart($_SESSION['info_user']['ma_kh'], $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $id_donhang);
+                    }
+
+
+                    // xóa session cart
+
+                    $_SESSION['mycart'] = "";
+                
+                }
+
+                global $id_donhang;
+
+                $bill = selectone_bill($id_donhang);
+                $bill_chitiet = selectall_cart($id_donhang);
+
+                include_once "view/billconfirm.php";
+                break;
+
+
+            case 'mybill':
+
+                $listbill = load_all_bill_byIDKH('', $_SESSION['info_user']['ma_kh']);
+                include_once "view/mybill.php";
+                break;
 
 
 

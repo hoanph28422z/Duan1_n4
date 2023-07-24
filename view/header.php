@@ -20,7 +20,7 @@
             <img src="fame/img/logo.png" alt="">
         </a>
         <i class="bx bx-menu" id="menu-icon"></i>
-        <ul class="navbar">
+        <ul class="navbar"> 
             <li><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="../product/index.html">Products</a></li>
