@@ -208,19 +208,21 @@ header{
     justify-content: center;
 }
 .products-container .box .content_home a{
-    padding:5px 1rem;
+    padding:4px 0.3rem;
     color: var(--text-color);
-    border: 2px solid var(--main-color--);
+    /* border: 2px solid var(--main-color--); */
     border-radius: 4px;
     text-transform: uppercase;
     margin-left: 15px;
 }
-.products-container .box .content_home a:hover{
+/* .products-container .box .content_home a:hover{
     background: var(--main-color--);
     color: var(--bg-color);
     transition: 0.2s all linear;
 
-}
+} */
+
+
 .customers-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,auto));

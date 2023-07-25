@@ -166,7 +166,7 @@
                 <form action="index.php?act=dangnhap" method="post">
                         <h2>Sign In</h2>
                         <div class="input_box">
-                            <span class="icon"> <i class="bx bxs-envelope"></i></span>
+                            <span class="icon"> <i class='bx bx-user'></i></span>
                             <input type="text" name="user">
                             <label for>User</label>
                         </div>

@@ -29,7 +29,21 @@
         
         
         <div class="products-container">
-                
+                <style>
+.add-to-cart {
+    text-transform: uppercase;
+    color: #1b1b1b;
+    border: 2px solid #bc9667;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .add-to-cart:hover {
+  background-color: #bc9667;
+}
+
+                </style>
                 <?php
                     $i =0;
                     foreach ($spnews as $sp) {
@@ -57,7 +71,7 @@
                             <input type="hidden" name="tensp" value="'.$te_hh.'">
                             <input type="hidden" name="anh" value="'.$hinh.'">
                             <input type="hidden" name="gia" value="'.$don_gia.'">
-                            <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Add to Cart">
+                            <input class="add-to-cart" type="submit" name="addCART" value="Add to Cart">
                     </form>
                     </div>
                     </div>  

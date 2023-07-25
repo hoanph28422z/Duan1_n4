@@ -2,17 +2,126 @@
             <div class="box-left">
 
             <!-- chi tiết sản phẩm  -->
-            <div class="row margin-bottom">
+
+            <div class="product-detail">
+
+ <?php
+ $img =  $img_path.$hinh;
+ echo '<div class="product-image"><img src="'.$img.'" alt=""></div>'.'<br>';
+ ?>
+  <div class="product-info">
+    <?php
+
+                extract($one_prod);
+
+            ?>
+    <div style="margin-top:50px;" class="box-title">
+    
+    <h2><?=$te_hh ?></h2></div>
+    
+    <ul class="product-features">
+    <?php  
+echo '<li><strong>Mã sản phẩm:</strong> '.$ma_hh.'</li>'.'<br>';
+echo '<li> <strong>TÊN HÀNG HÓA:</strong> '.$te_hh.'</li>'.'<br>';
+echo '<li><strong>Giá:</strong> '.$don_gia.'</li>'.'<br>';
+echo '<li> <strong>SỐ LƯỢNG HÀNG HÓA:</strong> '.$so_luong.'</li>'.'<br>';
+
+
+echo ' <form action="index.php?act=addCART" method="post">
+<input type="hidden" name="id" value="'.$ma_hh.'">
+       <input type="hidden" name="tensp" value="'.$te_hh.'">
+       <input type="hidden" name="anh" value="'.$hinh.'">
+       <input type="hidden" name="gia" value="'.$don_gia.'">
+<input class="add-to-cart" type="submit" name="addCART" value="Thêm vào giỏ hàng">
+</form>';
+echo '<p class="product-desc"> <strong>MÔ TẢ:</strong>'.$mo_ta.'</p>';
+
+?>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .product-detail {
+    display: flex;
+    margin: 80px;margin-top: 120px;
+   
+  }
+  
+  .product-image {
+    flex-basis: 50%;
+    margin-right: 20px;
+  }
+  
+  .product-image img {
+    width: 600px;
+    height: 600px;
+  }
+  
+  .product-info {
+    flex-basis: 50%;
+    margin-left: 80px;
+  }
+  
+  h2, .product-desc {
+    margin-top: 25px;
+  }
+  
+  .product-features {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  .product-features li {
+    margin-bottom: 10px;
+  }
+  
+  .product-features strong {
+    display: inline-block;
+    width: 150px;
+  }
+  
+  .add-to-cart {
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #0077b3;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div  class="row margin-bottom">
 
             <?php
 
                 extract($one_prod);
 
             ?>
-            <div class="box-title"><?=$te_hh ?></div>
+            
 
             <div class="row box-content">
-                <?php  
+                <!-- <?php  
 
                         
 
@@ -23,6 +132,8 @@
                      echo '<p>- <strong>TÊN HÀNG HÓA:</strong> '.$te_hh.'</p>'.'<br>';
                      echo '<p>- <strong>GIÁ HÀNG HÓA:</strong> '.$don_gia.'</p>'.'<br>';
                      echo ' <p class="margin-bottom"> <strong>SỐ LƯỢNG HÀNG HÓA:</strong> '.$so_luong.'</p>'.'<br>';
+
+
                      echo ' <form action="index.php?act=addCART" method="post">
                      <input type="hidden" name="id" value="'.$ma_hh.'">
                             <input type="hidden" name="tensp" value="'.$te_hh.'">
@@ -32,7 +143,7 @@
                     </form>';
                      echo '<p style="margin-left: 30px;">'.$mo_ta.'</p>';
 
-                ?>
+                ?> -->
             </div>
             
                 
@@ -42,6 +153,7 @@
 
 
             </div>
+            
 
              <!-- BOX BÌNH LUẬN  -->
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
