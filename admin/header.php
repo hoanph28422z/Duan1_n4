@@ -32,6 +32,7 @@
         <div class="header-icon">
             <i class="bx bx-cart-alt"></i>
             <i class="bx bx-search" id="search-icon"></i>
+            <a href="http://localhost/Duan1_n4/index.php"><i class='bx bxs-user-detail bx-tada bx-rotate-90' ></i></a>
         </div>
         <div class="search-box">
             <input type="search" id="" placeholder="Search Header">

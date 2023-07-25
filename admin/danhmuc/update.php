@@ -6,7 +6,7 @@
 
 ?>
 
-<div class="row">
+<div style="margin-top: 150px;" class="row">
             <div class="row  form-title"><h1>Cập nhật loại hàng hóa</h1></div>
             <div class="row form-content">
                     <form action="index.php?act=updatedm" method="post">

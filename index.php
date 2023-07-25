@@ -50,7 +50,17 @@
 
                  case 'dangki':
 
-                    
+                    if (isset($_POST['dangki']) && ($_POST['dangki'])) {
+                        $email = $_POST['email'];
+                        $ho_ten = $_POST['user'];
+                        $mat_khau = $_POST['pass'];
+     
+                        insert_user($ho_ten, $email, $mat_khau);
+                        $thongbao = "✔️ Thêm thành viên thành công! Vui lòng đăng nhập để bình luận và đặt hàng";
+     
+                     }
+     
+                     include_once "./login/login.php";
                     break;
 
                     case 'editTK':

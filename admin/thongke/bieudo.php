@@ -1,4 +1,4 @@
-<div class="row">
+<div style="margin-top: 150px;" class="row">
 
 <div id="myChart" style="width:100%; max-width:800px; height:700px;"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

@@ -197,29 +197,29 @@
 <!-- Sign Up -->
 
                 <div class="form-box register">
-                    <form action="#">
+                <form action="index.php?act=dangki" method="post">
                         <h2>Sign Up</h2>
 
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-user"></i></span>
-                            <input type="text">
+                            <input type="text" name="user" placeholder="Tên người dùng"> <br> <br>
                             <label for>Name</label>
                         </div>
                         
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-envelope"></i></span>
-                            <input type="email">
+                            <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
                             <label for>Email</label>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-lock-alt"></i></span>
-                            <input type="password">
+                            <input type="password" name="pass" placeholder="Mật khẩu"> <br> <br>
                             <label for>PassWord</label>
                         </div>
                         <div class="remember-forgot">
                             <label for=""><input type="checkbox">I agree to the terms & conditions</label>
                         </div>
-                        <button type="submit" class="btn">Sign Up</button>
+                        <input type="submit" name="dangki" value="Sign Up">
                         <div class="login-register">
                             <p>Already have an account <a href="javascript:;" class="login-link">Sign In</a></p>
                         </div>

@@ -30,7 +30,7 @@
 
                 $dsdanhmuc = selectall_cate();
                 
-                include_once "danhmuc/listdm.php";
+                include_once "danhmuc/list.php";
                 break;
             case 'xoadm':
                 if (isset($_GET['id'])&&$_GET['id']>0) {
@@ -246,7 +246,52 @@
                             include_once "thongke/bieudo.php";
                             break;
 
-
+                            case 'dskh':
+                                $dsTK = selectall_TK();
+                
+                                include_once "taikhoan/list.php";
+                
+                                break;
+                            case 'xoatk':
+                                if (isset($_GET['makh']) && ($_GET['makh'])>0) {
+                                    $ma_kh = $_GET['makh'];
+                                    delete_user($ma_kh);
+                                    
+                                }
+                                $dsTK = selectall_TK();
+                
+                
+                                include_once "taikhoan/list.php";
+                                break;
+                            
+                            case 'suatk':
+                
+                                if (isset($_GET['makh']) && ($_GET['makh']) >0 ) {
+                                    $ma_kh = $_GET['makh'];
+                                    $dskh = selectone_TK($ma_kh);
+                                    extract($dskh);
+                                }
+                
+                                include_once "taikhoan/update.php";
+                                break;
+                
+                            case 'capnhatKH':
+                
+                                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                                    $ho_ten = $_POST['tenkh'];
+                                    $email = $_POST['email'];
+                                    $mat_khau = $_POST['pass'];
+                                    $role = $_POST['role'];
+                                    $id = $_POST['ma_kh'];
+                
+                                    update_user_inADMIN($ho_ten, $email, $mat_khau, $role, $id);
+                                    $thongbao = "✔️ Cập nhật thành công!";
+                                }
+                
+                                
+                                $dsTK = selectall_TK();
+                                include_once "taikhoan/list.php";
+                                break;
 
             
             /* xong sản phẩm */
