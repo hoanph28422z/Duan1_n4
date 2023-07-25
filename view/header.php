@@ -23,11 +23,11 @@
         <ul class="navbar"> 
             <li><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="../product/index.html">Products</a></li>
-            <li><a href="#customers">Customers</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="index.php?act=dangnhap">Login</a></li>
         </ul>
         <div class="header-icon">
-            <i class="bx bx-cart-alt"></i>
+        <a href="index.php?act=viewcart"><i class="bx bx-cart-alt"></i></a>
             <i class="bx bx-search" id="search-icon"></i>
         </div>
         <div class="search-box">

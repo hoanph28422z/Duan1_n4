@@ -9,7 +9,7 @@
     include_once "model/viewcart.php";
     include_once "./view/header.php";
     include_once "global.php";
-
+    
 
     if (!isset($_SESSION['mycart']) || empty($_SESSION['mycart'])) {
        $_SESSION['mycart'] =[];
@@ -24,9 +24,50 @@
 
         switch ($act) {
 
-            //Mua hàng
+            case 'dangnhap':
+
+                if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                    $ho_ten = $_POST['user'];
+                    $mat_khau = $_POST['pass'];
+
+                    $check_user = check_user($ho_ten, $mat_khau);
+                    
+                    
+
+                    if (is_array($check_user)) {
+
+                        $_SESSION['info_user'] = $check_user;
+                        header('location:./index.php');
+                        $thongbao = "✔️ Đăng nhập thành công!";
+                    }else{
+                        $thongbao = "❌ Tài khoản không tồn tại! Kiểm tra và lại!";
+                    }
+ 
+                 }
+ 
+                 include_once "./login/login.php";
+                 break;
+
+                 case 'dangki':
+
+                    
+                    break;
+
+                    case 'editTK':
+
+                        
+                        break;
+        
+        
+        
+                    case 'logout':
+                        session_unset();
+                        header("Location:index.php");
+
+                        break;
+        
             
-            
+            // include "./view/login.php";
             // trang sản phẩm chi tiết
 
             case 'sanphamchitiet':
@@ -72,8 +113,8 @@
                         
                         
                     }
-                    include_once "view/viewcart.php";
-                    break;
+                    header('Location: index.php?act=viewcart');
+                     break;
     
                 case 'delcart':
     
@@ -85,7 +126,7 @@
                         $_SESSION['mycart'] = [];
                     }
     
-                    header('Location: index.php?act=viewcart');
+                    header('Location:index.php?act=viewcart');
                     break;
     
 

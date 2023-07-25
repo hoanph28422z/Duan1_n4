@@ -1,4 +1,4 @@
-<div class="row">
+<div style="margin-top: 200px;" class="row">
             <div class="row margin-bottom  form-title"><h1>Quản lý loại hàng</h1></div>
 
             <form action="index.php?act=listsp" class="margin-bottom" method="post">

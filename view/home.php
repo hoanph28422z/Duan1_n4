@@ -1,3 +1,4 @@
+
 <section class="home" id="home">
         <div class="home-text">
             <h1>Start Your Day <br> With Coffee</h1>
@@ -26,7 +27,10 @@
             <h2>Our Popular Products </h2>
         </div>
         
-        <?php
+        
+        <div class="products-container">
+                
+                <?php
                     $i =0;
                     foreach ($spnews as $sp) {
                         extract($sp);
@@ -40,12 +44,13 @@
                         }
 
 
-                        echo '<div class="box-sp '.$mr.' margin-bottom">
+                        echo '<div   class="box">
                         <div class="image">
                         <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
                         </div>
-
-                        <p>$ '.$don_gia.'</p>
+                        
+                        <div class="content">
+                        <span>$ '.$don_gia.'</span>
                         <a href="'.$link_sp.'">'.$te_hh.'</a>
                         <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">
@@ -54,24 +59,32 @@
                             <input type="hidden" name="gia" value="'.$don_gia.'">
                             <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Add to Cart">
                     </form>
-                        
-
-                    </div>';
+                    </div>
+                    </div>  
+                    ';
 
                     $i++;
                     }
             ?>
 
-        <!-- <div class="products-container">
-                <div class="box">
-                    <img src="../fame/img/p1.png" alt="">
-                    <h3>Americano Pure</h3>
-                    <div class="content">
-                        <span>$25</span>
-                        <a href="#">Add to Cart</a>
-                    </div>
+            
+            <!-- <div class="box">
+                <img src="../fame/img/p1.png" alt="">
+                <h3>Americano Pure</h3>
+                <div class="content">
+                    <span>$25</span>
+                    <a href="#">Add to Cart</a>
                 </div>
+            </div>
             <div class="box">
+                <img src="../fame/img/p1.png" alt="">
+                <h3>Americano Pure</h3>
+                <div class="content">
+                    <span>$25</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div> -->
+            <!-- <div class="box">
                 <img src="../fame/img/p1.png" alt="">
                 <h3>Americano Pure</h3>
                 <div class="content">
@@ -94,23 +107,7 @@
                     <span>$25</span>
                     <a href="#">Add to Cart</a>
                 </div>
-            </div>
-            <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
     </section>
  

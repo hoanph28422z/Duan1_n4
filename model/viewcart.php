@@ -4,7 +4,7 @@
         global $img_path;
         $i=0;
         $tongtien=0;
-        $so =0;
+       
 
         if ($del==1) {
 
@@ -21,6 +21,7 @@
 
 
         echo '
+        
                 <tr>
                 <th>STT</th>
                 <th>HÌNH</th>
@@ -34,33 +35,12 @@
         
         ';
     foreach ($_SESSION['mycart'] as $cart) {
-        $i++;
 
         $hinh = $img_path.$cart[2];
         $ttien = $cart[3]*$cart[4];
         $tongtien = $tongtien + $ttien;
-
-
-        if ($del==1) {
-
-            $xoasp_td = '<td><a href="index.php?delcart&idcart='.$so.'"><i class="fa-solid fa-delete-left"></i></a></td>';
-            
-
-            
-        }else{
-            $xoasp_td="";
-           
-        }
-
-
-
-
-
+            $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="Xoa"></a>';
                     echo '
-        
-        
-        
-        
                      <tr>
                         <td>'.$i.'</td>
                         <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
@@ -68,11 +48,11 @@
                         <td>'.$cart[3].'</td>
                         <td>'.$cart[4].'</td>
                         <td>'.$ttien.'</td>
-                        '.$xoasp_td.'
+                        <td>'.$xoasp.'</td>
                     </tr>';
 
 
-            $so++;  
+            $i+=1;  
 
     }
 
