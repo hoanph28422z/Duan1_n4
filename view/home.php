@@ -49,7 +49,7 @@
                         <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
                         </div>
                         
-                        <div class="content">
+                        <div class="content_home">
                         <span>$ '.$don_gia.'</span>
                         <a href="'.$link_sp.'">'.$te_hh.'</a>
                         <form action="index.php?act=addCART" method="post">

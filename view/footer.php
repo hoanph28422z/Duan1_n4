@@ -34,4 +34,5 @@
             <span><i class="bx bxl-gmail"></i>Anhnvph28374@fpt.edu.vn</span>
         </div>
     </section>
-    <script src="../fame/main.js"></script>
+    <script src="fame/main.js"></script>
+    <script src="login/main.js"></script>

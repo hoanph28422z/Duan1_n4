@@ -29,7 +29,7 @@
                 if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
                     $ho_ten = $_POST['user'];
                     $mat_khau = $_POST['pass'];
-
+                    $email = $_POST['email'];
                     $check_user = check_user($ho_ten, $mat_khau);
                     
                     
