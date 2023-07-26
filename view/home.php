@@ -58,7 +58,7 @@
                         }
 
 
-                        echo '<div   class="box">
+                        echo '<div class="box">
                         <div class="image">
                         <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
                         </div>
@@ -66,6 +66,7 @@
                         <div class="content_home">
                         <span>$ '.$don_gia.'</span>
                         <a href="'.$link_sp.'">'.$te_hh.'</a>
+
                         <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">
                             <input type="hidden" name="tensp" value="'.$te_hh.'">

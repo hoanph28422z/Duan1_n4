@@ -25,7 +25,7 @@
     <li><strong>Tên đăng nhập:</strong> <?=$ho_ten ?></li>
     <li><strong>Họ tên:</strong> <?=$ho_ten ?></li>
     <li><strong>Email:</strong> <?=$email ?></li>
-    <li><strong>Đơn hàng:</strong>  <a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
+    <li><strong>Đơn hàng:</strong><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
     <li><strong>Cập nhật tài khoản:</strong> <a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
     <?php
 
@@ -179,7 +179,15 @@
                             <label for=""><input type="checkbox">Remember Me</label>
                             <a href="index.php?act=quenMK">Forgot Password</a>
                         </div>
-                        <input type="submit" name="dangnhap" value="Sign In">
+                        <input style="width: 100%;
+    height: 45px;
+    background: #c4103d;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" type="submit" name="dangnhap" value="Sign In">
                         <?php 
                            if (isset($thongbao)&&($thongbao!="")) {
                             echo $thongbao;
@@ -219,7 +227,15 @@
                         <div class="remember-forgot">
                             <label for=""><input type="checkbox">I agree to the terms & conditions</label>
                         </div>
-                        <input type="submit" name="dangki" value="Sign Up">
+                        <input style="width: 100%;
+    height: 45px;
+    background: #c4103d;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" type="submit" name="dangki" value="Sign Up">
                         <div class="login-register">
                             <p>Already have an account <a href="javascript:;" class="login-link">Sign In</a></p>
                         </div>

@@ -7,7 +7,7 @@
     include_once "model/loai.php";
     include_once "model/taikhoan.php";
     include_once "model/viewcart.php";
-    include_once "./view/header.php";
+    include_once "view/header.php";
     include_once "global.php";
     
 
@@ -141,7 +141,7 @@
     
 
 
-                                // Tiến hành đặt hàng
+                                            // Tiến hành đặt hàng
 
             case 'bill':
 
@@ -159,10 +159,7 @@
                         $idKH = $_SESSION['info_user']['ma_kh'];
                     }else{
                         $idKH = 0;
-                    }
-
-
-
+                    } 
 
                     $name_bill = $_POST['person'];
                     $email_bill = $_POST['email'];
@@ -184,6 +181,7 @@
                     $_SESSION['mycart'] = "";
                 
                 }
+                
 
                 global $id_donhang;
 
@@ -200,9 +198,6 @@
                 include_once "view/mybill.php";
                 break;
 
-
-
-                    
 
             default:
             include_once "view/home.php";

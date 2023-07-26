@@ -1,5 +1,5 @@
 
-<div class="row margin-bottom">
+<div style="margin-top: 100px;" class="row">
         <div class="box-left">
 
             <div class="row margin-bottom">
