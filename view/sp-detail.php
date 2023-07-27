@@ -44,23 +44,29 @@ echo '<p class="product-desc"> <strong>MÔ TẢ:</strong>'.$mo_ta.'</p>';
 <style>
   .product-detail {
     display: flex;
-    margin: 80px;margin-top: 120px;
+    margin: 80px;
+    margin-top: 50px;
    
   }
   
   .product-image {
     flex-basis: 50%;
     margin-right: 20px;
+    border-radius:50px ;
+  
   }
   
   .product-image img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
+    margin-top: 120px;
+    border-radius:50%;
   }
   
   .product-info {
     flex-basis: 50%;
     margin-left: 80px;
+    margin-top: 120px;
   }
   
   h2, .product-desc {
@@ -107,54 +113,6 @@ echo '<p class="product-desc"> <strong>MÔ TẢ:</strong>'.$mo_ta.'</p>';
 
 
 
-
-
-
-
-            <div  class="row margin-bottom">
-
-            <?php
-
-                extract($one_prod);
-
-            ?>
-            
-
-            <div class="row box-content">
-                <!-- <?php  
-
-                        
-
-                     $img =  $img_path.$hinh;
-
-                     echo '<div class="row margin-bottom "> <img src="'.$img.'" alt=""> </div>'.'<br>';
-                     echo '<p>- <strong>MÃ HÀNG HÓA:</strong> '.$ma_hh.'</p>'.'<br>';
-                     echo '<p>- <strong>TÊN HÀNG HÓA:</strong> '.$te_hh.'</p>'.'<br>';
-                     echo '<p>- <strong>GIÁ HÀNG HÓA:</strong> '.$don_gia.'</p>'.'<br>';
-                     echo ' <p class="margin-bottom"> <strong>SỐ LƯỢNG HÀNG HÓA:</strong> '.$so_luong.'</p>'.'<br>';
-
-
-                     echo ' <form action="index.php?act=addCART" method="post">
-                     <input type="hidden" name="id" value="'.$ma_hh.'">
-                            <input type="hidden" name="tensp" value="'.$te_hh.'">
-                            <input type="hidden" name="anh" value="'.$hinh.'">
-                            <input type="hidden" name="gia" value="'.$don_gia.'">
-                    <input style="margin-left: 45px; margin-top: 10px; margin-bottom: 15px;" type="submit" name="addCART" value="Thêm vào giỏ hàng">
-                    </form>';
-                     echo '<p style="margin-left: 30px;">'.$mo_ta.'</p>';
-
-                ?> -->
-            </div>
-            
-                
-                
-                
-               
-
-
-            </div>
-            
-
              <!-- BOX BÌNH LUẬN  -->
              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -178,26 +136,39 @@ echo '<p class="product-desc"> <strong>MÔ TẢ:</strong>'.$mo_ta.'</p>';
 
 
              <!-- SẢN PHẨM CÙNG LOẠI -->
-             <div class="row margin-bottom">
+             <div class="">
 
-            <div class="box-title">SẢN PHẨM CÙNG LOẠI</div>
+            <div class="box-title"><h2>SẢN PHẨM CÙNG LOẠI</h2></div>
 
-            <div class="row box-content">
+            <div class="sanpham_cl">
                 <?php
                     foreach ($spkhac as $same_kind) {
                        extract($same_kind);
                        $link_sp = "index.php?act=sanphamchitiet&idsp=".$ma_hh;
-
-                       echo '<li><a href="'.$link_sp.'">'.$te_hh.'</a></li>';
+                    
+                       echo '<ul>
+                       <li><a href="'.$link_sp.'">'.$te_hh.'</a></li>
+                       </ul>';
                     }
 
                 ?>
-
-                
-
             </div>
 
             </div>
+            <style>
+    .sanpham_cl{
+        
+        margin:20px 100px 70px 100px;
+        text-align: center;
+    }
+    ul li{
+      padding: 10px;
+    }
+    ul li a{
+      color: black;
+    }
+
+</style>
 
     </div>
 

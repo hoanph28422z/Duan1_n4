@@ -1,15 +1,15 @@
 
 <div style="margin-top: 100px;" class="row">
-        <div class="box-left">
-
-            <div class="row margin-bottom">
+       
+<div style="margin: 20px;padding:10px;" class="">
+            <div style="" class="">
 
                            
                     <div class="box-title">CẢM ƠN</div>
 
                   
 
-                        <div class="row box-bill margin-bottom">
+                        <div style="padding: 10px;" class="box-bill">
                                 
                                     <p>Cảm ơn quí khách đã đặt hàng</p>
                             
@@ -27,7 +27,7 @@
                 ?>
 
 
-                        <div class="row margin-bottom">
+                        <div class="row">
 
                         <div class="box-title">MÃ ĐƠN HÀNG</div>
                         <div class="row box-bill">
@@ -37,7 +37,7 @@
                         </div>
                         </div>
 
-
+</div>
                         <div class="row margin-bottom">
 
                         <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
@@ -80,7 +80,7 @@
 
 
 
-                    <div class="row margin-bottom">
+                    <div class="row">
 
                         <div class="box-title">CHI TIẾT GIỎ HÀNG</div>
 
@@ -106,17 +106,7 @@
                     </div>
                         </div>
 
-
-                        
-
-                       
-
-
-
-                    
-                   
-                    
-                    
+        
             </div>
        
 

@@ -1,6 +1,6 @@
 
 <style>
-    .row{
+    .mycart{
         
         margin:100px 100px 150px 100px;
         text-align: center;
@@ -36,7 +36,7 @@ td {
 
 
 
-<div class="row">
+<div class="mycart">
 
                     <div class="box-title">
                         ĐƠN HÀNG CỦA TÔI

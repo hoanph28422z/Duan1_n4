@@ -1,5 +1,37 @@
+<style>
+    .row{
+        
+        text-align: center;
+    }
+    table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
 
-<div style="margin-top: 200px;" class="row margin-bottom">
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 10px;
+}
+</style>
+<div style="margin-top: 100px;" class="row">
+
             <div class="box-left">
                            
                     <form action="index.php?act=billconfirm" method="post" class="billform">
@@ -54,7 +86,7 @@
                         </div>
 
 
-                        <div class="row margin-bottom">
+                        <div class="row">
 
                         <div class="box-title">GIỎ HÀNG</div>
 
