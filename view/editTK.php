@@ -1,52 +1,9 @@
-<div style="margin-top: 85px;" class="edit_tk">
 
-            <!-- chi tiết sản phẩm  -->
-        <div class="row margin-bottom">
-
-            <div class="box-title"><h2>CẬP NHẬT TÀI KHOẢN</h2></div>
-
-            <div class="row box-content formDK">
-
-            <?php
-
-                if (isset($_SESSION['info_user']) && (is_array($_SESSION['info_user']))) {
-                    extract($_SESSION['info_user']);
-                    // var_dump($_SESSION['info_user']);
-                }
-
-            ?>
-        
-                <form action="index.php?act=editTK" method="post">
-                
-                        <label for>Username</label><br>
-                        <input type="text" name="user" value="<?=$ho_ten ?>"> <br> <br>
-                        <label for>Email</label><br>
-                        <input type="email" name="email" value="<?=$email ?>"> <br> <br>
-                        <label for>PassWord</label><br>
-                        <input type="password" name="pass" value="<?=$mat_khau ?>"> <br> <br>
-                        
-                        <input type="hidden" name="id" value="<?=$ma_kh ?>">
-
-
-                        <input type="submit" name="capnhat" value="Cập nhật">
-                        <input type="reset" value="Nhập lại">
-
-                        <h4 style="color: #16C60C;">
-                        <?php 
-                           if (isset($thongbao)&&($thongbao!="")) {
-                            echo $thongbao;
-                           }
-                            
-                            ?>
-                            </h4>
-                    </form>
-                
-            </div>
-            <style>
-                .edit_tk{
-                        background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
-                }
-                form {
+<style>
+.edit_tk{
+ background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
+}
+ .form-group {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -81,6 +38,52 @@ input[type="reset"] {
   cursor: pointer;
 }
             </style>
+
+<div style="margin-top: 85px;" class="edit_tk">
+
+            <!-- chi tiết sản phẩm  -->
+        <div class="row margin-bottom">
+
+            <div class="box-title"><h2>CẬP NHẬT TÀI KHOẢN</h2></div>
+
+            <div class="row box-content formDK">
+
+            <?php
+
+                if (isset($_SESSION['info_user']) && (is_array($_SESSION['info_user']))) {
+                    extract($_SESSION['info_user']);
+                    // var_dump($_SESSION['info_user']);
+                }
+
+            ?>
+        
+                <form class="form-group" action="index.php?act=editTK" method="post">
+                
+                        <label for>Username</label><br>
+                        <input  type="text" name="user" value="<?=$ho_ten ?>"> <br> <br>
+                        <label for>Email</label><br>
+                        <input  type="email" name="email" value="<?=$email ?>"> <br> <br>
+                        <label for>PassWord</label><br>
+                        <input type="password" name="pass" value="<?=$mat_khau ?>"> <br> <br>
+                        
+                        <input type="hidden" name="id" value="<?=$ma_kh ?>">
+
+
+                        <input  type="submit" name="capnhat" value="Cập nhật">
+                        <input  type="reset" value="Nhập lại">
+
+                        <h4 style="color: #16C60C;">
+                        <?php 
+                           if (isset($thongbao)&&($thongbao!="")) {
+                            echo $thongbao;
+                           }
+                            
+                            ?>
+                            </h4>
+                    </form>
+                
+            </div>
+            
             
                 
                 
@@ -94,5 +97,3 @@ input[type="reset"] {
     </div>
 
           
-
-        

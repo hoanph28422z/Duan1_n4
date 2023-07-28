@@ -1,36 +1,4 @@
-<style>
-    .row{
-        
-        text-align: center;
-    }
-    table {
-  border-collapse: collapse; /* remove space between table cells */
-  width: 100%;
-  /* max-width: 800px; */
-  margin: 0 auto; /* center the table */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
 
-thead {
-  background-color: #333;
-  color: #fff;
-}
-
-th {
-  padding: 10px;
-  text-align: center;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-td {
-  padding: 10px;
-}
-</style>
-<div style="margin-top: 100px;" class="row">
 
             <div class="box-left">
                            
@@ -118,6 +86,8 @@ td {
 
                     
                     </form>
+            </div>
+
                     
                     <style>
                       input[type="submit"] {
@@ -138,6 +108,36 @@ td {
 input[type="submit"]:hover {
   background-color: #3e8e41; /* màu nền khi hover */
   color: white; /* màu chữ khi hover */
+}
+.box-left{
+  margin-top: 100px;
+        text-align: center;
+    }
+    table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 10px;
 }
                     </style>
             </div>

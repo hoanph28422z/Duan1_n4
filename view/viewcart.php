@@ -8,13 +8,54 @@
                     <div class="box-content tableCART">
 
                         <table>
+                                <tr>
+                                  <thead>
+                                    <th>STT</th>
+                                  <th>Hình</th>
+                                  <th>Sản phẩm</th>
+                                  <th>Đơn giá</th>
+                                  <th>Số lượng</th>
+                                  <th>Thành tiền</th>
+                                  <th></th>
+                                  </thead>
+                                </tr>
+                                <?php
+                                $tongtien=0;
+                                $i=0;
+                              foreach ($_SESSION['mycart'] as $cart) {
+                            $hinh = $img_path.$cart[2];
+                            $ttien = $cart[3]*$cart[4];
+                            $tongtien = $tongtien + $ttien;
+                          $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="HỦY"></a>';
+                           echo '
+                           <tr>
+                           <td>'.$i.'</td>
+                         <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
+                        <td>'.$cart[1].'</td>
+                        <td>'.$cart[3].'</td>
+                      <td>'.$cart[4].'</td>
+                      <td>'.$ttien.'</td>
+                      <td>'.$xoasp.'</td>
+                      </tr>';
+                                          
+                                          
+                    $i+=1;  
+                                          
+     }
+     echo '<tr>
+            <td>Tổng đơn hàng</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>'.$tongtien.'</td>
+            <th></th>
+               
+            </tr>';
+                                          
                                 
-                            <?php
-                              viewcart(1);
-
-                            ?>
-
                                 
+?>
 
 
                                 
@@ -61,6 +102,34 @@ input[type="button"] {
 input[type="button"]:hover {
   background-color: #3e8e41; /* màu nền khi hover */
   color: white; /* màu chữ khi hover */
+}
+
+table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 1000px;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 70px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 20px;
 }
                     </style>
                     

@@ -1,40 +1,6 @@
 
 
 
-<style>
-    .row{
-        /* margin:100px 100px 150px 100px; */
-        text-align: center;
-        
-    }
-    table {
-  border-collapse: collapse; /* remove space between table cells */
-  width: 1000px;
-  /* max-width: 800px; */
-  margin: 0 auto; /* center the table */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  margin-bottom: 70px;
-}
-
-thead {
-  background-color: #333;
-  color: #fff;
-}
-
-th {
-  padding: 10px;
-  text-align: center;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-td {
-  padding: 20px;
-}
-</style>    
 
 <?php
 
@@ -46,14 +12,14 @@ td {
 
         if ($del==1) {
 
-            $xoasp_th = '<th>Thao tác</th>';
+
             $xoasp_td2 = '<td></td>';
             
 
             
         }else{
             
-            $xoasp_th="";
+
             $xoasp_td2="";
         }
 
@@ -69,7 +35,7 @@ td {
                 <th>SỐ LƯỢNG</th>
                 <th>THÀNH TIỀN</th>
                
-                '.$xoasp_th.'
+                
                 </thead>
                 </tr>
         </div>
@@ -79,16 +45,18 @@ td {
         $hinh = $img_path.$cart[2];
         $ttien = $cart[3]*$cart[4];
         $tongtien = $tongtien + $ttien;
-            $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="Xoa"></a>';
+            // $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="Xoa"></a>';
                     echo '
-                     <tr>
+
+                     <tr class"mycart">
+                     
                         <td>'.$i.'</td>
                         <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
                         <td>'.$cart[1].'</td>
                         <td>'.$cart[3].'</td>
                         <td>'.$cart[4].'</td>
                         <td>'.$ttien.'</td>
-                        <td>'.$xoasp.'</td>
+
                     </tr>';
 
 
@@ -316,3 +284,38 @@ td {
 
 
 ?>
+<style>
+    .row{
+        /* margin:100px 100px 150px 100px; */
+        text-align: center;
+        
+    }
+    table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 1000px;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 70px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding:20px;
+
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 20px;
+}
+</style>    

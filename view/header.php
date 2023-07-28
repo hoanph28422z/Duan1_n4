@@ -27,7 +27,9 @@
         <a href="index.php?act=logout"><i class='bx bx-log-out'></i></a>
         </div>
         <div class="search-box">
-            <input type="search" id="" placeholder="Search Header">
+            <form action="index.php?act=sanpham" method="post">
+            <input type="text" name="kyw" placeholder="Search Header">
+            </form>
         </div>
         
     </header>   

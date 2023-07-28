@@ -1,17 +1,17 @@
 
-<div style="margin-top: 100px;" class="row">
+<div class="viewcart_all">
        
 <div style="margin: 20px;padding:10px;" class="">
-            <div style="" class="">
+            <div class="">
 
                            
-                    <div class="box-title">CẢM ƠN</div>
+                    <div class="box-title"><H2>CẢM ƠN</H2></div>
 
                   
 
                         <div style="padding: 10px;" class="box-bill">
                                 
-                                    <p>Cảm ơn quí khách đã đặt hàng</p>
+                                    <h3>Cảm ơn quí khách đã đặt hàng</h3>
                             
                         </div>
 
@@ -108,7 +108,12 @@
 
         
             </div>
-       
+            <style>
+     .viewcart_all{
+        text-align: center;
+        margin-top: 85px;
+    }
+</style>
 
    
             

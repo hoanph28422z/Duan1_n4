@@ -60,7 +60,8 @@ echo '<p class="product-desc"> <strong>MÔ TẢ:</strong>'.$mo_ta.'</p>';
     width: 500px;
     height: 500px;
     margin-top: 120px;
-    border-radius:50%;
+    border-radius:20px;
+    padding: 20px;
   }
   
   .product-info {

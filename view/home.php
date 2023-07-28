@@ -82,47 +82,6 @@
                     }
             ?>
 
-            
-            <!-- <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div> -->
-            <!-- <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="../fame/img/p1.png" alt="">
-                <h3>Americano Pure</h3>
-                <div class="content">
-                    <span>$25</span>
-                    <a href="#">Add to Cart</a>
-                </div>
-            </div> -->
         </div>
     </section>
  

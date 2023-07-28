@@ -108,6 +108,30 @@
             
             // include "./view/login.php";
             // trang sản phẩm chi tiết
+            case 'sanpham':
+                if (isset($_POST['kyw']) && ($_POST['kyw']!="")) {
+                    $kyw = $_POST['kyw'];
+
+                }else{
+                    $kyw="";
+                }
+
+
+
+                if (isset($_GET['iddm']) && ($_GET['iddm'] >0)) {
+                    $iddm = $_GET['iddm'];
+                    
+                }else{
+                    $iddm = 0;
+                }
+
+                $dssp = selectall_prod($kyw, $iddm);
+                $ten_dm = select_name_cate($iddm);
+                
+                include_once "view/sanpham.php";
+                
+
+                break;
 
             case 'sanphamchitiet':
 
