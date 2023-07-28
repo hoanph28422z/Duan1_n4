@@ -65,7 +65,36 @@
 
                     case 'editTK':
 
-                        
+                        if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                            $ho_ten = $_POST['user'];
+                            $mat_khau = $_POST['pass'];
+                            $email = $_POST['email'];
+                            $id = $_POST['id'];
+        
+                            update_user($ho_ten, $email, $mat_khau, $id);
+                            $_SESSION['info_user'] = check_user($ho_ten, $mat_khau);
+                            header('location: index.php?act=editTK');
+                        }
+        
+                        include_once "view/editTK.php";
+                        break;
+        
+        
+                    case 'quenMK':
+        
+                        if (isset($_POST['guiemail']) && ($_POST['guiemail'])) {
+                            
+                            $email = $_POST['email'];
+                            $check_email = check_email($email);
+                            if (is_array($check_email)) {
+                                $thongbao = "Mật khẩu của bạn là: ".$check_email['mat_khau'];
+                            }else{
+                                $thongbao="Email không tồn tại trong hệ thống";
+                            }
+                            
+                        }
+        
+                        include_once "view/forget-pass.php";
                         break;
         
         

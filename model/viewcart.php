@@ -68,7 +68,7 @@ td {
                 <th>ĐƠN GIÁ</th>
                 <th>SỐ LƯỢNG</th>
                 <th>THÀNH TIỀN</th>
-                <th></th>
+               
                 '.$xoasp_th.'
                 </thead>
                 </tr>

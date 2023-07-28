@@ -1,9 +1,9 @@
 
 <div class="viewcart">
   
-            <div class="box-left">
+            <div class="viewcart_once">
                            
-                    <div class="box-title">GIỎ HÀNG</div>
+                    <div class="box-title"><h2>GIỎ HÀNG</h2><i class='bx bx-cart-alt bx-tada' ></i></div>
 
                     <div class="box-content tableCART">
 
@@ -29,13 +29,19 @@
                  
 
                     </div>
+                    </div>
                     <style>
 
 
 
 .viewcart{
-  margin-top: 100px;
+  margin-top: 83px;
   text-align: center;
+
+}
+.viewcart_once{
+  background-image: url('https://cdn.wallpapersafari.com/51/9/aiDE7f.png');
+
 }
 
 input[type="button"] {
@@ -58,7 +64,7 @@ input[type="button"]:hover {
 }
                     </style>
                     
-            </div>
+          
        
 </div>
    
