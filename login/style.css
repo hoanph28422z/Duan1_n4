@@ -9,8 +9,9 @@ body{
 
 }
 .background{
+    margin-top: -109px;
     width: 100%;
-    height: 100vh;
+    height: 156vh;
     z-index: 1;
     background: url("./img/home.jpg") no-repeat;
     background-size: cover;
@@ -70,6 +71,7 @@ content h2{
 .text-sci p{
     font-size: 16px;
     margin: 30px 0;
+    text-align: justify;
 }
 
 .list-icons a i{

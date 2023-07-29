@@ -20,6 +20,7 @@
     // $dstop10 = selectall_prod_top10();
 
     if (isset($_GET['act']) && ($_GET['act'])  != "") {
+
         $act = $_GET['act'];
 
         switch ($act) {
@@ -161,26 +162,34 @@
                 case 'addCART':
                     if (isset($_POST['addCART']) && ($_POST['addCART'])) {
                         
-                            // do something with $_POST['id']
-                        
                         $id = $_POST['id'];
-                        $tensp = $_POST['tensp'];
-                        $anh = $_POST['anh'];
-                        $gia = $_POST['gia'];
-                        $soluong = 1;
-                        $ttien = $soluong*$gia;
-                        $prodADD = [$id, $tensp, $anh, $gia, $soluong, $ttien];
+
+                        if(!isset($_SESSION['mycart'][$id])) {
+
+                            $tensp = $_POST['tensp'];
+                            $anh = $_POST['anh'];
+                            $gia = $_POST['gia'];
+                            $soluong = 1;
+                            $ttien = $soluong*$gia;
+                            $prodADD = [$id, $tensp, $anh, $gia, $soluong, $ttien];
+                            
+                            $_SESSION['mycart'][$id] = $prodADD;
+                        } else {
+                            $_SESSION['mycart'][$id][4] += 1;
+                            $_SESSION['mycart'][$id][5] = $_SESSION['mycart'][$id][4] * $_SESSION['mycart'][$id][3];
+                        }                        
                         
-                        array_push($_SESSION['mycart'], $prodADD);
     
-                        
+                        // echo "<pre>";
+                        // print_r($_SESSION['mycart']);
+                        // die;
                         
                     }
                     header('Location: index.php?act=viewcart');
                      break;
     
                 case 'delcart':
-    
+
                     if (isset($_GET['idcart'])) {
                         // hàm array_slice dùng để xoa mảng. Gồm 3 tham số: cái mảng, vị trí cần xóa, xóa bao nhiêu phần tử (ở đây 1 là chỉ xóa vị trí đó)
                         array_slice($_SESSION['mycart'], $_GET['idcart'], 1);

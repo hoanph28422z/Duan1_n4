@@ -64,7 +64,7 @@
                         </div>
                         
                         <div class="content_home">
-                        <span>$ '.$don_gia.'</span>
+                        <span>'.$don_gia.'VND</span>
                         <a href="'.$link_sp.'">'.$te_hh.'</a>
 
                         <form action="index.php?act=addCART" method="post">
