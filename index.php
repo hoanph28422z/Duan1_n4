@@ -179,7 +179,6 @@
                             $_SESSION['mycart'][$id][5] = $_SESSION['mycart'][$id][4] * $_SESSION['mycart'][$id][3];
                         }                        
                         
-    
                         // echo "<pre>";
                         // print_r($_SESSION['mycart']);
                         // die;
@@ -187,9 +186,35 @@
                     }
                     header('Location: index.php?act=viewcart');
                      break;
+                   case 'update':
+                    if(isset($_POST['update_click'])){
+                        if (isset($_POST['addCART']) && ($_POST['addCART'])) {
+                        
+                            $id = $_POST['id'];
     
-                case 'delcart':
+                            if(!isset($_SESSION['mycart'][$id])) {
+    
+                                $tensp = $_POST['tensp'];
+                                $anh = $_POST['anh'];
+                                $gia = $_POST['gia'];
+                                $soluong = 1;
+                                $ttien = $soluong*$gia;
+                                $prodADD = [$id, $tensp, $anh, $gia, $soluong, $ttien];
+                                
+                                $_SESSION['mycart'][$id] = $prodADD;
+                            } else {
+                                $_SESSION['mycart'][$id][4] += 1;
+                                $_SESSION['mycart'][$id][5] = $_SESSION['mycart'][$id][4] * $_SESSION['mycart'][$id][3];
+                            }                 
+                        }
+                    }else{
 
+                    }
+                    header('Location: index.php?act=viewcart');
+
+                    break;
+                case 'delcart':
+                    
                     if (isset($_GET['idcart'])) {
                         // hàm array_slice dùng để xoa mảng. Gồm 3 tham số: cái mảng, vị trí cần xóa, xóa bao nhiêu phần tử (ở đây 1 là chỉ xóa vị trí đó)
                         array_slice($_SESSION['mycart'], $_GET['idcart'], 1);
@@ -200,6 +225,9 @@
     
                     header('Location:index.php?act=viewcart');
                     break;
+                    // echo "<pre>";
+                    //     print_r($_GET['idcart']);
+                    //     die;
     
 
 

@@ -5,7 +5,7 @@
     <div class="box-title">
       <h2>GIỎ HÀNG</h2><i class='bx bx-cart-alt bx-tada'></i>
     </div>
-
+<form action="index.php?act=update" method="post">
     <div class="box-content tableCART">
 
       <table>
@@ -22,27 +22,28 @@
         </tr>
         <?php
         $tongtien = 0;
-        $i = 0;
+        
         foreach ($_SESSION['mycart'] as $id => $cart) {
           $hinh = $img_path . $cart[2];
           $ttien = $cart[3] * $cart[4];
           $tongtien = $tongtien + $ttien;
-          $xoasp = '<a href="index.php?act=delcart&idcart=' .$id .'"><input type="button" value="HỦY"></a>';
+          $xoasp = '<a href="index.php?act=delcart&idcart='. $id .'"><input type="button" value="HỦY"></a>';
           echo '
                            <tr>
-                           <td>' . $i . '</td>
+                           <td>' . $id . '</td>
                          <td><img src="' . $hinh . '" alt="" width="98%" height="100px; padding-top: 3px;"></td>
                         <td>' . $cart[1] . '</td>
                         <td>' . $cart[3] . '</td>
-                      <td>' . $cart[4] . '</td>
+                      <td><input type="number" value="' . $cart[4] .'" name="soluong">
+                      <input type="submit" value="Cập Nhật" name="update_click"></td>
                       <td>' . $ttien . '</td>
                       <td>' . $xoasp . '</td>
                       </tr>';
 
 
-          $i += 1;
         }
-        echo '<tr>
+        echo '
+        <tr class="sum">
             <td>Tổng đơn hàng</td>
             <td></td>
             <td></td>
@@ -71,6 +72,7 @@
 
     </div>
   </div>
+      </form>
   <style>
     .viewcart {
       margin-top: 83px;
@@ -143,6 +145,9 @@
 
     td {
       padding: 20px;
+    }
+    .sum{
+      background-color: gray;
     }
   </style>
 

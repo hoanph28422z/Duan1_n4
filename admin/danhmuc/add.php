@@ -1,5 +1,5 @@
 
-<div style="margin-top: 150px;" class="row">
+<div class="row">
             <div class="row  form-title"><h1>Thêm mới loại hàng hóa</h1></div>
             <div class="row form-content">
                     <form action="index.php?act=adddm" method="post">

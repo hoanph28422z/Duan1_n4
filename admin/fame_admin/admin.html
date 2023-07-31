@@ -1,4 +1,29 @@
-<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+	<div id="mySidenav" class="sidenav">
+        <p class="logo">Admin <span class="menu">☰</span></p>
+        <p class="logo1"> <span class="menu1">☰</span></p>
+      <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>Trang Chủ</a>
+      <a href="#"class="icon-a"><i class="fa fa-pie-chart icons"></i>Danh Mục</a>
+      <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
+      <a href="#"class="icon-a"><i class="fa fa-user"></i>Khách Hàng</a>
+      <a href="#"class="icon-a"><i class="fa fa-shopping-bag"></i>Đơn Hàng</a>
+      <a href="#"class="icon-a"><i class="fa fa-inbox"></i>Bình Luận</a>
+      <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i>Thống Kê</a>
+
+    
+    
+    </div>
+    <div id="main">
         <div class="head">
             <div class="col-div-6">
     <p class="nav"> Trang Chủ</p>
@@ -174,4 +199,50 @@
     </div>
     
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
     
+      $(".menu").click(function(){
+        $("#mySidenav").css('width','70px');
+        $("#main").css('margin-left','70px');
+        $(".logo").css('display', 'none');
+        $(".logo1").css('display','block');
+        $(".logo span").css('visibility', 'visible');
+         $(".logo span").css('margin-left', '-10px');
+         $(".icon-a").css('visibility', 'hidden');
+         $(".icon-a").css('height', '25px');
+         $(".icons").css('visibility', 'visible');
+         $(".icons").css('margin-left', '-8px');
+          $(".menu1").css('display','block');
+          $(".menu").css('display','none');
+      });
+    
+    $(".menu1").click(function(){
+        $("#mySidenav").css('width','300px');
+        $("#main").css('margin-left','300px');
+        $(".logo").css('visibility', 'visible');
+        $(".logo").css('display','block');
+         $(".icon-a").css('visibility', 'visible');
+         $(".icons").css('visibility', 'visible');
+         $(".menu").css('display','block');
+          $(".menu1").css('display','none');
+     });
+    
+    </script>
+    <script>
+    $(document).ready(function(){
+      $(".profile p").click(function(){
+        $(".profile-div").toggle();
+        
+      });
+      $(".noti-icon").click(function(){
+        $(".notification-div").toggle();
+      });
+    
+    
+    
+      
+    });
+    </script>
+</body>
+</html>

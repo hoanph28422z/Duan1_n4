@@ -29,21 +29,6 @@
         
         
         <div class="products-container">
-                <style>
-.add-to-cart {
-    text-transform: uppercase;
-    color: #1b1b1b;
-    border: 2px solid #bc9667;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-left: 15px;
-    margin-top: 10px;
-  }
-  .add-to-cart:hover {
-  background-color: #bc9667;
-}
-
-                </style>
                 <?php
                     $i =0;
                     foreach ($spnews as $sp) {
@@ -62,11 +47,11 @@
                         <div class="image">
                         <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
                         </div>
-                        
+                        <div class="ten_sp">
+                        <a href="'.$link_sp.'">'.$te_hh.'</a>
+                        </div>
                         <div class="content_home">
                         <span>'.$don_gia.'VND</span>
-                        <a href="'.$link_sp.'">'.$te_hh.'</a>
-
                         <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">
                             <input type="hidden" name="tensp" value="'.$te_hh.'">
@@ -84,4 +69,37 @@
 
         </div>
     </section>
- 
+    <style>
+.add-to-cart {
+    text-transform: uppercase;
+    color: #1b1b1b;
+    border: 2px solid #bc9667;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  .add-to-cart:hover {
+  background-color: #bc9667;
+}
+.products-container .box .content_home span {
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.ten_sp{
+    text-align: center;
+    margin-top: 20px;
+}
+.ten_sp a{
+    padding:4px 0.3rem;
+    color:#1b1b1b;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.products-container .box .content_home{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+ </style>

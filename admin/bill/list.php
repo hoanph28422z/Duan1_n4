@@ -1,4 +1,4 @@
-<div style="margin-top: 150px;" class="row">
+<div class="row">
             <div class="row margin-bottom  form-title"><h1>Quản lý loại hàng</h1></div>
 
             <form action="index.php?act=dsdh" class="margin-bottom" method="post">
@@ -8,6 +8,17 @@
                             <select name="idKH" id="">
                             
                             <option value="0" selected>Tất cả</option>
+                            <?php
+                        foreach ($dsTK as $mytk) {
+                         
+                            ?>
+                                <option value="<?php echo $mytk['id'] ?>"><?php echo $mytk['name_bill'] ?></option>
+
+                                <?php
+
+                        }
+
+                        ?>
 
                             </select>
                
@@ -24,6 +35,7 @@
                                         <th></th>
                                         <th>MÃ ĐƠN HÀNG </th>
                                         <th>KHÁCH HÀNG</th>
+                                        <th>EMAIL</th>
                                         <th>SỐ LƯỢNG HÀNG</th>
                                         <th>GIÁ TRỊ ĐƠN HÀNG</th>
                                         <th>TÌNH TRẠNG ĐƠN HÀNG</th>
@@ -47,9 +59,8 @@
                                     echo ' <tr>
                                     <td><input type="checkbox" name="" id=""></td>
                                     <td>DAM-'.$id.'</td>
-                                    <td>'.$name_bill.'<br>
-                                        '.$email_bill.'<br>
-                                    </td>    
+                                    <td>'.$name_bill.'</td>
+                                    <td>'.$email_bill.'</td>    
                                     <td>'.$soluongSP.'</td>    
                                     <td>'.$tong_dh_bill.'$</td>    
                                     <td><p style="padding: 3px 5px; color: yellow; border-radius:  2px 10px 2px 10px;background-color: green;">'.$ttdh.'</p></td>    

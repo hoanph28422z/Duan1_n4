@@ -1,4 +1,4 @@
-<div style="margin-top: 150px;" class="row">
+<div class="row">
             <div class="row margin-bottom  form-title"><h1>DANH SÁCH TÀI KHOẢN</h1></div>
 
             <div class="row form-content">

@@ -15,7 +15,7 @@ $anh = "no photo";
 
 
 ?>
-<div style="margin-top: 150px;" class="row">
+<div class="row">
             <div class="row margin-bottom  form-title"><h1>Cập nhật sản phẩm</h1></div>
 
             
