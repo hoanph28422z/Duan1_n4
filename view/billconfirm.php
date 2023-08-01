@@ -1,17 +1,17 @@
 
-<div class="row margin-bottom">
-        <div class="box-left">
-
-            <div class="row margin-bottom">
+<div class="viewcart_all">
+       
+<div style="margin: 20px;padding:10px;" class="">
+            <div class="">
 
                            
-                    <div class="box-title">CẢM ƠN</div>
+                    <div class="box-title"><H2>CẢM ƠN</H2></div>
 
                   
 
-                        <div class="row box-bill margin-bottom">
+                        <div style="padding: 10px;" class="box-bill">
                                 
-                                    <p>Cảm ơn quí khách đã đặt hàng</p>
+                                    <h3>Cảm ơn quí khách đã đặt hàng</h3>
                             
                         </div>
 
@@ -27,7 +27,7 @@
                 ?>
 
 
-                        <div class="row margin-bottom">
+                        <div class="row">
 
                         <div class="box-title">MÃ ĐƠN HÀNG</div>
                         <div class="row box-bill">
@@ -37,7 +37,7 @@
                         </div>
                         </div>
 
-
+</div>
                         <div class="row margin-bottom">
 
                         <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
@@ -80,7 +80,7 @@
 
 
 
-                    <div class="row margin-bottom">
+                    <div class="row">
 
                         <div class="box-title">CHI TIẾT GIỎ HÀNG</div>
 
@@ -106,19 +106,14 @@
                     </div>
                         </div>
 
-
-                        
-
-                       
-
-
-
-                    
-                   
-                    
-                    
+        
             </div>
-       
+            <style>
+     .viewcart_all{
+        text-align: center;
+        margin-top: 85px;
+    }
+</style>
 
    
             

@@ -1,153 +1,27 @@
-<!-- <!DOCTYPE html>
+<!-- <!--  -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./fame_admin/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row margin-bottom headeradmin">
-            <h1>ADMIN</h1>
-        </div>
-        <div class="row margin-bottom menu">
+    
+	<div id="mySidenav" class="sidenav">
+        <p class="logo">Admin <span class="menu">☰</span></p>
+        <p class="logo1"> <span class="menu1">☰</span></p>
+      <a href="../admin/index.php" class="icon-a"><i class="fa fa-dashboard icons"></i>Trang Chủ</a>
+      <a href="index.php?act=adddm"class="icon-a"><i class="fa fa-pie-chart icons"></i>Danh Mục</a>
+      <a href="index.php?act=addsp"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
+      <a href="index.php?act=dskh"class="icon-a"><i class="fa fa-user"></i>Khách Hàng</a>
+      <a href="index.php?act=dsdh"class="icon-a"><i class="fa fa-shopping-bag"></i>Đơn Hàng</a>
+      <a href="index.php?act=dsbl"class="icon-a"><i class="fa fa-inbox"></i>Bình Luận</a>
+      <a href="index.php?act=thongke"class="icon-a"><i class="fa fa-list-alt icons"></i>Thống Kê</a>
 
-            <ul>
-                <li><a href="../admin/index.php">Trang chủ</a></li>
-                <li><a href="index.php?act=adddm">Danh mục</a></li>
-                <li><a href="index.php?act=addsp">Hàng hóa</a></li>
-                <li><a href="index.php?act=dskh">Khách hàng</a></li>
-                <li><a href="index.php?act=dsdh">Đơn hàng</a></li>
-                <li><a href="index.php?act=dsbl">Bình luận</a></li>
-                <li><a href="index.php?act=thongke">Thống kê</a></li>
-            </ul>
-        </div> -->
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
-<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/lightcase.css"> -->
-<link rel="stylesheet" href="../assets/css/lightcase.css">
-    <!-- <link rel="stylesheet" href="assets/css/meanmenu.css"> -->
-<link rel="stylesheet" href="../assets/css//meanmenu.css">
-    <!-- <link rel="stylesheet" href="assets/css/nice-select.css"> -->
-<link rel="stylesheet" href="../assets/css/nice-select.css">
-    <!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css"> -->
-<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/animate.min.css"> -->
-<link rel="stylesheet" href="../assets/css/animate.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/jquery-ui.css"> -->
-<link rel="stylesheet" href="../assets/css/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
-<link rel="stylesheet" href="../assets/css/main.css">
-</head>
-<body>
-<header class="site-header">
-        <div class="header-top header-top__2">
-            <div class="container-fluid custom-width">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-12 align-self-center">
-                        <div class="header-top__left d-flex align-items-center">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="../assets/images/logo/logo-black.png" alt="img">
-                                </a>
-                            </div>
-                            <ul class="header-top__infos pl-75 list-unstyled d-flex align-items-center mb-0">
-                                <li><a href="tel:91800458568"><i class="fas fa-phone-square"></i> 91 800 458 568</a></li>
-                                <li><i class="fa fa-map-marker-alt"></i> Wasington Baseben</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-12  align-self-center">
-                        <div class="header-top__right header-top__right--2 d-flex justify-content-xl-end justify-content-center align-items-center">
-                            <div class="social-links social-links__2 d-flex align-items-center justify-content-md-start justify-content-center">
-                                <a href="#0" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="#0" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#0" target="_blank"><i class="fab fa-youtube"></i></a>
-                                <a href="#0" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="#0" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
-                            <a href="http://localhost/du_an_1/d-an-1/" class="site-btn">Trang khách</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="menu-area menu-area-2 custom-padding">
-            <div class="container-fluid custom-width">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-9 col-6">
-                        <div class="logo mm-only d-md-block d-lg-none">
-                            <a href="index.html">
-                                <img src="assets/images/logo/logo-black.png" alt="img">
-                            </a>
-                        </div>
-                        <div class="main-menu main-menu__2">
-                            <nav id="mobile-menu">
-                                <ul>
-                                    <li class="menu-item-has-children active"><a href="../admin/index.php">Home</a>
-                    
-                                    </li>
-                                    <li><a href="index.php?act=adddm">Danh mục</a></li>
-                                    <li><a href="index.php?act=addsp">Hàng hóa</a></li>
-                                    <li><a href="index.php?act=dskh">Khách hàng</a></li>
-                                    <li><a href="index.php?act=dsdh">Đơn hàng</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                            <li><a href="chefs.html">Chefs</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="story.html">Story</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li><a href="index.php?act=dsbl">Bình luận</a>
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="product-details.html">Shop Details</a></li>
-                                            <li><a href="cart.html">Shop Cart</a></li>
-                                            <li><a href="checkout.html">Shop Checkout</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li><a href="index.php?act=thongke">Thống kê</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-3 col-6 align-self-center">
-                        <div class="menu-area__right menu-area__right--2 d-flex justify-content-end align-items-center">
-                            <div class="search">
-                                <div class="search__trigger item">
-                                    <span class="open"><i class="far fa-search"></i></span>
-									<span class="close"><i class="fal fa-times"></i></span>
-                                </div>
-                                <div class="search__form">
-                                    <form role="search" method="get" action="https://xpressrow.com/html/cafena/cafena/index.html">
-                                        <input type="search" name="s" value="" placeholder="Search Keywords">
-                                        <button type="submit"><i class="far fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="hamburger-trigger item">
-                                <i class="far fa-bars">
-                                    
-                                </i>
-                            </div>
-                            <div class="cart cart-trigger item position-relative">
-                                <i class="fa fa-shopping-basket"></i>
-                                <span class="cart__count">3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-</body>
-</html>
+    
+    
+    </div>

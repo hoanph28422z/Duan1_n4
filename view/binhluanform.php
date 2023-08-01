@@ -24,7 +24,7 @@
 </head>
 <body>
     
-    <div class="row margin-bottom">
+    <div class="row">
 
 
 
@@ -38,7 +38,7 @@
                 
                 foreach ($dsbl as $bl) {
                     extract($bl);
-
+                    
                     echo '<tr><td>'.$noi_dung.'</td>';
                     echo '<td>'.$ma_kh.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
@@ -55,12 +55,17 @@
 
     ?>
 
-        <div class="box-footer searchbox">
+        <div class="">
 
-            <form action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
+            <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
                 <input type="hidden" name="ma_hh" value="<?=$idprod ?>">
-                <input type="text" style="width: 300px; border-radius: 5px; padding: 5px 20px;" placeholder="Nhập bình luận" name="noidung" id=""> <br><br>
-                <input style="margin-left: 350px; position: absolute; margin-top: -50px;padding: 5px 20px; border-radius: 3px; border: 1px solid gray;" type="submit" name="guibinhluan" value="Gửi bình luận">
+                <input type="text" style="width: 500px;height: 50px;padding: 10px;" placeholder="Nhập bình luận" name="noidung" id=""> <br><br>
+                <input style="width: 150px;height: 50px;background-color: #4CAF50;
+                               color: white;
+                               padding:10px;
+                               border: none;
+                               border-radius: 4px;
+                               cursor: pointer;" type="submit" name="guibinhluan" value="Gửi bình luận">
             </form>
         </div>
 

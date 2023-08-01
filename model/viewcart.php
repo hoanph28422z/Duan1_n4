@@ -1,78 +1,66 @@
+
+
+
+
 <?php
 
     function viewcart($del){
         global $img_path;
         $i=0;
         $tongtien=0;
-        $so =0;
+       
 
         if ($del==1) {
 
-            $xoasp_th = '<th>Thao tác</th>';
+
             $xoasp_td2 = '<td></td>';
             
 
             
         }else{
             
-            $xoasp_th="";
+
             $xoasp_td2="";
         }
 
 
         echo '
+        <div class="row">
                 <tr>
+                <thead>
                 <th>STT</th>
                 <th>HÌNH</th>
                 <th>SẢN PHẨM</th>
                 <th>ĐƠN GIÁ</th>
                 <th>SỐ LƯỢNG</th>
                 <th>THÀNH TIỀN</th>
-                '.$xoasp_th.'
-
+               
+                
+                </thead>
                 </tr>
-        
+        </div>
         ';
     foreach ($_SESSION['mycart'] as $cart) {
-        $i++;
 
         $hinh = $img_path.$cart[2];
         $ttien = $cart[3]*$cart[4];
         $tongtien = $tongtien + $ttien;
-
-
-        if ($del==1) {
-
-            $xoasp_td = '<td><a href="index.php?delcart&idcart='.$so.'"><i class="fa-solid fa-delete-left"></i></a></td>';
-            
-
-            
-        }else{
-            $xoasp_td="";
-           
-        }
-
-
-
-
-
+            // $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="Xoa"></a>';
                     echo '
-        
-        
-        
-        
-                     <tr>
+
+                     <tr class"mycart">
+                     
                         <td>'.$i.'</td>
                         <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
                         <td>'.$cart[1].'</td>
                         <td>'.$cart[3].'</td>
                         <td>'.$cart[4].'</td>
                         <td>'.$ttien.'</td>
-                        '.$xoasp_td.'
+
                     </tr>';
 
 
-            $so++;  
+            $i+=1;  
 
     }
 
@@ -154,7 +142,7 @@
         
         $i=0;
         $tongtien=0;
-        $so =0;
+       
 
       
         echo '
@@ -173,9 +161,9 @@
     foreach ($bill_chitiet as $cart) {
         global $img_path;
         $i++;
-
         $hinh = $img_path.$cart['img'];
-        $tongtien = $cart['thanhtien'];
+        // $ttien = $cart['price']*$cart['soluong'];
+        $tongtien+=$cart['thanhtien'];
 
 
 
@@ -195,7 +183,7 @@
                     </tr>';
 
 
-            $so++;  
+            $i+=1;  
 
     }
 
@@ -296,3 +284,38 @@
 
 
 ?>
+<style>
+    .row{
+        /* margin:100px 100px 150px 100px; */
+        text-align: center;
+        
+    }
+    table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 1000px;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 70px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding:20px;
+
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 20px;
+}
+</style>    

@@ -1,5 +1,5 @@
 
-<div class="row margin-bottom">
+
             <div class="box-left">
                            
                     <form action="index.php?act=billconfirm" method="post" class="billform">
@@ -54,7 +54,7 @@
                         </div>
 
 
-                        <div class="row margin-bottom">
+                        <div class="row">
 
                         <div class="box-title">GIỎ HÀNG</div>
 
@@ -86,8 +86,60 @@
 
                     
                     </form>
+            </div>
+
                     
-                    
+                    <style>
+                      input[type="submit"] {
+  background-color: #4CAF50; /* màu nền */
+  border: none; /* không có đường viền */
+  color: white; /* màu chữ */
+  padding: 10px 20px; /* khoảng cách giữa nút và đường viền */
+  text-align: center; /* căn giữa nội dung */
+  text-decoration: none; /* không có gạch chân */
+  display: inline-block; /* hiển thị thành khối */
+  font-size: 16px; /* cỡ chữ */
+  border-radius: 5px; /* bo góc */
+  transition-duration: 0.4s; /* thời gian chuyển động */
+  cursor: pointer; /* chỉ số chấm */
+  margin-bottom: 50px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41; /* màu nền khi hover */
+  color: white; /* màu chữ khi hover */
+}
+.box-left{
+  margin-top: 100px;
+        text-align: center;
+    }
+    table {
+  border-collapse: collapse; /* remove space between table cells */
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 0 auto; /* center the table */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 10px;
+}
+                    </style>
             </div>
        
 
