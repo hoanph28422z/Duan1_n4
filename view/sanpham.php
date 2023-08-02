@@ -20,15 +20,15 @@ if (($i==2) ||($i==5) ||  ($i==8) || ($i==11)){
 }
 
 
-echo '<div class="box'.$mr.'">
-<div class="image">
+echo '<div class="box">
+                        <div class="image">
                         <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
                         </div>
-                        
+                        <div class="ten_sp">
+                        <a href="'.$link_sp.'">'.$te_hh.'</a>
+                        </div>
                         <div class="content_home">
-                        <span>$ '.$don_gia.'</span>
-                        <a href="'.$link_sp.'"><h3>'.$te_hh.'</h3></a>
-
+                        <span>'.$don_gia.'VND</span>
                         <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">
                             <input type="hidden" name="tensp" value="'.$te_hh.'">
@@ -37,8 +37,8 @@ echo '<div class="box'.$mr.'">
                             <input class="add-to-cart" type="submit" name="addCART" value="Add to Cart">
                     </form>
                     </div>
-</div>  
-';
+                    </div>  
+                    ';
 
 $i++;
 }
@@ -56,10 +56,29 @@ $i++;
     padding: 10px 20px;
     border-radius: 4px;
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .add-to-cart:hover {
   background-color: #bc9667;
 }
-
-                </style>
+.products-container .box .content_home span {
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.ten_sp{
+    text-align: center;
+    margin-top: 20px;
+}
+.ten_sp a{
+    padding:4px 0.3rem;
+    color:#1b1b1b;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.products-container .box .content_home{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+ </style>
