@@ -11,8 +11,8 @@
 <body>
     
 	<div id="mySidenav" class="sidenav">
-        <p class="logo">Admin <span class="menu">☰</span></p>
-        <p class="logo1"> <span class="menu1">☰</span></p>
+        <p class="logo">Admin </p>
+
       <a href="../admin/index.php" class="icon-a"><i class="fa fa-dashboard icons"></i>Trang Chủ</a>
       <a href="index.php?act=adddm"class="icon-a"><i class="fa fa-pie-chart icons"></i>Danh Mục</a>
       <a href="index.php?act=addsp"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
