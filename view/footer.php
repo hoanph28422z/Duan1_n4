@@ -36,3 +36,21 @@
     </section>
     <script src="fame/main.js"></script>
     <script src="login/main.js"></script>
+        <!--========= JS Here =========-->
+        <script src="show_pro/assets/js/jquery-2.2.4.min.js"></script>
+    <script src="show_pro/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="show_pro/assets/js/jquery.meanmenu.min.js"></script>
+    <script src="show_pro/assets/js/jquery.nice-select.min.js"></script>
+    <script src="show_pro/assets/js/lightcase.js"></script>
+    <script src="show_pro/assets/js/owl.carousel.min.js"></script>
+    <script src="show_pro/assets/js/tilt.jquery.min.js"></script>
+    <script src="show_pro/assets/js/wow.min.js"></script>
+    <script src="show_pro/assets/js/jquery.easing.min.js"></script>
+    <script src="show_pro/assets/js/scrollwatch.js"></script>
+    <script src="show_pro/assets/js/sticky-header.js"></script>
+    <script src="show_pro/assets/js/waypoint.js"></script>
+    <script src="show_pro/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="show_pro/assets/js/isotope.pkgd.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfpGBFn5yRPvJrvAKoGIdj1O1aO9QisgQ"></script>
+    <script src="show_pro/assets/js/jquery-ui-slider-range.js"></script>
+    <script src="show_pro/assets/js/main.js"></script>
