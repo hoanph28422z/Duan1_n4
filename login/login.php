@@ -1,4 +1,6 @@
+<style>
 
+</style>
 
 <div style="margin-top: 100px;" class="row margin-bottom">
 
@@ -13,21 +15,13 @@
         ?>
 
 
-
+            
             <div class="user-info">
                 <!-- <h2>Thông tin người dùng</h2>
   <img class="avatar" src="path/to/user-avatar.jpg" alt="Ảnh đại diện của người dùng"> -->
-                <div class="hello">
-                    <h2>Xin chào</h2>
-                    <?= $ho_ten ?>
 
-                </div>
                 <ul>
-                    <li><strong>Tên đăng nhập:</strong> <?= $ho_ten ?></li>
-                    <li><strong>Họ tên:</strong> <?= $ho_ten ?></li>
-                    <li><strong>Email:</strong> <?= $email ?></li>
-                    <li><strong>Đơn hàng:</strong><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
-                    <li><strong>Cập nhật tài khoản:</strong> <a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
+
                     <?php
 
                     if ($vai_tro == 1) {
@@ -36,7 +30,7 @@
                     ?>
 
                         <li>
-                            <strong>Trang admin:</strong><a href="admin/index.php">Admin</a>
+                        <strong>Trang admin:</strong><a href="admin/index.php">Admin</a>
                         </li>
 
 
@@ -46,17 +40,13 @@
 
             <style>
                 .user-info {
-                    background-color: #f8f8f8;
-                    border: 1px solid #ccc;
                     padding: 20px;
                     margin: 20px;
                     border-radius: 5px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    text-align: left;
+                    text-transform: capitalize;
                 }
-
+            
                 .hello {
                     margin-right: 400px;
                 }
@@ -85,6 +75,9 @@
                 strong {
                     display: inline-block;
                     width: 150px;
+                }
+                #footer{
+                    display: none;
                 }
             </style>
 

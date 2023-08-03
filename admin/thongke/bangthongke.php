@@ -1,3 +1,22 @@
+<style>
+    .row{
+        width: 79vw;
+        margin: 0 auto;
+        position: relative;
+        left: 50px;
+
+    }
+    .btn__{
+        border: none;
+        border-radius: 5px;
+        padding: 15px ;
+        box-shadow: 1px 1px 12px rgba(35 25 15/25%);
+        font-weight: 550;
+        cursor: pointer;
+    }
+</style>
+
+
 <div class="row">
             <div class="row margin-bottom  form-title"><h1>THỐNG KÊ SẢN PHẨM THEO LOẠI</h1></div>
 
@@ -43,7 +62,7 @@
 
                     <div class="row margin-bottom10">
                            
-                            <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ"></a>
+                            <a href="index.php?act=bieudo"><input type="button" class="btn__" value="Xem biểu đồ"></a>
                         
                     </div>
 
