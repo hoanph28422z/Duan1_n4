@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="./fame_admin/style.css">
+    <style>
+      #home{
+        font-family: arial, sans-serif;
+      }
+    </style>
 </head>
 <body>
     
 	<div id="mySidenav" class="sidenav">
-        <p class="logo">Admin </p>
+        <p class="logo">Admin</p>
 
-      <a href="../admin/index.php" class="icon-a"><i class="fa fa-dashboard icons"></i>Trang Chủ</a>
+      <a href="../index.php" class="icon-a"><i class="fa fa-home icons"></i>Trang Chủ User</a>
+      <a href="../admin/index.php" class="icon-a"><i class="fa fa-dashboard icons"></i>Trang Chủ Admin</a>
+
+
       <a href="index.php?act=adddm"class="icon-a"><i class="fa fa-pie-chart icons"></i>Danh Mục</a>
       <a href="index.php?act=addsp"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
       <a href="index.php?act=dskh"class="icon-a"><i class="fa fa-user"></i>Khách Hàng</a>
