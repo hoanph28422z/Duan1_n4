@@ -99,7 +99,7 @@
     
     }
 
-
+  
 
     function insert_bill($idKH, $name_bill, $email_bill, $pttt_bill ,$ngay_dh_bill, $tong_dh_bill){
         $sql = "insert into bill(idKH, name_bill, email_bill, pttt_bill, ngay_dh_bill, tong_dh_bill) values('$idKH', '$name_bill', '$email_bill', '$pttt_bill' ,'$ngay_dh_bill', '$tong_dh_bill')";
@@ -279,8 +279,11 @@
        
     }
 
-
-
+    
+    // function update_sl_cart($soluong,$id){
+    //     $sql ="UPDATE cart set soluong='".$soluong."' WHERE id=".$id;
+    //     pdo_execute($sql);
+    // }
 
 
 ?>
