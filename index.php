@@ -61,8 +61,10 @@
                         $email = $_POST['email'];
                         $ho_ten = $_POST['user'];
                         $mat_khau = $_POST['pass'];
+                        $que_quan = $_POST['que_quan'];
+                        $sdt = $_POST['sdt'];
      
-                        insert_user($ho_ten, $email, $mat_khau);
+                        insert_user($ho_ten, $email, $mat_khau,$que_quan,$sdt);
                         $thongbao = "✔️ Thêm thành viên thành công! Vui lòng đăng nhập để bình luận và đặt hàng";
      
                      }
@@ -76,9 +78,11 @@
                             $ho_ten = $_POST['user'];
                             $mat_khau = $_POST['pass'];
                             $email = $_POST['email'];
+                            $que_quan = $_POST['que_quan'];
+                            $sdt = $_POST['sdt'];
                             $id = $_POST['id'];
         
-                            update_user($ho_ten, $email, $mat_khau, $id);
+                            update_user($ho_ten, $email, $mat_khau,$que_quan,$sdt, $id);
                             $_SESSION['info_user'] = check_user($ho_ten, $mat_khau);
                             header('location: index.php?act=editTK');
                         }

@@ -1,8 +1,8 @@
 <?php
        // TẠO MODEL MÔ-ĐUN TÀI KHOẢN
 
-       function insert_user($ho_ten, $email, $mat_khau){
-        $sql = "insert into khach_hang(ho_ten, email, mat_khau) values('".$ho_ten."', '".$email."', '".$mat_khau."')";
+       function insert_user($ho_ten, $email, $mat_khau, $que_quan, $sdt){
+        $sql = "insert into khach_hang(ho_ten, email, mat_khau, que_quan, sdt) values('".$ho_ten."', '".$email."', '".$mat_khau."','".$que_quan."','".$sdt."')";
         pdo_execute($sql);
     }
 
@@ -16,8 +16,8 @@
     }
 
     // Cập nhật tài khoản
-    function update_user($ho_ten, $email, $mat_khau, $id){
-        $sql = "update khach_hang set ho_ten ='".$ho_ten."', email ='".$email."', mat_khau ='".$mat_khau."' where ma_kh =".$id;
+    function update_user($ho_ten, $email, $mat_khau,$que_quan,$sdt,$id){
+        $sql = "update khach_hang set ho_ten ='".$ho_ten."', email ='".$email."', mat_khau ='".$mat_khau."', que_quan ='".$que_quan."', sdt ='".$sdt."' where ma_kh =".$id;
         pdo_execute($sql);
         
 
@@ -67,8 +67,8 @@
     // Cập nhật tài khoản trong admin
 
     // Cập nhật tài khoản
-    function update_user_inADMIN($ho_ten, $email, $mat_khau, $role, $id){
-        $sql = "update khach_hang set ho_ten ='".$ho_ten."', email ='".$email."', mat_khau ='".$mat_khau."', vai_tro = '".$role."' where ma_kh =".$id;
+    function update_user_inADMIN($ho_ten, $email, $mat_khau,$que_quan,$sdt, $role, $id){
+        $sql = "update khach_hang set ho_ten ='".$ho_ten."', email ='".$email."', mat_khau ='".$mat_khau."', que_quan ='".$que_quan."', sdt ='".$sdt."', vai_tro = '".$role."' where ma_kh =".$id;
         pdo_execute($sql);
         
 

@@ -277,23 +277,25 @@
                                 include_once "taikhoan/update.php";
                                 break;
                 
-                            case 'capnhatKH':
+                            // case 'capnhatKH':
                 
-                                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                                    $ho_ten = $_POST['tenkh'];
-                                    $email = $_POST['email'];
-                                    $mat_khau = $_POST['pass'];
-                                    $role = $_POST['role'];
-                                    $id = $_POST['ma_kh'];
+                            //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                            //         $ho_ten = $_POST['tenkh'];
+                            //         $email = $_POST['email'];
+                            //         $mat_khau = $_POST['pass'];
+                            //         $que_quan = $_POST['que_quan'];
+                            //         $sdt = $_POST['sdt'];
+                            //         $role = $_POST['role'];
+                            //         $id = $_POST['ma_kh'];
                 
-                                    update_user_inADMIN($ho_ten, $email, $mat_khau, $role, $id);
-                                    $thongbao = "✔️ Cập nhật thành công!";
-                                }
+                            //         update_user_inADMIN($ho_ten, $email, $mat_khau,$que_quan,$sdt, $role, $id);
+                            //         $thongbao = "✔️ Cập nhật thành công!";
+                            //     }
                 
                                 
-                                $dsTK = selectall_TK();
-                                include_once "taikhoan/list.php";
-                                break;
+                            //     $dsTK = selectall_TK();
+                            //     include_once "taikhoan/list.php";
+                            //     break;
 
             
             /* xong sản phẩm */

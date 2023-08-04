@@ -23,7 +23,8 @@
                 <ul class="text_user">
                     <li><strong>Tên Đăng Nhập</strong><?= $ho_ten ?></li>
                     <li><strong>Email</strong><?= $email?></li>
-
+                    <li><strong>Quê Quán</strong><?= $que_quan?></li>
+                    <li><strong>SDT</strong><?= $sdt?></li>
                     <li><a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
                     <?php
 
@@ -39,7 +40,7 @@
             <style>
                 .box-content{
                     background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
-                    background-size: 100vw , 100vh;
+                    background-size: 109vw , 100vh;
                     background-repeat: no-repeat;
                 
                 }
@@ -196,12 +197,12 @@
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-map"></i></span>
-                            <input type="text" name="diachi" placeholder="Nhập Địa Chỉ"> <br> <br>
+                            <input type="text" name="que_quan" placeholder="Nhập Địa Chỉ"> <br> <br>
                             <label for>Địa Chỉ</label>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-phone"></i></span>
-                            <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
+                            <input type="" name="sdt" placeholder="Số điện thoại"> <br> <br>
                             <label for>Số Điện Thoại</label>
                         </div>
                         <div class="input_box">

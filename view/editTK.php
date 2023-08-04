@@ -2,6 +2,8 @@
 <style>
 .edit_tk{
  background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
+ margin-top: 85px;
+ background-size: cover;
 }
  .form-group {
   max-width: 400px;
@@ -39,7 +41,7 @@ input[type="reset"] {
 }
             </style>
 
-<div style="margin-top: 85px;" class="edit_tk">
+<div class="edit_tk">
 
             <!-- chi tiết sản phẩm  -->
         <div class="row margin-bottom">
@@ -65,6 +67,10 @@ input[type="reset"] {
                         <input  type="email" name="email" value="<?=$email ?>"> <br> <br>
                         <label for>PassWord</label><br>
                         <input type="password" name="pass" value="<?=$mat_khau ?>"> <br> <br>
+                        <label for>QUE QUAN</label><br>
+                        <input type="text" name="que_quan" value="<?=$que_quan ?>"> <br> <br>
+                        <label for>SO DIEN THOAI</label><br>
+                        <input type="text" name="sdt" value="<?=$sdt ?>"> <br> <br>
                         
                         <input type="hidden" name="id" value="<?=$ma_kh ?>">
 
@@ -84,16 +90,15 @@ input[type="reset"] {
                 
             </div>
             
-            
-                
-                
-                
+                   
+            </div>
+
                
 
 
         </div>
 
 
-    </div>
+
 
           

@@ -63,7 +63,7 @@
                                         <td>'.$mat_khau.'</td>    
                                         <td>'.$vai_tro.'</td>    
                                         <td class="text_user">
-                                        <a href="'.$suatk.'"><input type="button" class="btn_user" value="Sửa"></a> 
+                                        
                                           <a href="'.$xoatk.'"><input type="button" class="btn_user" value="Xóa"></a></td>
                                         </tr>';
 
