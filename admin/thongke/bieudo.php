@@ -1,9 +1,9 @@
 <style>
-   #myChart{
-        width: 650px;
-        margin: 10px auto;
-        background: none;
-   }
+        #myChart {
+                width: 650px;
+                margin: 10px auto;
+                background: none;
+        }
 </style>
 
 
@@ -11,7 +11,6 @@
 
         <div id="myChart"></div>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
         <script>
                 google.charts.load('current', {
                         'packages': ['corechart']
@@ -48,6 +47,3 @@
                         chart.draw(data, options);
                 }
         </script>
-
-
-</div>
