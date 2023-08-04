@@ -75,6 +75,7 @@
                     $cate = $_POST['loaihang'];
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
+                    $chi_tiet = $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh']['name'];
 
                     $target_dir = "../upload/";
@@ -86,7 +87,7 @@
                       }
 
                     
-                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des);
+                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
                     $thongbao = "Thêm thành công";
                 }
                
@@ -138,6 +139,7 @@
                     $cate = $_POST['loaihang'];
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
+                    $chi_tiet= $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh']['name'];
 
                     $target_dir = "../upload/";
@@ -147,10 +149,10 @@
                       } else {
                         // echo "Sorry, there was an error uploading your file.";
                       }
-                    update_prod($tensanpham, $giasanpham, $giamgia, $anh ,$cate, $date, $des, $ma_hh);
+                    update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet, $ma_hh);
                     $thongbao = "Cập nhật thành công";
 
-                }
+                    }
 
                 
                 $dssanpham = selectall_prod('', 0);

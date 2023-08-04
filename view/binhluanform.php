@@ -38,9 +38,8 @@
                 
                 foreach ($dsbl as $bl) {
                     extract($bl);
-                    
-                    echo '<tr><td>'.$noi_dung.'</td>';
-                    echo '<td>'.$ho_ten.'</td>';
+                    echo '<tr><td>'.$ho_ten.'</td>';
+                    echo '<td>'.$noi_dung.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
                 }
         ?>

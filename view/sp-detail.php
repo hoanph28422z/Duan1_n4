@@ -99,8 +99,8 @@ extract($one_prod);
                             <?php
                             echo '<h3><strong>Giá:</strong> '.$don_gia.'[VND]</h3>';
                             echo"<br>";
-                            echo '<p class ="text">'.$mo_ta.'</p>';
-
+                            echo '<p class ="text">'.$chi_tiet.'</p>';
+                            echo "<br>";
                             echo ' <div class="product-quantity d-flex align-items-center">
                             <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">

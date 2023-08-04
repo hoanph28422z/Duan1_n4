@@ -2,8 +2,8 @@
 
     // TẠO MODEL MÔ-ĐUN SẢN PHẨM
 
-    function insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des){
-        $sql = "insert into hang_hoa(te_hh, don_gia, so_luong, hinh, ma_loai, ngay_nhap, mo_ta) values('$tensanpham', '$giasanpham', '$quantity', '$anh', '$cate', '$date', '$des')";
+    function insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet){
+        $sql = "insert into hang_hoa(te_hh, don_gia, so_luong, hinh, ma_loai, ngay_nhap, mo_ta, chi_tiet) values('$tensanpham', '$giasanpham', '$quantity', '$anh', '$cate', '$date', '$des','$chi_tiet')";
         pdo_execute($sql);
     }
 
@@ -33,13 +33,13 @@
         return $sanpham;
     }
 
-    function update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $ma_hh){
+    function update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des,$chi_tiet, $ma_hh){
         if ($anh!="") {
             $sql = "update hang_hoa set te_hh= '".$tensanpham. "', don_gia='".$giasanpham."', so_luong='".$quantity."', 
-        hinh='".$anh."', ngay_nhap='".$date."', ma_loai='".$cate."', mo_ta='".$des."'
+        hinh='".$anh."', ngay_nhap='".$date."', ma_loai='".$cate."', mo_ta='".$des."',chi_tiet='".$chi_tiet."'
         where ma_hh='".$ma_hh."' ";
         }else{
-            $sql = "update hang_hoa set te_hh= '".$tensanpham. "', don_gia='".$giasanpham."', so_luong='".$quantity."', ngay_nhap='".$date."', ma_loai='".$cate."', mo_ta='".$des."'
+            $sql = "update hang_hoa set te_hh= '".$tensanpham. "', don_gia='".$giasanpham."', so_luong='".$quantity."', ngay_nhap='".$date."', ma_loai='".$cate."', mo_ta='".$des."',chi_tiet='".$chi_tiet."'
             where ma_hh=".$ma_hh;
         }
 
