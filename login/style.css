@@ -124,7 +124,7 @@ content h2{
     width: 340px;
     height: 50px;
     border-bottom:2px solid #e4e4e4 ;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 .input_box input{
     width: 100%;
@@ -156,7 +156,7 @@ content h2{
 .remember-forgot{
     font-size: 14.5px;
     font-weight: 500;
-    margin: -15px 0 15px;
+    margin: 16px 0 15px;
     display: flex;
     justify-content: space-between; 
 }

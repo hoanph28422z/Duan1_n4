@@ -97,6 +97,7 @@
 
 <?php
         if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
+            $ma_kh = $_SESSION['info_user']['ma_kh'];
             $noi_dung = $_POST['noidung'];
             $ma_hh = $_POST['ma_hh'];
             $ma_kh = $_SESSION['info_user']['ma_kh'];

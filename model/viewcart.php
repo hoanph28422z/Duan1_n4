@@ -216,6 +216,9 @@
 
 ?>
 <style>
+    header a{
+        text-decoration: none;
+    }
     .row{
         /* margin:100px 100px 150px 100px; */
         text-align: center;

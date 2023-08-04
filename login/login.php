@@ -240,6 +240,10 @@
 
     </section>
 <style>
+    body{
+        background: url('login/img/home.jpg');
+        background-size: cover;
+    }
     .footer{
         display: none;
     }
@@ -252,6 +256,13 @@
     .input_box{
         margin-top: 10px;
     }
+    .remember-forgot {
+    font-size: 14.5px;
+    font-weight: 500;
+    margin: 16px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
 
 </style>
     </html>
