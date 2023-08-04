@@ -156,7 +156,7 @@ content h2{
 .remember-forgot{
     font-size: 14.5px;
     font-weight: 500;
-    margin: -15px 0 15px;
+    margin: 16px 0 15px;
     display: flex;
     justify-content: space-between; 
 }
