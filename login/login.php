@@ -17,34 +17,32 @@
             <div class="user-info">
                 <!-- <h2>Thông tin người dùng</h2>
   <img class="avatar" src="path/to/user-avatar.jpg" alt="Ảnh đại diện của người dùng"> -->
-                <div class="hello">
-                    <h2>Xin chào</h2>
-                    <?= $ho_ten ?>
 
-                </div>
-                <ul>
-                    <li><strong>Tên đăng nhập:</strong> <?= $ho_ten ?></li>
-                    <li><strong>Họ tên:</strong> <?= $ho_ten ?></li>
-                    <li><strong>Email:</strong> <?= $email ?></li>
-                    <li><strong>Đơn hàng:</strong><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
-                    <li><strong>Cập nhật tài khoản:</strong> <a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
+                    <h2>Hồ Sơ Của Tôi</h2>
+                    <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+                <ul class="text_user">
+                    <li><strong>Tên Đăng Nhập</strong><?= $ho_ten ?></li>
+                    <li><strong>Email</strong><?= $email?></li>
+
+                    <li><a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
                     <?php
 
                     if ($vai_tro == 1) {
-
-
                     ?>
-
                         <li>
                             <strong>Trang admin:</strong><a href="admin/index.php">Admin</a>
                         </li>
-
-
                     <?php     }  ?>
                 </ul>
             </div>
 
             <style>
+                .box-content{
+                    background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
+                    background-size: 100vw , 100vh;
+                    background-repeat: no-repeat;
+                
+                }
                 .user-info {
                     background-color: #f8f8f8;
                     border: 1px solid #ccc;
@@ -52,14 +50,13 @@
                     margin: 20px;
                     border-radius: 5px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    width: 450px;
+                    height: 450px;
+                    margin: 10px auto;
+                    opacity: 1;
                 }
 
-                .hello {
-                    margin-right: 400px;
-                }
+
 
                 .avatar {
                     width: 100px;
@@ -85,6 +82,22 @@
                 strong {
                     display: inline-block;
                     width: 150px;
+                }
+                .footer#footer {
+                    position: relative;
+                    bottom: -192px;
+                }
+                .text_user{
+                    padding-top: 15px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+                .text_user li{
+                    margin-top: 20px;
+                }
+                .text_user li a{
+                    
+                    font-weight: 550;
                 }
             </style>
 

@@ -11,6 +11,9 @@
       #home{
         font-family: arial, sans-serif;
       }
+      .sidenav{
+        width: 250px;
+      }
     </style>
 </head>
 <body>

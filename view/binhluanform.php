@@ -3,9 +3,9 @@
     include_once "../model/pdo.php";
     include_once "../model/binhluan.php";
     if (isset($_SESSION['info_user'])) {
-        $ma_kh = $_SESSION['info_user']['ma_kh'];
+        $ho_ten = $_SESSION['info_user']['ho_ten'];
     }else{
-        $ma_kh = "";
+        $ho_ten = "";
     }
     $idprod = $_REQUEST['idprod'];
     $dsbl = selectall_binhluan($idprod);
@@ -40,7 +40,7 @@
                     extract($bl);
                     
                     echo '<tr><td>'.$noi_dung.'</td>';
-                    echo '<td>'.$ma_kh.'</td>';
+                    echo '<td>'.$ho_ten.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
                 }
         ?>

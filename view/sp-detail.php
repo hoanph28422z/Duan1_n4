@@ -29,7 +29,32 @@
     <link rel="stylesheet" href="show_pro/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="show_pro/assets/css/jquery-ui.css">
     <link rel="stylesheet" href="show_pro/assets/css/main.css">
+<style>
+    .navbar{
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    .navbar a{
+        text-decoration: none;
+    }
+    .footer-box a{
+        text-decoration: none;
+    }
+    .box-title{
+        display: none;
+    }
+    .product-details__content h3,.text{
+        position: absolute;
+        margin-bottom: 15px;
+    }
+    .site-btn{
+        margin-top: 35px;
+    }
+    .text{
+        text-align: left;
 
+    }
+</style>
 </head>
 
 <body>
@@ -68,12 +93,13 @@ extract($one_prod);
                         <div class="product-details__content">
                         
                             <div class="tr-wrapper d-flex align-items-center justify-content-between">
-                                <h2 style="" class="title"><?=$te_hh ?></h2>
+                                <h2 style="" class="title"><?=$te_hh?></h2>
                                 
                             </div>
                             <?php
-                            echo '<h3 style="margin-right:;"><strong>Giá:</strong> '.$don_gia.'[VND]</h3>';
-                            echo '<h4 style="margin-right:px;"><strong>Ngày nhập:</strong> '.$ngay_nhap.'</h3>';
+                            echo '<h3><strong>Giá:</strong> '.$don_gia.'[VND]</h3>';
+                            echo"<br>";
+                            echo '<p class ="text">'.$mo_ta.'</p>';
 
                             echo ' <div class="product-quantity d-flex align-items-center">
                             <form action="index.php?act=addCART" method="post">
@@ -86,17 +112,8 @@ extract($one_prod);
                             </div>';
                             
                             ?>
-                            <a href="#0" class="wishlist"><i class="fas fa-heart"></i> Add to watch list</a>
-                            <div class="pd-social-wrapper">
-                                <span class="share"><i class="fas fa-share"></i> Share</span>
-                                <div class="social-links d-flex align-items-center">
-                                    <a href="#0" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0" target="_blank"><i class="fab fa-youtube"></i></a>
-                                    <a href="#0" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#0" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+
+                            
                         </div>
                     </div>
 

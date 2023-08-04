@@ -1,7 +1,7 @@
 <style>
     .row{
         position: relative;
-        left: 102px;
+        left: 92px;
         width: 79vw;
     }
     .btn_comment{

@@ -1,27 +1,29 @@
+<style>
+
+    .row{
+        position: relative;
+        left: 102px;
+        width: 79vw;
+
+    }
+    .btn{
+        border: none;
+        padding: 6px 15px;
+        outline: none;
+        box-shadow: 1px 1px 10px rgba(25 25 25  /25%);
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    .form-dsHANG table tr th,.form-dsHANG table tr td{
+        text-align: center;
+    }
+</style>
+
+
 <div class="row">
             <div class="row margin-bottom  form-title"><h1>Quản lý loại hàng</h1></div>
 
-            <form action="index.php?act=listsp" class="margin-bottom" method="post">
-                            <input type="text" name="kyw" id="">
-                            <select name="iddm" id="">
-                            
-                            <option value="0" selected>Tất cả</option>
-
-                            <?php
-                        foreach ($dsdanhmuc as $danhmuc) {
-                         
-                            ?>
-                                <option value="<?php echo $danhmuc['ma_loai'] ?>"><?php echo $danhmuc['ten_loai'] ?></option>
-
-                                <?php
-
-                        }
-
-                        ?>
-                            </select>
-
-                            <input type="submit" name="listOK" value="GO">
-                    </form>
+            
 
             <div class="row form-content">
                 
@@ -30,7 +32,7 @@
 
                             <table>
                                     <tr>
-                                    <th></th>
+
                                         <th>MÃ HÀNG </th>
                                         <th>TÊN HÀNG HÓA</th>
                                         <th>HÌNH</th>
@@ -54,15 +56,15 @@
                                     }
                                     echo 
                                         '<tr>
-                                        <td><input type="checkbox" name="" id=""></td>
+
                                         <td>'.$ma_hh.'</td>
                                         <td>'.$te_hh.'</td>    
                                         <td>'.$anh.'</td>    
                                         <td>'.$don_gia.'</td>    
                                         <td>'.$so_luong.'</td>    
                                         <td>'.$so_luot_xem.'</td>    
-                                        <td><a href="'.$suasp.'"><input type="button" value="Sửa"></a> 
-                                          <a href="'.$xoasp.'"><input type="button" value="Xóa"></a></td>
+                                        <td><a href="'.$suasp.'"><input class="btn" type="button" value="Sửa"></a> 
+                                          <a href="'.$xoasp.'"><input  class="btn" type="button" value="Xóa"></a></td>
                                         </tr>';
 
                                 }
@@ -72,12 +74,6 @@
                             </table>
                     </div>
 
-                    <div class="row margin-bottom10">
-                            <input type="button" value="Chọn tất cả">
-                            <input type="button" value="Bỏ chọn tất cả">
-                            <input type="button" value="Xóa các mục đã chọn">
-                            <a href="index.php?act=addsp"><input type="button" value="Nhập thêm"></a>
-                    </div>
 
                        
                
