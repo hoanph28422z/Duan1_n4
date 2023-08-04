@@ -4,15 +4,23 @@
     include_once "../model/binhluan.php";
     if (isset($_SESSION['info_user'])) {
         $ma_kh = $_SESSION['info_user']['ma_kh'];
+        $ho_ten = $_SESSION['info_user']['ho_ten'];
+
     }else{
         $ma_kh = "";
+        $ho_ten="";
     }
-    $idprod = $_REQUEST['idprod'];
-    $dsbl = selectall_binhluan($idprod);
+    if (isset($_REQUEST['idprod'])) {
+        $idprod = $_REQUEST['idprod'];
+        $dsbl = selectall_binhluan($idprod);
+        // Tiếp tục xử lý các thao tác khác
+    } else {
+        // Xử lý trường hợp khi không có 'idprod'
+    }
+    
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> 
 </head>
 <body>
     
@@ -38,8 +46,8 @@
                 
                 foreach ($dsbl as $bl) {
                     extract($bl);
-                    
                     echo '<tr><td>'.$noi_dung.'</td>';
+                    echo '<td>'.$ho_ten.'</td>';
                     echo '<td>'.$ma_kh.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
                 }
@@ -54,6 +62,8 @@
     
 
     ?>
+
+   
 
         <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
         <div class="row">
@@ -88,12 +98,12 @@
             ?>
 
 
-
-        <?php
+<?php
         if (isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])) {
             $noi_dung = $_POST['noidung'];
             $ma_hh = $_POST['ma_hh'];
             $ma_kh = $_SESSION['info_user']['ma_kh'];
+            $ho_ten = $_SESSION['info_user']['ho_ten'];
             date_default_timezone_set(timezone_name_from_abbr("CST"));
             $ngay_bl = date("h:i:s a d/m/Y");
 

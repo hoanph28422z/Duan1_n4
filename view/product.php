@@ -232,7 +232,7 @@
 
                                     $link_dm = "index.php?act=sanpham&iddm=".$ma_loai;
 
-                                    echo '<ul>
+                                    echo '<ul style="padding: 4px;">
                                             <li class="cat-item">
                                              <a style="margin-left:90px" href="'.$link_dm.'">'.$ten_loai.'</a>
                                             </li>
