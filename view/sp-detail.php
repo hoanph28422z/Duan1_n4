@@ -151,7 +151,7 @@ extract($one_prod);
                           ?>
                         </div>
                         <div class="tab-pane fade" id="pinfo-2" role="tabpanel" aria-labelledby="pinfo-2-tab">
-                            <ul class="adi-info list-unstyled mb-0">
+                            <!-- <ul class="adi-info list-unstyled mb-0">
                                 <li>Weight</li>
                                 <li>1.4 oz</li>
                                 <li>Dimensions</li>
@@ -162,7 +162,7 @@ extract($one_prod);
                                 <li>Cotton, Silk &amp; Synthetic</li>
                                 <li>Warranty</li>
                                 <li>3 Months</li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="tab-pane fade" id="pinfo-3" role="tabpanel" aria-labelledby="pinfo-3-tab">
                             <div class="pp-comments">

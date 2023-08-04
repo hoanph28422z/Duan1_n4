@@ -21,6 +21,11 @@
   <link rel="stylesheet" href="show_pro/assets/css/main.css">
 
 </head>
+<style>
+  div{
+    font-family:Roboto;
+  }
+</style>
 <div class="box-left">
 
   <form action="index.php?act=billconfirm" method="post" class="billform">

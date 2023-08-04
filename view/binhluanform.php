@@ -29,7 +29,17 @@
     <link rel="stylesheet" href="../css/style.css"> 
 </head>
 <body>
-    
+    <style>
+        .stc{
+            padding: 5px 10px; 
+            /* background: red;  */
+            color: red;
+            font-size: 1rem; /* 16px */
+            line-height: 1.5rem; /* 24px */
+            font-style: italic;
+            font-family:Roboto;
+        }
+    </style>
     <div class="row">
 
 
@@ -40,8 +50,15 @@
 
         <div class="box-content2 binhluan">
             <table>
+                 <thead>
+                <tr>
+                    <td>Nội dung</td>
+                    <td>Mã khách hàng</td>
+                    <td>Ngày bình luận</td>
+                </tr>
+                </thead>
             <?php
-                
+               
                 foreach ($dsbl as $bl) {
                     extract($bl);
                     echo '<tr><td>'.$noi_dung.'</td>';
@@ -88,7 +105,7 @@
 
         <?php  
         }else{
-            echo '<h3 style="padding: 5px 10px; background: red; color: yellow;">Đăng nhập để bình luận sản phẩm</h3>';
+            echo '<h3 class="stc">Đăng nhập để bình luận sản phẩm</h3>';
         }
             
             
