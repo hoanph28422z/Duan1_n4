@@ -81,7 +81,7 @@ extract($one_prod);
                                 <div class="tab-content" id="">
                                 <?php
                                 $img =  $img_path.$hinh;
-                                echo '<div class="product-image"><img src="'.$img.'" alt=""></div>'.'<br>';
+                                echo '<div class="product-image"><img style="padding:40px" src="'.$img.'" alt=""></div>'.'<br>';
                             ?>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ extract($one_prod);
 
 
                     <div class="col-xl-6">
-                        <div class="product-details__content">
+                        <div style="margin-top: 70px;" class="product-details__content">
                         
                             <div class="tr-wrapper d-flex align-items-center justify-content-between">
                                 <h2 style="" class="title"><?=$te_hh?></h2>
@@ -99,8 +99,8 @@ extract($one_prod);
                             <?php
                             echo '<h3><strong>Giá:</strong> '.$don_gia.'[VND]</h3>';
                             echo"<br>";
-                            echo '<p class ="text">'.$mo_ta.'</p>';
-
+                            echo '<p class ="text">'.$chi_tiet.'</p>';
+                            echo "<br><br><br>";
                             echo ' <div class="product-quantity d-flex align-items-center">
                             <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">
@@ -133,13 +133,13 @@ extract($one_prod);
                         <nav>
                             <div class="nav d-flex align-items-center justify-content-center" id="pinfo-tab" role="tablist">
                                 <a class="nav-link active" id="pinfo-1-tab" data-bs-toggle="tab" href="#pinfo-1" role="tab" aria-controls="pinfo-1" aria-selected="true">
-                                    Product Details
+                                    Mô Tả Sản Phẩm
                                 </a>
                                 <a class="nav-link" id="pinfo-2-tab" data-bs-toggle="tab" href="#pinfo-2" role="tab" aria-controls="pinfo-2" aria-selected="true">
                                     additional imformation
                                 </a>
                                 <a class="nav-link" id="pinfo-3-tab" data-bs-toggle="tab" href="#pinfo-3" role="tab" aria-controls="pinfo-3" aria-selected="true">
-                                    (04) Review
+                                    Bình Luận
                                 </a>
                             </div>
                         </nav>
@@ -172,7 +172,7 @@ extract($one_prod);
                                 <script>
                                 $(document).ready(function(){
 
-                                $("#binhluan").load("view/binhluanform.php", {idprod: <?=$ma_hh  ?>});
+                                $("#binhluan").load("view/binhluanform.php", {idprod:<?=$ma_hh?>});
                                 });
 
                                 </script>
@@ -217,8 +217,8 @@ extract($one_prod);
                                     
                                       echo '<div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                                       <div class="pp__item pp__item--2 text-center pt-20 pb-20">
-                                      <div class="pp__thumb pp__thumb--2 mt-35">
-                                      <a href="'.$link_sp.'"><img src="'.$img.'" alt=""></a>
+                                      <div style="min-height: 300px;" class="pp__thumb pp__thumb--2 mt-35">
+                                      <a href="'.$link_sp.'"><img style="height:280px;padding:30px"; src="'.$img.'" alt=""></a>
                                       </div>
                                       <h4 class="pp__title pp__title--2">
                                       <a href="'.$link_sp.'">'.$te_hh.'</a>

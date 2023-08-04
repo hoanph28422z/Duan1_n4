@@ -75,6 +75,7 @@
                     $cate = $_POST['loaihang'];
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
+                    $chi_tiet = $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh']['name'];
 
                     $target_dir = "../upload/";
@@ -86,7 +87,7 @@
                       }
 
                     
-                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des);
+                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
                     $thongbao = "Thêm thành công";
                 }
                
@@ -138,6 +139,7 @@
                     $cate = $_POST['loaihang'];
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
+                    $chi_tiet= $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh']['name'];
 
                     $target_dir = "../upload/";
@@ -147,10 +149,10 @@
                       } else {
                         // echo "Sorry, there was an error uploading your file.";
                       }
-                    update_prod($tensanpham, $giasanpham, $giamgia, $anh ,$cate, $date, $des, $ma_hh);
+                    update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet, $ma_hh);
                     $thongbao = "Cập nhật thành công";
 
-                }
+                    }
 
                 
                 $dssanpham = selectall_prod('', 0);
@@ -275,23 +277,25 @@
                                 include_once "taikhoan/update.php";
                                 break;
                 
-                            case 'capnhatKH':
+                            // case 'capnhatKH':
                 
-                                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                                    $ho_ten = $_POST['tenkh'];
-                                    $email = $_POST['email'];
-                                    $mat_khau = $_POST['pass'];
-                                    $role = $_POST['role'];
-                                    $id = $_POST['ma_kh'];
+                            //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                            //         $ho_ten = $_POST['tenkh'];
+                            //         $email = $_POST['email'];
+                            //         $mat_khau = $_POST['pass'];
+                            //         $que_quan = $_POST['que_quan'];
+                            //         $sdt = $_POST['sdt'];
+                            //         $role = $_POST['role'];
+                            //         $id = $_POST['ma_kh'];
                 
-                                    update_user_inADMIN($ho_ten, $email, $mat_khau, $role, $id);
-                                    $thongbao = "✔️ Cập nhật thành công!";
-                                }
+                            //         update_user_inADMIN($ho_ten, $email, $mat_khau,$que_quan,$sdt, $role, $id);
+                            //         $thongbao = "✔️ Cập nhật thành công!";
+                            //     }
                 
                                 
-                                $dsTK = selectall_TK();
-                                include_once "taikhoan/list.php";
-                                break;
+                            //     $dsTK = selectall_TK();
+                            //     include_once "taikhoan/list.php";
+                            //     break;
 
             
             /* xong sản phẩm */

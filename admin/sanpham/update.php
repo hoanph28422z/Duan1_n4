@@ -102,6 +102,11 @@ $anh = "no photo";
                         <label for="">Mô tả</label>
                         <textarea name="mota" id="" cols="113" rows="3"><?=$mo_ta?></textarea>
                     </div>
+
+                    <div class="row margin-bottom10 des">
+                        <label for="">Chi tiet</label>
+                        <textarea name="chi_tiet" id="" cols="113" rows="3"><?=$mo_ta?></textarea>
+                    </div>
                     <br>
 
                     <div class="row margin-bottom button ">

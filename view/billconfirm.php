@@ -1,4 +1,3 @@
-
 <div class="viewcart_all">
        
 <div style="margin: 20px;padding:10px;" class="">
@@ -40,7 +39,7 @@
 </div>
                         <div class="row margin-bottom">
 
-                        <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
+                        <div class="box-title"><h2>THÔNG TIN ĐẶT HÀNG</h2></div>
 
                     <div class="box-bill tableCART">
 
@@ -65,24 +64,13 @@
                 
 
 
-                    <div class="row margin-bottom">
-
-                    <div class="box-title">PHƯƠNG THỨC THANH TOÁN</div>
-
-                    <div class="box-bill tableCART">
-
-                                <P><?=$bill['pttt_bill']  ?></P>
-
-
-
-                    </div>
-                    </div>
+             
 
 
 
                     <div class="row">
 
-                        <div class="box-title">CHI TIẾT GIỎ HÀNG</div>
+                        <div class="box-title"><h2>CHI TIẾT GIỎ HÀNG</h2></div>
 
                     <div class="box-content tableCART">
 

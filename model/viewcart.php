@@ -4,78 +4,6 @@
 
 <?php
 
-    function viewcart($del){
-        global $img_path;
-        $i=0;
-        $tongtien=0;
-       
-
-        if ($del==1) {
-
-
-            $xoasp_td2 = '<td></td>';
-            
-
-            
-        }else{
-            
-
-            $xoasp_td2="";
-        }
-
-
-        echo '
-        <div class="row">
-                <tr>
-                <thead>
-                <th>STT</th>
-                <th>HÌNH</th>
-                <th>SẢN PHẨM</th>
-                <th>ĐƠN GIÁ</th>
-                <th>SỐ LƯỢNG</th>
-                <th>THÀNH TIỀN</th>
-               
-                
-                </thead>
-                </tr>
-        </div>
-        ';
-    foreach ($_SESSION['mycart'] as $cart) {
-
-        $hinh = $img_path.$cart[2];
-        $ttien = $cart[3]*$cart[4];
-        $tongtien = $tongtien + $ttien;
-            // $xoasp = '<a href="index.php?delcart&idcart='.$i.'"><input type="button" value="Xoa"></a>';
-                    echo '
-
-                     <tr class"mycart">
-                     
-                        <td>'.$i.'</td>
-                        <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
-                        <td>'.$cart[1].'</td>
-                        <td>'.$cart[3].'</td>
-                        <td>'.$cart[4].'</td>
-                        <td>'.$ttien.'</td>
-
-                    </tr>';
-
-
-            $i+=1;  
-
-    }
-
-    echo '<tr>
-            <td>Tổng đơn hàng</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>'.$tongtien.'</td>
-            '.$xoasp_td2.'
-               
-            </tr>';
-    }
-
 
 
 
@@ -158,9 +86,9 @@
                 </tr>
         
         ';
-    foreach ($bill_chitiet as $cart) {
+    foreach ($bill_chitiet as $id=> $cart) {
         global $img_path;
-        $i++;
+        
         $hinh = $img_path.$cart['img'];
         // $ttien = $cart['price']*$cart['soluong'];
         $tongtien+=$cart['thanhtien'];
@@ -173,8 +101,8 @@
         
         
                      <tr>
-                        <td>'.$i.'</td>
-                        <td><img src="'.$hinh.'" alt="" width="98%" height="100px; padding-top: 3px;"></td>
+                        <td>'.$id.'</td>
+                        <td><img src="'.$hinh.'" alt="" width="80%" height="100px; padding-top: 3px;"></td>
                         <td>'.$cart['name'].'</td>
                         <td>'.$cart['price'].'</td>
                         <td>'.$cart['soluong'].'</td>
@@ -183,7 +111,7 @@
                     </tr>';
 
 
-            $i+=1;  
+         
 
     }
 
@@ -309,7 +237,7 @@ thead {
 }
 
 th {
-  padding:20px;
+  padding:20px 48px;
 
   text-align: center;
 }
@@ -319,6 +247,6 @@ tbody tr:nth-child(even) {
 }
 
 td {
-  padding: 20px;
+  padding: 20px ;
 }
 </style>    

@@ -133,8 +133,12 @@
                             <label for="">Mô tả</label>
                             <textarea name="mota" class="id_product"></textarea>
                         </div>
+                        
+                        <div class="row margin-bottom10 des">
+                            <label for="">Chi Tiet</label>
+                            <textarea name="chi_tiet" class="id_product"></textarea>
+                        </div>
                         <br>
-    
                         <div class="row margin-bottom button ">
                                 <input type="submit" class="btn_products" name="themmoi" value="THÊM MỚI">
                                 <input type="reset" class="btn_products" value="NHẬP LẠI">
