@@ -239,11 +239,6 @@
     <section class="footer" id="footer">
 
     </section>
-
-    </html>
-<?php
-        }
-?>
 <style>
     .footer{
         display: none;
@@ -257,12 +252,9 @@
     .input_box{
         margin-top: 10px;
     }
-    .form-box .input_box{
-    position: relative;
-    width: 340px;
-    height: 50px;
-    border-bottom:2px solid #e4e4e4 ;
-    margin: 30px 0;
-    }
 
 </style>
+    </html>
+<?php
+        }
+?>
