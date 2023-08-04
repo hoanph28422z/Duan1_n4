@@ -1,3 +1,29 @@
+<style>
+    .input_upload{
+        padding: 15px;
+        border: none;
+        box-shadow: 1px 1px 10px rgba(15 15 15 /15%);
+        margin-top: 22px;
+        border-radius: 5px;
+        font-weight: 550;
+        width: 550px;
+        outline: none;
+    }
+    .margin-bottom10 {
+        text-align: left;
+        width: 650px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .margin-bottom10 label{
+
+ 
+        font-size: 0.986rem;
+        font-weight: 550;
+
+}
+</style>
+
 <?php
 
 if (is_array($sanpham)) {
@@ -15,6 +41,8 @@ $anh = "no photo";
 
 
 ?>
+
+sty
 <div class="row">
             <div class="row margin-bottom  form-title"><h1>Cập nhật sản phẩm</h1></div>
 
@@ -25,32 +53,31 @@ $anh = "no photo";
             <div class="row form-content2">
                 <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data"  class="form-quanlyhh">
                     <div class="row margin-bottom10">
-                        <label for="">Mã hàng hóa</label> <br>
-                        <input type="text" name="mahang" placeholder="auto number" disabled> 
+                        <input type="text" class="input_upload" name="mahang" placeholder="Mã Hàng Hóa" disabled> 
                     </div>
 
                     <div class="row margin-bottom10">
                         <label for="">Tên hàng hóa</label> <br>
-                        <input type="text" name="tenhang" value="<?=$te_hh ?>"> 
+                        <input type="text"  class="input_upload" name="tenhang" value="<?=$te_hh ?>"> 
                     </div>
 
 
                     <div class="row margin-bottom10">
                         <label for="">Đơn giá</label> <br>
-                        <input type="text" name="giahang" value="<?=$don_gia?>"> 
+                        <input type="text"  class="input_upload" name="giahang" value="<?=$don_gia?>"> 
                     </div>
 
 
                     <div class="row margin-bottom10">
                         <label for="">Số lượng</label> <br>
-                        <input type="text" name="so_luong" value="<?=$so_luong ?>"> 
+                        <input type="text"  class="input_upload" name="so_luong" value="<?=$so_luong ?>"> 
                     </div>
 
 
                     <div class="row margin-bottom10">
                         <label for="">Hình ảnh</label> <br>
                        
-                        <input type="file" name="hinhanh"> <br> 
+                        <input type="file"  class="input_upload" name="hinhanh"> <br> 
                         
                         
                         
@@ -60,7 +87,7 @@ $anh = "no photo";
                     <div class="row margin-bottom10">
                         
                         <label for="">Loại hàng</label> <br>
-                        <select name="loaihang" class="select"  id="">
+                        <select name="loaihang"  class="input_upload" class="select"  id="">
                         <?php
                         foreach ($dsdanhmuc as $danhmuc) {
                             extract($danhmuc);
@@ -77,16 +104,16 @@ $anh = "no photo";
                         </select>
                     </div>
 
-
+<br>
                     <div class="row margin-bottom10">
                         <label for="choose">Hàng đặc biệt</label> <br>
                         <div class="padding">
-                        <input type="radio" name="choose" id="dacbiet" value="đặc biệt"> <label  for="dacbiet" id="dacbiet">Đặc biệt</label>
+                        <input type="radio" name="choose"  id="dacbiet" value="đặc biệt"> <label  for="dacbiet" id="dacbiet">Đặc biệt</label>
                         <input type="radio" name="choose" id="binhthuong" value="bình thường"> <label for="binhthuong">Bình thường</label>
                         </div>
                     </div>
 
-
+<br>
                     <div class="row margin-bottom10">
                         <label for="">Ngày nhập</label> <br>
                         <input type="date" class="date" name="ngay" value="<?=$ngay_nhap?>"> 
@@ -95,7 +122,7 @@ $anh = "no photo";
 
                     <div class="row margin-bottom10">
                         <label for="">Số lượt xem</label> <br>
-                        <input type="text" name="luotxem" value="0" disabled> 
+                        <input type="text"  class="input_upload" name="luotxem" value="0" disabled> 
                     </div>
 
                     <div class="row margin-bottom10 des">
@@ -105,7 +132,7 @@ $anh = "no photo";
 
                     <div class="row margin-bottom10 des">
                         <label for="">Chi tiet</label>
-                        <textarea name="chi_tiet" id="" cols="113" rows="3"><?=$mo_ta?></textarea>
+                        <textarea name="chi_tiet" id="" ><?=$mo_ta?></textarea>
                     </div>
                     <br>
 

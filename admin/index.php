@@ -38,7 +38,7 @@
                 }
                 
                 $dsdanhmuc = selectall_cate();
-                include_once "danhmuc/listdm.php";
+                include_once "danhmuc/list.php";
                 break;
             case 'suadm':
                 if (isset($_GET['id'])&&$_GET['id']>0) {
