@@ -4,11 +4,9 @@
     include_once "../model/binhluan.php";
     if (isset($_SESSION['info_user'])) {
         $ma_kh = $_SESSION['info_user']['ma_kh'];
-        $ho_ten = $_SESSION['info_user']['ho_ten'];
 
     }else{
         $ma_kh = "";
-        $ho_ten="";
     }
     if (isset($_REQUEST['idprod'])) {
         $idprod = $_REQUEST['idprod'];
@@ -47,7 +45,6 @@
                 foreach ($dsbl as $bl) {
                     extract($bl);
                     echo '<tr><td>'.$noi_dung.'</td>';
-                    echo '<td>'.$ho_ten.'</td>';
                     echo '<td>'.$ma_kh.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
                 }
@@ -103,7 +100,6 @@
             $noi_dung = $_POST['noidung'];
             $ma_hh = $_POST['ma_hh'];
             $ma_kh = $_SESSION['info_user']['ma_kh'];
-            $ho_ten = $_SESSION['info_user']['ho_ten'];
             date_default_timezone_set(timezone_name_from_abbr("CST"));
             $ngay_bl = date("h:i:s a d/m/Y");
 
