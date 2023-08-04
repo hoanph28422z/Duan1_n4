@@ -57,6 +57,23 @@
         border-radius: 10px;
         margin: 10px 15px;
     }
+    .input-hoan{
+        width: 350px;
+        height: 40px;
+         box-shadow: 1px 1px 10px rgba(14 25 14/25%);
+        border-radius: 10px;
+        font-size:0.986rem ;
+    }
+    .btn_tag {
+                border: none;
+                outline: none;
+                box-shadow: 1px 1px 10px rgba(24 15 24 /25%);
+                padding: 15px;
+                border-radius: 50px;
+                margin: 15px 10px;
+                cursor: pointer;
+                font-weight: 550;
+        }
 </style>
 <div class="row">
             <div class="row  form-title"><h1>Cập nhật loại hàng hóa</h1></div>
@@ -64,20 +81,20 @@
                     <form action="index.php?act=updatedm" method="post">
                         <div class="row margin-bottom10">
                             <label for="">Mã loại</label>
-                            <input type="text" name="maloai" placeholder="auto number" disabled> 
+                            <input type="hidden" name="maloai" placeholder="auto number" disabled> 
                         </div>
 
                         <div class="row margin-bottom10">
                             <label for="">Tên loại</label>
-                            <input type="text" name="tenloai" value="<?=$ten_loai  ?>"> 
+                            <input class="input-hoan" type="text" name="tenloai" value="<?=$ten_loai  ?>"> 
                             <input type="hidden" name="id" value="<?=$ma_loai?>">
                         </div>
 
                         <div class="row margin-bottom">
                                 
-                                <input type="submit" name="capnhat" value="CẬP NHẬT">
-                                <input type="reset" value="NHẬP LẠI">
-                                <a href="indext.php?act=listdm"><input type="button" value="DANH SÁCH"></a>
+                                <input class="btn_tag" type="submit" name="capnhat" value="CẬP NHẬT">
+                                <input class="btn_tag" type="reset" value="NHẬP LẠI">
+                                <a href="indext.php?act=listdm"><input class="btn_tag" type="button" value="DANH SÁCH"></a>
                         </div>
 
                            <?php 

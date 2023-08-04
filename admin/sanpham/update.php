@@ -67,7 +67,7 @@ $anh = "no photo";
             <div class="row form-content2">
                 <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data"  class="form-quanlyhh">
                     <div class="row margin-bottom10">
-                        <input type="text" class="input_upload" name="mahang" placeholder="Mã Hàng Hóa" disabled> 
+                        <input type="hidden" class="input_upload" name="mahang" placeholder="Mã Hàng Hóa" disabled> 
                     </div>
 
                     <div class="row margin-bottom10">
