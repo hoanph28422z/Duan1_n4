@@ -16,14 +16,20 @@
     }
 
     $spnews = selectall_prod_home();
-    // $dsdm = selectall_cate();
-    // $dstop10 = selectall_prod_top10();
+    $dsdm = selectall_cate();
+    $dstop10 = selectall_prod_top10();
 
     if (isset($_GET['act']) && ($_GET['act'])  != "") {
 
         $act = $_GET['act'];
 
         switch ($act) {
+
+
+            case 'product':
+
+                include_once "view/product.php";
+                break;
 
             case 'dangnhap':
 
@@ -184,15 +190,10 @@
                     header('Location: index.php?act=viewcart');
                      break;
                      case 'updateCart':
-                        // if(isset($_POST['MOD_QUANTITY'])){
-                        //     foreach($_SESSION['mycart'] as $key => $value){
-                        //         if($value['name']==$_POST['name']){
-                        //             $_SESSION['mycart'][$key]['soluong']=$_POST['MOD_QUANTITY'];
-                        //             print_r($_SESSION['mycart']);
-                        //         }
-                        //     }
-                        // }
-                        // header('Location: index.php?act=viewcart');
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            $_SESSION['mycart'][$_POST['id']][4] = $_POST['soluong'];
+                        }
+                        header('Location: index.php?act=viewcart');
                         
                         break;
                    

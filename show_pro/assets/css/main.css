@@ -7359,7 +7359,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .product-details__content .product-quantity .site-btn {
   border-radius: 0px;
-  padding: 11.5px 34px;
+  padding: 11.5px 12px;
 }
 @media (max-width: 450px) {
   .product-details__content .product-quantity .site-btn {
@@ -7597,7 +7597,7 @@ html .ui-button.ui-state-disabled:active {
 .table thead th {
   font-size: 15px;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   font-weight: 600;
   border: none;
   padding-left: 0px;

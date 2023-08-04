@@ -55,7 +55,7 @@
 
     ?>
 
-        <div class="">
+        <!-- <div class="">
 
             <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
                 <input type="hidden" name="ma_hh" value="<?=$idprod ?>">
@@ -67,9 +67,31 @@
                                border-radius: 4px;
                                cursor: pointer;" type="submit" name="guibinhluan" value="Gửi bình luận">
             </form>
-        </div>
+        </div> -->
 
-                
+        <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
+        <div class="row">
+        <input type="hidden" name="ma_hh" value="<?=$idprod ?>">
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-15">
+                                               
+                                                <textarea style="width: 500px;height: 50px;padding: 10px;" placeholder="Nhập bình luận" name="noidung" id=""></textarea>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="col-md-12">
+                                            <input class="site-btn" type="submit" name="guibinhluan" value="Gửi bình luận">
+                                        </div>
+                                    </div>
+
+        </form>
+
+
+
+
+
+
+
 
         <?php  
         }else{

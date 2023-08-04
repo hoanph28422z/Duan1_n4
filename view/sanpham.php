@@ -3,7 +3,7 @@
             <h2>Our Popular Products </h2>
         </div>
         
-        
+        <div class="box-title"><strong><h2><?=$ten_dm ?></h2></strong></div>
         <div class="products-container">
                  <?php
 
@@ -80,5 +80,8 @@ $i++;
     display: flex;
     justify-content: center;
     align-items: center
+}
+.box-title h2{
+    text-transform: uppercase;
 }
  </style>

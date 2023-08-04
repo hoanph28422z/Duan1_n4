@@ -69,6 +69,7 @@
 
         </div>
     </section>
+    
     <style>
 .add-to-cart {
     text-transform: uppercase;

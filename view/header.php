@@ -6,8 +6,16 @@
     <title>COFFEE</title>
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="login/style.css">
     <link rel="stylesheet" href="fame/style.css">
+
+    <!-- <link rel="stylesheet" href="show_pro/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="show_pro/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="show_pro/assets/css/lightcase.css">
+    <link rel="stylesheet" href="show_pro/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="show_pro/assets/css/nice-select.css">
+    <link rel="stylesheet" href="show_pro/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="show_pro/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="show_pro/assets/css/main.css"> -->
 </head>
 <body>
     <header>
@@ -18,7 +26,7 @@
         <ul class="navbar"> 
             <li><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
+            <li><a href="index.php?act=product">Products</a></li>
             <li><a href="index.php?act=dangnhap">Login</a></li>
         </ul>
         <div class="header-icon">
@@ -34,4 +42,3 @@
         
     </header>   
 </body>
-</html>
