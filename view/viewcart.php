@@ -105,10 +105,8 @@
                 </div>
               </div>
               <div class="cart-bottom-wrapper d-flex align-items-center">
-                <a href="index.php?act=bill"><input type="button" style="padding: 5px 10px;   margin-bottom: 70px;
-                      margin-right: 15px;" value="Tiếp tục đặt hàng"></a>
-                <a href="index.php?act=delcart"><input type="button" style="padding: 5px 10px;   margin-bottom: 70px;
-                      margin-right: 15px;" value="Xóa giỏ hàng"> </a>
+                <a class="site-btn site-btn__bghide" href="index.php?act=bill"><i class='bx bx-upvote bx-fade-up' ></i>TIẾP TỤC ĐẶT HÀNG</a>
+                <a class="site-btn site-btn__bghide" href="index.php?act=delcart"><i class='bx bxs-message-alt-x'></i>XÓA GIỎ HÀNG </a>
               </div>
             </div>
           </div>

@@ -243,7 +243,7 @@
                     $email_bill = $_POST['email'];
                     $ngay_dh_bill = date('h:i:s a d/m/Y');
                     $tong_dh_bill= tongdonhang();
-                    $pttt_bill = $_POST['pttt'];
+                    $pttt_bill = $_POST['pttt_bill'];
 
                     $id_donhang = insert_bill($idKH, $name_bill, $email_bill, $pttt_bill ,$ngay_dh_bill, $tong_dh_bill);
                     

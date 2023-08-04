@@ -65,18 +65,7 @@
                 
 
 
-                    <div class="row margin-bottom">
-
-                    <div class="box-title">PHƯƠNG THỨC THANH TOÁN</div>
-
-                    <div class="box-bill tableCART">
-
-                                <P><?=$bill['pttt_bill']  ?></P>
-
-
-
-                    </div>
-                    </div>
+             
 
 
 

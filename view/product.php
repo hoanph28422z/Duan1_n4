@@ -168,7 +168,7 @@
                                                     echo '  <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
                                                     <div class="pp__item pp__item--2 active text-center pt-20 pb-20">
                                                     <div class="pp__thumb pp__thumb--2 mt-35">
-                                                    <a href="'.$link_sp.'"> <img src="'.$anh.'" alt=""></a>
+                                                    <a href="'.$link_sp.'"> <img style="padding:30px" src="'.$anh.'" alt=""></a>
                                                     </div>
                                                     <div class="pp__content pp__content--2 mt-25">
 
@@ -222,7 +222,9 @@
                                 <button type="submit"><i class="fal fa-search"></i></button>
                             </form>
                         </div>
-                        <div class="widget mt-30">
+
+
+                        <div  class="widget mt-30">
                             <h2 class="title">Categories</h2>
                             <?php
                                 foreach ($dsdm as $dm) {
@@ -230,12 +232,16 @@
 
                                     $link_dm = "index.php?act=sanpham&iddm=".$ma_loai;
 
-                                    echo '<li>
-                                                <a href="'.$link_dm.'">'.$ten_loai.'</a>
-                                        </li>';
+                                    echo '<ul>
+                                            <li class="cat-item">
+                                             <a style="margin-left:90px" href="'.$link_dm.'">'.$ten_loai.'</a>
+                                            </li>
+                                        </ul>
+                                        ';
                                 }
                         ?>
                         </div>
+
 
                         <div class="widget mt-30">
                             <h2 class="title">top Product</h2>

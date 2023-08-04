@@ -51,7 +51,7 @@
 // load sản phẩ, cho trang chủ
 
 function selectall_prod_home(){
-    $sql = "select * from hang_hoa where 1 order by ma_hh desc limit 0,9";
+    $sql = "select * from hang_hoa where 1 order by ma_hh ";
     $dssanpham = pdo_query($sql);
     return $dssanpham;
 

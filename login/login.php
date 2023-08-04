@@ -25,7 +25,10 @@
                     <li><strong>Email</strong><?= $email?></li>
                     <li><strong>Quê Quán</strong><?= $que_quan?></li>
                     <li><strong>SDT</strong><?= $sdt?></li>
+                    <li><a href="index.php?act=mybill">Lịch sử mua hàng</a></li>
                     <li><a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
+                    
+
                     <?php
 
                     if ($vai_tro == 1) {

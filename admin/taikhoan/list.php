@@ -44,6 +44,8 @@
                     <th>USERNAME</th>
                     <th>EMAIL</th>
                     <th>PASSWORD</th>
+                    <th>QUE QUAN</th>
+                    <th>SDT</th>
                     <th>ROLE</th>
                     <th>Chức Năng</th>
                 </tr>
@@ -60,7 +62,9 @@
                                         <td>'.$ma_kh.'</td>
                                         <td>'.$ho_ten.'</td>    
                                         <td>'.$email.'</td>    
-                                        <td>'.$mat_khau.'</td>    
+                                        <td>'.$mat_khau.'</td>  
+                                        <td>'.$que_quan.'</td>
+                                        <td>'.$sdt.'</td>  
                                         <td>'.$vai_tro.'</td>    
                                         <td class="text_user">
                                         

@@ -1,147 +1,220 @@
+<head>
+
+  <!--========= Required meta tags =========-->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-            <div class="box-left">
-                           
-                    <form action="index.php?act=billconfirm" method="post" class="billform">
+  <!--====== Favicon ======-->
+  <link rel="shortcut icon" href="show_pro/assets/images/logo/favicon.ico" type="images/x-icon" />
 
-                    <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
+  <!--====== CSS Here ======-->
+  <link rel="stylesheet" href="show_pro/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="show_pro/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="show_pro/assets/css/lightcase.css">
+  <link rel="stylesheet" href="show_pro/assets/css/meanmenu.css">
+  <link rel="stylesheet" href="show_pro/assets/css/nice-select.css">
+  <link rel="stylesheet" href="show_pro/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="show_pro/assets/css/jquery-ui.css">
+  <link rel="stylesheet" href="show_pro/assets/css/main.css">
 
-                  
+</head>
+<div class="box-left">
 
-                        <div class="row box-content margin-bottom">
-                                <table>
+  <form action="index.php?act=billconfirm" method="post" class="billform">
 
-                                <?php
-
-                                    if (isset($_SESSION['info_user'])) {
-                                        $person = $_SESSION['info_user']['ho_ten'];
-                                        $email = $_SESSION['info_user']['email'];
-                                    }else{
-                                        $person = "";
-                                        $email = "";
-                                    }
-
-
-                                ?>
+    <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
 
 
-                                        <tr>
-                                            <td>Người đặt hàng</td> 
-                                            <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;" type="text" name="person" id="" value="<?=$person ?>"></td>
-                                        </tr>
 
-                                        <tr>
-                                            <td>Email</td> 
-                                            <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;"  type="text" name="email" id="" value="<?=$email ?>"></td>
-                                        </tr>
-                                </table>
-                        </div>
+    <div class="row box-content margin-bottom">
+      <table>
 
+        <?php
 
-                        <div class="row margin-bottom">
-
-                        <div class="box-title">PHƯƠNG THỨC THANH TOÁN</div>
-                        <div class="row box-bill">
-
-                            <table class="formBILL">
-                                    <td><input type="radio" name="pttt" id="" checked>Trả tiền khi nhận hàng</td>
-                                    <td><input type="radio" name="pttt" id="">Chuyển khoản ngân hàng</td>
-                                    <td><input type="radio" name="pttt" id="">Thanh toán online</td>
-                            </table>
+        if (isset($_SESSION['info_user'])) {
+          $person = $_SESSION['info_user']['ho_ten'];
+          $email = $_SESSION['info_user']['email'];
+          $que_quan = $_SESSION['info_user']['que_quan'];
+          $sdt = $_SESSION['info_user']['sdt'];
+        } else {
+          $person = "";
+          $email = "";
+          $que_quan = "";
+          $sdt = "";
+        }
 
 
-                        </div>
-                        </div>
+        ?>
 
 
-                        <div class="row">
+        <tr>
+          <td>Người đặt hàng</td>
+          <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;" type="text" name="person" id="" value="<?= $person ?>"></td>
+        </tr>
 
-                        <div class="box-title">GIỎ HÀNG</div>
+        <tr>
+          <td>Email</td>
+          <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;" type="text" name="email" id="" value="<?= $email ?>"></td>
+        </tr>
+        <tr>
+          <td>Quê Quán</td>
+          <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;" type="text" name="que_quan" id="" value="<?= $que_quan ?>"></td>
+        </tr>
+        <tr>
+          <td>Số Điện Thoại</td>
+          <td><input style="width: 300px; padding: 5px 10px; margin-left: 30px; margin-bottom: 10px;" type="text" name="sdt" id="" value="<?= $sdt ?>"></td>
+        </tr>
+      </table>
+    </div>
 
-                    <div class="box-content tableCART">
-
-                        <table>
-                                
-                            <?php
-                                viewcart(0);
-
-                            ?>
-
-                                
 
 
-                                
 
-                        </table>
+    <div style=" text-align: center;" class="viewcart">
 
+      <div class="viewcart_once">
+
+        <div class="box-title">
+          <h2>GIỎ HÀNG</h2><i class='bx bx-cart-alt bx-tada'></i>
+        </div>
+
+
+        <body>
+
+
+          <!-- cart area start -->
+          <div class="cart-area pt-70 pb-120">
+            <!-- <div class="container"> -->
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="cart-wrapper">
+                  <div class="table-content table-responsive">
+                    <table class="table">
+                      <thead style="background-color:white;">
+                        <tr>
+                          <th style="color:#333;" class="">Product ID</th>
+                          <th style="color:#333;" class="product-thumbnail">Product Image</th>
+                          <th style="color:#333;" class="cart-product-name">Product Name</th>
+                          <th style="color:#333;" class="product-price">Price</th>
+                          <th style="color:#333;" class="product-quantity">Quantity</th>
+                          <th style="color:#333;" class="product-subtotal">subTotal</th>
                        
-                 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                        $tongtien = 0;
 
-                    </div>
-                        </div>
+                        foreach ($_SESSION['mycart'] as $id => $cart) {
+                          $hinh = $img_path . $cart[2];
+                          $ttien = $cart[3] * $cart[4];
 
-                        <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-top: 20px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"></a> 
+                          $html = "
+        ";
+                          $tongtien = $tongtien + $ttien;
+                          $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
+
+        echo '
+
+        <tr>
+        
+           <td>'.$id.'</td>
+           <td class="product-thumbnail"><img class="img" src="'.$hinh.'"></td>
+           <td class="product-name">'.$cart[1].'</td>
+           <td class="product-price">'.$cart[3].'</td>
+           <td class="product-quantity">'.$cart[4].'</td>
+           <td class=\"product-subtotal\">'.$ttien.'</td>
+
+       </tr>';
+                        }
+                        echo '
+      <tr class="sum">
+          <td>Total order</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>' . $tongtien . '</td>
+          <th></th>
+             
+          </tr>';
 
 
 
-                    
-                    </form>
+                        ?>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
-                    
-                    <style>
-                      input[type="submit"] {
-  background-color: #4CAF50; /* màu nền */
-  border: none; /* không có đường viền */
-  color: white; /* màu chữ */
-  padding: 10px 20px; /* khoảng cách giữa nút và đường viền */
-  text-align: center; /* căn giữa nội dung */
-  text-decoration: none; /* không có gạch chân */
-  display: inline-block; /* hiển thị thành khối */
-  font-size: 16px; /* cỡ chữ */
-  border-radius: 5px; /* bo góc */
-  transition-duration: 0.4s; /* thời gian chuyển động */
-  cursor: pointer; /* chỉ số chấm */
-  margin-bottom: 50px;
-}
 
-input[type="submit"]:hover {
-  background-color: #3e8e41; /* màu nền khi hover */
-  color: white; /* màu chữ khi hover */
-}
-.box-left{
-  margin-top: 100px;
-        text-align: center;
-    }
-    table {
-  border-collapse: collapse; /* remove space between table cells */
-  width: 100%;
-  /* max-width: 800px; */
-  margin: 0 auto; /* center the table */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
+          </div>
+          <!-- cart area end -->
 
-thead {
-  background-color: #333;
-  color: #fff;
-}
 
-th {
-  padding: 10px;
-  text-align: center;
-}
+      </div>
+    </div>
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+    <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-top: 20px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"></a>
 
-td {
-  padding: 10px;
-}
-                    </style>
-            </div>
-       
 
-   
-    
+
+
+  </form>
+</div>
+
+
+<style>
+  input[type="submit"] {
+    background-color: #4CAF50;
+    /* màu nền */
+    border: none;
+    /* không có đường viền */
+    color: white;
+    /* màu chữ */
+    padding: 10px 20px;
+    /* khoảng cách giữa nút và đường viền */
+    text-align: center;
+    /* căn giữa nội dung */
+    text-decoration: none;
+    /* không có gạch chân */
+    display: inline-block;
+    /* hiển thị thành khối */
+    font-size: 16px;
+    /* cỡ chữ */
+    border-radius: 5px;
+    /* bo góc */
+    transition-duration: 0.4s;
+    /* thời gian chuyển động */
+    cursor: pointer;
+    /* chỉ số chấm */
+    margin-bottom: 50px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+    /* màu nền khi hover */
+    color: white;
+    /* màu chữ khi hover */
+  }
+
+  .box-left {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  table tbody tr td {
+    padding: 20px 70px;
+    vertical-align: middle;
+
+  }
+  
+</style>
+</div>

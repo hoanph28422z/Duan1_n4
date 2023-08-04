@@ -3,9 +3,9 @@
     include_once "../model/pdo.php";
     include_once "../model/binhluan.php";
     if (isset($_SESSION['info_user'])) {
-        $ho_ten = $_SESSION['info_user']['ho_ten'];
+        $ma_kh = $_SESSION['info_user']['ma_kh'];
     }else{
-        $ho_ten = "";
+        $ma_kh = "";
     }
     $idprod = $_REQUEST['idprod'];
     $dsbl = selectall_binhluan($idprod);
@@ -38,8 +38,9 @@
                 
                 foreach ($dsbl as $bl) {
                     extract($bl);
-                    echo '<tr><td>'.$ho_ten.'</td>';
-                    echo '<td>'.$noi_dung.'</td>';
+                    
+                    echo '<tr><td>'.$noi_dung.'</td>';
+                    echo '<td>'.$ma_kh.'</td>';
                     echo '<td>'.$ngay_bl.'</td></tr>';
                 }
         ?>
@@ -53,20 +54,6 @@
     
 
     ?>
-
-        <!-- <div class="">
-
-            <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
-                <input type="hidden" name="ma_hh" value="<?=$idprod ?>">
-                <input type="text" style="width: 500px;height: 50px;padding: 10px;" placeholder="Nhập bình luận" name="noidung" id=""> <br><br>
-                <input style="width: 150px;height: 50px;background-color: #4CAF50;
-                               color: white;
-                               padding:10px;
-                               border: none;
-                               border-radius: 4px;
-                               cursor: pointer;" type="submit" name="guibinhluan" value="Gửi bình luận">
-            </form>
-        </div> -->
 
         <form style="display: flex;justify-content:space-between;margin-left: 250px;margin-right: 300px;margin-bottom: 70px;" action="<?=$_SERVER['PHP_SELF'];  ?>" method="post">
         <div class="row">
