@@ -139,20 +139,20 @@
             <div class="logreg-box">
                 <div class="form-box login">
                     <form action="index.php?act=dangnhap" method="post">
-                        <h2>Sign In</h2>
+                        <h2>Đăng Nhập</h2>
                         <div class="input_box">
                             <span class="icon"> <i class='bx bx-user'></i></span>
                             <input type="text" name="user">
-                            <label for>User</label>
+                            <label for>Tài Khoản</label>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-lock-alt"></i></span>
                             <input type="password" name="pass">
-                            <label for>PassWord</label>
+                            <label for>Mật Khẩu</label>
                         </div>
                         <div class="remember-forgot">
-                            <label for=""><input type="checkbox">Remember Me</label>
-                            <a href="index.php?act=quenMK">Forgot Password</a>
+                            <label for=""><input type="checkbox">Ghi Nhớ</label>
+                            <a href="index.php?act=quenMK">Quên Mật Khẩu</a>
                         </div>
                         <input style="width: 100%;
                         height: 45px;
@@ -162,14 +162,14 @@
                         border-radius: 4px;
                         color: #e4e4e4;
                         font-weight: 500;
-                        box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" type="submit" name="dangnhap" value="Sign In">
+                        box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" type="submit" name="dangnhap" value="Đăng Nhập">
                         <?php
                         if (isset($thongbao) && ($thongbao != "")) {
                             echo $thongbao;
                         }
                         ?>
                         <div class="login-register">
-                            <p>Don't have an account ? <a href="javascript:;" class="register-link">Sign</a></p>
+                            <p>Bạn Chưa Có Tài Khoản ? <a href="javascript:;" class="register-link">Đăng Ký</a></p>
                         </div>
                     </form>
                 </div>
@@ -181,12 +181,12 @@
 
                 <div class="form-box register">
                     <form action="index.php?act=dangki" method="post">
-                        <h2>Sign Up</h2>
+                        <h2>Đăng Ký</h2>
 
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-user"></i></span>
                             <input type="text" name="user" placeholder="Tên người dùng"> <br> <br>
-                            <label for>Name</label>
+                            <label for>Tên Đăng Nhập</label>
                         </div>
 
                         <div class="input_box">
@@ -195,12 +195,22 @@
                             <label for>Email</label>
                         </div>
                         <div class="input_box">
+                            <span class="icon"> <i class="bx bxs-map"></i></span>
+                            <input type="text" name="diachi" placeholder="Nhập Địa Chỉ"> <br> <br>
+                            <label for>Địa Chỉ</label>
+                        </div>
+                        <div class="input_box">
+                            <span class="icon"> <i class="bx bxs-phone"></i></span>
+                            <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
+                            <label for>Số Điện Thoại</label>
+                        </div>
+                        <div class="input_box">
                             <span class="icon"> <i class="bx bxs-lock-alt"></i></span>
                             <input type="password" name="pass" placeholder="Mật khẩu"> <br> <br>
-                            <label for>PassWord</label>
+                            <label for>Mật Khẩu</label>
                         </div>
                         <div class="remember-forgot">
-                            <label for=""><input type="checkbox">I agree to the terms & conditions</label>
+                            <label for=""><input type="checkbox">Tôi đồng ý với các Điều khoản & Điều kiện</label>
                         </div>
                         <input style="width: 100%;
                             height: 45px;
@@ -211,7 +221,7 @@
                             color: #e4e4e4;
                             font-weight: 500;
                             box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);
-                            " type="submit" name="dangki" value="Sign Up">
+                            " type="submit" name="dangki" value="Đăng Ký">
                         <div class="login-register">
                             <p>Already have an account <a href="javascript:;" class="login-link">Sign In</a></p>
                         </div>
@@ -233,8 +243,12 @@
         display: none;
     }
     .container{
-        margin-top: 30px;
+        height: 600px;
     }
+    .input_box{
+        margin-top: 10px;
+    }
+
 </style>
     </html>
 <?php
