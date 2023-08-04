@@ -3,7 +3,7 @@
             <h2>Our Popular Products </h2>
         </div>
         
-        <div class="box-title"><strong><h2 style="color: #bc9667;"><?=$ten_dm ?></h2></strong></div>
+        <div class="box-title"><strong><h2 style="color: #bc9667;"><i class='bx bxs-coffee bx-tada' ></i><?=$ten_dm ?></h2></strong></div>
         <div class="products-container">
                  <?php
 

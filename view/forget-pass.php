@@ -1,4 +1,4 @@
-<div style="margin-top: 120px;margin-bottom: 80px;" class="forgot-pass">
+<div style="margin-top:120px;margin-bottom: 80px;" class="forgot-pass">
             <div class="box-left">
 
             <!-- chi tiết sản phẩm  -->
@@ -8,7 +8,7 @@
 
             <div class="row box-content formDK">
 
-                <form action="index.php?act=quenMK" method="post">
+                <form class="form-group" action="index.php?act=quenMK" method="post">
                        
                         Email:  <br>
                         <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
@@ -33,7 +33,7 @@
     </div>
 </div>  
 <style>
- form {
+ .form-group {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;

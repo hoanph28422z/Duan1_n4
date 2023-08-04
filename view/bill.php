@@ -160,7 +160,7 @@
       </div>
     </div>
 
-    <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-top: 20px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"></a>
+    <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-bottom:40px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"><i class='bx bxs-check-circle bx-tada' ></i></a>
 
 
 
@@ -171,36 +171,22 @@
 
 <style>
   input[type="submit"] {
-    background-color: #4CAF50;
-    /* màu nền */
     border: none;
-    /* không có đường viền */
-    color: white;
-    /* màu chữ */
-    padding: 10px 20px;
-    /* khoảng cách giữa nút và đường viền */
-    text-align: center;
-    /* căn giữa nội dung */
-    text-decoration: none;
-    /* không có gạch chân */
-    display: inline-block;
-    /* hiển thị thành khối */
-    font-size: 16px;
-    /* cỡ chữ */
-    border-radius: 5px;
-    /* bo góc */
-    transition-duration: 0.4s;
-    /* thời gian chuyển động */
-    cursor: pointer;
-    /* chỉ số chấm */
-    margin-bottom: 50px;
+    border-radius: 0px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0px;
+    background-color: transparent;
   }
 
   input[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color:seagreen;
     /* màu nền khi hover */
     color: white;
     /* màu chữ khi hover */
+    border-radius: 5px;
   }
 
   .box-left {

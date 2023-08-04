@@ -69,7 +69,7 @@ td {
 
                                             echo '
                                             
-                                            <tr>
+                                            <tr style="text-align: center;">
 
                                             <td>'.$i.'</td>
                                             <td>DAM-'.$id.'</td>

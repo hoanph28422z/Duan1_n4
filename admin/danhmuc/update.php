@@ -5,7 +5,8 @@
     }
 
 ?>
-.main{
+<style>
+    .main{
         position: relative;
         top: 0;
         left: 100px;
@@ -56,6 +57,7 @@
         border-radius: 10px;
         margin: 10px 15px;
     }
+</style>
 <div class="row">
             <div class="row  form-title"><h1>Cập nhật loại hàng hóa</h1></div>
             <div class="row form-content">
