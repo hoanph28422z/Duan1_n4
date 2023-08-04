@@ -90,7 +90,7 @@ extract($one_prod);
 
 
                     <div class="col-xl-6">
-                        <div class="product-details__content">
+                        <div style="margin-top: 70px;" class="product-details__content">
                         
                             <div class="tr-wrapper d-flex align-items-center justify-content-between">
                                 <h2 style="" class="title"><?=$te_hh?></h2>
@@ -100,7 +100,7 @@ extract($one_prod);
                             echo '<h3><strong>Giá:</strong> '.$don_gia.'[VND]</h3>';
                             echo"<br>";
                             echo '<p class ="text">'.$chi_tiet.'</p>';
-                            echo "<br>";
+                            echo "<br><br><br>";
                             echo ' <div class="product-quantity d-flex align-items-center">
                             <form action="index.php?act=addCART" method="post">
                             <input type="hidden" name="id" value="'.$ma_hh.'">

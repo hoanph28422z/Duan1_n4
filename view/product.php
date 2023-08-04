@@ -257,7 +257,7 @@
 
                                             echo'<div class="item d-flex align-items-center">
                                             <div class="thumb">
-                                                    <img src="'.$anh.'" alt="">
+                                            <a href="'.$link_sp.'"><img src="'.$anh.'" alt=""></a>
                                                 </div>
                                                 <div class="content">
                                                 <h5 class="rp-title border-effect"><a href="'.$link_sp.'">'.$te_hh.'</a></h5>

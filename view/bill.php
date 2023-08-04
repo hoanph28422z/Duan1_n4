@@ -25,9 +25,7 @@
 
   <form action="index.php?act=billconfirm" method="post" class="billform">
 
-    <div class="box-title">THÔNG TIN ĐẶT HÀNG</div>
-
-
+    <div   class="box-title"><h2>THÔNG TIN ĐẶT HÀNG</h2></div>
 
     <div class="row box-content margin-bottom">
       <table>

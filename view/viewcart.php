@@ -106,7 +106,7 @@
               </div>
               <div class="cart-bottom-wrapper d-flex align-items-center">
                 <a class="site-btn site-btn__bghide" href="index.php?act=bill"><i class='bx bx-upvote bx-fade-up' ></i>TIẾP TỤC ĐẶT HÀNG</a>
-                <a class="site-btn site-btn__bghide" href="index.php?act=delcart"><i class='bx bxs-message-alt-x'></i>XÓA GIỎ HÀNG </a>
+                <a class="site-btn site-btn__bghide" href="index.php?act=delcart"><i class='bx bxs-trash-alt'></i>XÓA GIỎ HÀNG </a>
               </div>
             </div>
           </div>
