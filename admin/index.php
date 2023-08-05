@@ -67,7 +67,7 @@
 
             case 'addsp':
                 // Kiểm tra xem người người dùng đã click vào nút add hay chưa?
-               
+                
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                     $tensanpham = $_POST['tenhang'];
                     $giasanpham = $_POST['giahang'];

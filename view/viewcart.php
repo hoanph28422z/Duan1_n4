@@ -59,7 +59,7 @@
 
                       foreach ($_SESSION['mycart'] as $id => $cart) {
                         $hinh = $img_path . $cart[2];
-                        $ttien = $cart[3] * $cart[4];
+                        $ttien = intval($cart[3]) * intval($cart[4]);
 
                         $html = "
           ";
@@ -75,7 +75,7 @@
                   <td class=\"product-quantity\">
                       <form action=\"index.php?act=updateCart\" method=\"post\">
                         <input type=\"hidden\" name=\"id\" value=\"$id\" />
-                        <input type=\"number\" name=\"soluong\" value=\"$cart[4]\" min=\"1\" max=\"100\">
+                        <input type=\"number\" class=\"quantity\" name=\"soluong\" value=\"$cart[4]\" min=\"0\" max=\"100\">
                         <input type=\"submit\" value=\"Update\">
                       </form>
                   </td>

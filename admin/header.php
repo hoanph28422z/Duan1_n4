@@ -26,7 +26,7 @@
 
 
       <a href="index.php?act=adddm"class="icon-a"><i class="fa fa-pie-chart icons"></i>Danh Mục</a>
-      <a href="index.php?act=addsp"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
+      <a href="index.php?act=listsp"class="icon-a"><i class="fa fa-tasks icons"></i>Hàng Hóa</a>
       <a href="index.php?act=dskh"class="icon-a"><i class="fa fa-user"></i>Khách Hàng</a>
       <a href="index.php?act=dsdh"class="icon-a"><i class="fa fa-shopping-bag"></i>Đơn Hàng</a>
       <a href="index.php?act=dsbl"class="icon-a"><i class="fa fa-inbox"></i>Bình Luận</a>
