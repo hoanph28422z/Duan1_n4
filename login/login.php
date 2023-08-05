@@ -142,7 +142,7 @@
 
             <div class="logreg-box">
                 <div class="form-box login">
-                    <form action="index.php?act=dangnhap" method="post">
+                    <form action="index.php?act=dangnhap" method="post" style="width: 360px;">
                         <h2>Đăng Nhập</h2>
                         <div class="input_box">
                             <span class="icon"> <i class='bx bx-user'></i></span>
@@ -159,6 +159,7 @@
                             <a href="index.php?act=quenMK">Quên Mật Khẩu</a>
                         </div>
                         <input style="width: 100%;
+                        
                         height: 45px;
                         background: #c4103d;
                         border: none;
@@ -166,7 +167,7 @@
                         border-radius: 4px;
                         color: #e4e4e4;
                         font-weight: 500;
-                        box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" type="submit" name="dangnhap" value="Đăng Nhập">
+                        box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);" class="btn" type="submit" name="dangnhap" value="Đăng Nhập">
                         <?php
                         if (isset($thongbao) && ($thongbao != "")) {
                             echo $thongbao;
@@ -183,9 +184,9 @@
 
                 <!-- Sign Up -->
 
+
                 <div class="form-box register">
                     <form action="index.php?act=dangki" method="post">
-                        <h2>Đăng Ký</h2>
 
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-user"></i></span>
@@ -225,7 +226,7 @@
                             color: #e4e4e4;
                             font-weight: 500;
                             box-shadow: 0 0 10px 0  rgba(0, 0, 0, 0.5);
-                            " type="submit" name="dangki" value="Đăng Ký">
+                            " type="submit" name="dangki" class="btn" value="Đăng Ký">
                         <div class="login-register">
                             <p>Already have an account <a href="javascript:;" class="login-link">Sign In</a></p>
                         </div>
@@ -263,7 +264,13 @@
     display: flex;
     justify-content: space-between;
 }
+.btn{
+    cursor: pointer;
+}
 
+.login-register p{
+    margin-top: -15px;
+}
 </style>
     </html>
 <?php

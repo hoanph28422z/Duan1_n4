@@ -77,7 +77,7 @@
                     $des = $_POST['mota'];
                     $chi_tiet = $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh']['name'];
-
+                     
                     $target_dir = "../upload/";
                     $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
                     if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
@@ -88,7 +88,8 @@
 
                     
                     insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
-                    $thongbao = "Thêm thành công";
+                    $thongbao = "Thêm thành công";   
+                    
                 }
                
                 $dsdanhmuc = selectall_cate();
