@@ -27,7 +27,8 @@
         width: 450px;
         margin: 10px auto;
     }
-    #text_list label{
+
+    #text_list label {
         text-align: left;
         margin: 5px;
         font-weight: 550;
@@ -59,16 +60,7 @@ if (isset($bill) && (is_array($bill))) {
             <div class="row margin-bottom10" id="text_list">
                 <label for="">Tình trạng đơn hàng</label>
 
-
-                <select name="trangthai" id="">
-                <!-- <option><?= $bill_status ?></option> -->
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-
-                </select>
-
+                <input type="text" name="trangthai"  class="list_item"  value="<?= $bill_status ?>">
 
             </div>
 

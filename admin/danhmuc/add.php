@@ -18,9 +18,9 @@
                 position: fixed;
                 top: 0%;
                 left: 20%;
-                box-shadow: 1px 1px 10px rgba(24 15 24 /25%); 
+                box-shadow: 1px 1px 10px rgba(24 15 24 /25%);
                 height: 100vh;
-                width:80% ;
+                width: 80%;
 
         }
 
@@ -56,6 +56,7 @@
                 cursor: pointer;
                 font-weight: 550;
         }
+
         .btn_tag:hover {
                 transform: translateY(-5px);
                 transition: 0.2s all linear;
@@ -69,10 +70,13 @@
                         <br>
                         <div class="row margin-bottom10" id="form_group ">
                                 <input type="text" class="hiden" name="maloai" placeholder="Tên Loại" disabled>
+
                         </div>
 
                         <div class="row margin-bottom10" id="form_group">
                                 <input type="text" class="name_tag" name="tenloai" placeholder="Mời Bạn Nhập Dữ Liệu">
+
+
                         </div>
 
                         <div class="row margin-bottom">

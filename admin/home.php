@@ -120,7 +120,7 @@
         
         <div class="clearfix"></div>
         <br/>
-        <div class="col-div-12">
+        <!-- <div class="col-div-12">
             <div class="box-8">
             <div class="content-box">
                 <p>Top Selling Projects <span>Sell All</span></p>
@@ -166,7 +166,7 @@
     </table>
             </div>
         </div>
-        </div>
+        </div> -->
     
         
             

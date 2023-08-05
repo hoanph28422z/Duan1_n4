@@ -21,6 +21,11 @@
   <link rel="stylesheet" href="show_pro/assets/css/main.css">
 
 </head>
+<style>
+  div{
+    font-family:Roboto;
+  }
+</style>
 <div class="box-left">
 
   <form action="index.php?act=billconfirm" method="post" class="billform">
@@ -108,7 +113,7 @@
 
                         foreach ($_SESSION['mycart'] as $id => $cart) {
                           $hinh = $img_path . $cart[2];
-                          $ttien = $cart[3] * $cart[4];
+                          $ttien = intval($cart[3]) * intval($cart[4]);
 
                           $html = "
         ";
