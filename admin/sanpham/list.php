@@ -43,7 +43,7 @@
                     <th>ĐƠN GIÁ</th>
                     <th>SỐ LƯỢNG</th>
                     <th>LƯỢT XEM</th>
-                    <th><a href="index.php?act=addsp">Thêm mới</a></th>
+                    <th><a style="text-decoration: none;color: #6c88be;" href="index.php?act=addsp">THÊM MỚI</a></th>
                 </tr>
 
 
