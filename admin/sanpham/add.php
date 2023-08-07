@@ -76,24 +76,48 @@
                 <div class="row margin-bottom10">
                     <label for="">Tên hàng hóa</label> <br>
                     <input type="text" class="id_product" name="tenhang">
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['tenhang'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Đơn giá</label> <br>
                     <input type="text" class="id_product" name="giahang">
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['giahang'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Số lượng</label> <br>
                     <input type="text" class="id_product" name="so_luong">
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['so_luong'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Hình ảnh</label> <br>
                     <input type="file" class="id_product" name="hinhanh">
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['hinhanh'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
 
 
@@ -112,6 +136,7 @@
 
                         ?>
                     </select>
+
                 </div>
 
 
@@ -133,6 +158,7 @@
                 <div class="row margin-bottom10">
                     <label for="">Ngày nhập</label> <br>
                     <input type="date" class="date" name="ngay">
+
                 </div>
 
 
@@ -141,11 +167,23 @@
                 <div class="row margin-bottom10 des">
                     <label for="">Mô tả</label>
                     <textarea name="mota" class="id_product"></textarea>
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['mota'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
 
                 <div class="row margin-bottom10 des">
                     <label for="">Chi Tiet</label>
                     <textarea name="chi_tiet" class="id_product"></textarea>
+                    <?php
+                    if (!empty($errors)) : ?>
+                        <span style="color: red;">
+                            <?= $errors['chi_tiet'] ?>
+                        </span>
+                    <?php endif ?>
                 </div>
                 <br>
                 <div class="row margin-bottom button ">

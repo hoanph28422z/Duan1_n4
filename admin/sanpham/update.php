@@ -78,6 +78,12 @@ if (is_file($img)) {
             <div class="row margin-bottom10">
                 <label for="">Tên hàng hóa</label> <br>
                 <input type="text" class="input_upload" name="tenhang" value="<?= $te_hh ?>">
+                <span><?php
+                                if (!empty($errors)) : ?>
+                                    <span style="color: red;">
+                                        <?= $errors['tenloai'] ?>
+                                    </span>
+                                <?php endif ?></span>
             </div>
 
 

@@ -108,7 +108,7 @@
 
                         foreach ($_SESSION['mycart'] as $id => $cart) {
                           $hinh = $img_path . $cart[2];
-                          $ttien = $cart[3] * $cart[4];
+                          $ttien =intval($cart[3])  * intval($cart[4]);
 
                           $html = "
         ";

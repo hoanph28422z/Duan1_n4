@@ -7,8 +7,4 @@ registerLink.addEventListener("click", () => {
   logreBox.classList.add("active");
 });
 
-loginlink.addEventListener("click", () => {
-
-  logreBox.classList.remove("active");
-});
 

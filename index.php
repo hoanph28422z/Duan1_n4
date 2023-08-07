@@ -63,9 +63,23 @@
                         $mat_khau = $_POST['pass'];
                         $que_quan = $_POST['que_quan'];
                         $sdt = $_POST['sdt'];
-                        
-                        insert_user($ho_ten, $email, $mat_khau,$que_quan,$sdt);
-                        $thongbao = "✔️ Đăng ký thành công";
+                        $errors=array();
+                        if(!empty($ho_ten)){
+                            $errors['user'] = "Tên không được để giỗng";
+                        }
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            $errors['email'] = "Địa chỉ email không hợp lệ";
+                        }
+                        if (!preg_match('/^[0-9]{10}$/', $sdt)) {
+                            $errors['sdt'] = "Số điện thoại không hợp lệ";
+                        } 
+                        if (strlen($string) >= 8) {
+                            $errors['user'] = "Tên không được để giỗng";
+                        }
+                        if (!isset($errors)){
+                            insert_user($ho_ten, $email, $mat_khau,$que_quan,$sdt);
+                            $thongbao = "✔️ Đăng ký thành công";
+                        }
      
                      }
      
@@ -143,7 +157,7 @@
                             $anh = $_POST['anh'];
                             $gia = $_POST['gia'];
                             $soluong = 1;
-                            $ttien = $soluong*$gia;
+                            $ttien = intval($soluong) * intval($gia) ;
                             $prodADD = [$id, $tensp, $anh, $gia, $soluong, $ttien];
                             
                             $_SESSION['mycart'][$id] = $prodADD;

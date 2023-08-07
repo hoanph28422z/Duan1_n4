@@ -98,15 +98,21 @@ if (is_array($danhmuc)) {
 
             <div class="row margin-bottom10">
                 <label for="">Tên loại</label>
-                <input class="input-hoan" type="text" name="tenloai" value="<?= $ten_loai  ?>">
                 <input type="hidden" name="id" value="<?= $ma_loai ?>">
+                <input class="input-hoan" type="text" name="tenloai" value="<?= $ten_loai  ?>">
+                <?php
+                                if (!empty($errors)) : ?>
+                                    <span style="color: red;">
+                                        <?= $errors['tenloai'] ?>
+                                    </span>
+                                <?php endif ?>
             </div>
 
             <div class="row margin-bottom">
 
                 <input class="btn_tag" type="submit" name="capnhat" value="CẬP NHẬT">
                 <input class="btn_tag" type="reset" value="NHẬP LẠI">
-                <a href="indext.php?act=listdm"><input class="btn_tag" type="button" value="DANH SÁCH"></a>
+                <a href="index.php?act=listdm"><input class="btn_tag" type="button" value="DANH SÁCH"></a>
             </div>
 
             <?php

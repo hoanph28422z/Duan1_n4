@@ -69,7 +69,7 @@
 
                       $html = "
           ";
-                      $tongtien = $tongtien + $ttien;
+                      $tongtien = intval($tongtien ) + intval($ttien );
                       $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
                       echo "
               <tr>
@@ -125,3 +125,9 @@
   </div>
 </div>
 
+<script>
+  var quantity =document.querySelector('.quantity');
+  if(quantity.value == ""){
+    quantity.value  = 0;
+  }
+</script>
