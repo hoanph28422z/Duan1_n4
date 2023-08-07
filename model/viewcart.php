@@ -16,7 +16,7 @@
        
     foreach ($_SESSION['mycart'] as $cart) {
        
-        $ttien = $cart[3]*$cart[4];
+        $ttien = intval($cart[3])*intval($cart[4]);
         $tongtien = $tongtien + $ttien;
 
 
@@ -68,7 +68,7 @@
 
     function show_detail_bill($bill_chitiet){
         
-        $i=0;
+
         $tongtien=0;
        
 
@@ -90,9 +90,9 @@
         global $img_path;
         
         $hinh = $img_path.$cart['img'];
-        // $ttien = $cart['price']*$cart['soluong'];
-        $tongtien+=$cart['thanhtien'];
-
+        $ttien = intval($cart['price'])*intval($cart['soluong']);
+        $tongtien+=$ttien;
+        
 
 
                     echo '
@@ -106,7 +106,7 @@
                         <td>'.$cart['name'].'</td>
                         <td>'.$cart['price'].'</td>
                         <td>'.$cart['soluong'].'</td>
-                        <td>'.$cart['thanhtien'].'</td>
+                        <td>'.$ttien.'</td>
                        
                     </tr>';
 
