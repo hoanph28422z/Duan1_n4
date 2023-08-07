@@ -59,9 +59,12 @@ if (isset($bill) && (is_array($bill))) {
 
             <div class="row margin-bottom10" id="text_list">
                 <label for="">Tình trạng đơn hàng</label>
-
-                <input type="text" name="trangthai"  class="list_item"  value="<?= $bill_status ?>">
-
+                <select name="trangthai" class="list_item" id="">
+                    <option>0.Đơn hàng mới</option>
+                    <option>1.Đang xử lí</option>
+                    <option>2.Đang giao hàng</option>
+                    <option>3.Hoàn thành</option>
+                </select>
             </div>
 
             <div class="row margin-bottom">
