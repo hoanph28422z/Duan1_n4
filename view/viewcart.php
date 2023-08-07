@@ -69,7 +69,7 @@
 
                       $html = "
           ";
-                      $tongtien = $tongtien + $ttien;
+                      $tongtien = intval($tongtien ) + intval($ttien );
                       $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
                       echo "
               <tr>
@@ -81,7 +81,7 @@
                   <td class=\"product-quantity\">
                       <form action=\"index.php?act=updateCart\" method=\"post\">
                         <input type=\"hidden\" name=\"id\" value=\"$id\" />
-                        <input type=\"number\" name=\"soluong\" value=\"$cart[4]\" min=\"1\" max=\"100\">
+                        <input type=\"number\" class = \"quantity\" name=\"soluong\" value=\"$cart[4]\" min=\"0\" max=\"100\">
                         <input type=\"submit\" value=\"Update\">
                       </form>
                   </td>
@@ -125,3 +125,9 @@
   </div>
 </div>
 
+<script>
+  var quantity =document.querySelector('.quantity');
+  if(quantity.value == ""){
+    quantity.value  = 0;
+  }
+</script>

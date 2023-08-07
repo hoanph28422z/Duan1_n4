@@ -1,4 +1,5 @@
 
+
 <div style="margin-top: 100px;" class="row margin-bottom">
 
     <div class="box-content">
@@ -17,16 +18,16 @@
                 <!-- <h2>Thông tin người dùng</h2>
   <img class="avatar" src="path/to/user-avatar.jpg" alt="Ảnh đại diện của người dùng"> -->
 
-                    <h2>Hồ Sơ Của Tôi</h2>
-                    <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+                <h2>Hồ Sơ Của Tôi</h2>
+                <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
                 <ul class="text_user">
                     <li><strong>Tên Đăng Nhập</strong><?= $ho_ten ?></li>
-                    <li><strong>Email</strong><?= $email?></li>
-                    <li><strong>Quê Quán</strong><?= $que_quan?></li>
-                    <li><strong>SDT</strong><?= $sdt?></li>
+                    <li><strong>Email</strong><?= $email ?></li>
+                    <li><strong>Quê Quán</strong><?= $que_quan ?></li>
+                    <li><strong>SDT</strong><?= $sdt ?></li>
                     <li><a href="index.php?act=mybill">Lịch sử mua hàng</a></li>
-                    <li><a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
-                    
+
+
 
                     <?php
 
@@ -35,17 +36,30 @@
                         <li>
                             <strong>Trang admin:</strong><a href="admin/index.php">Admin</a>
                         </li>
-                    <?php     }  ?>
+                    <?php     }
+
+                    ?>
+                    <?php
+
+                    if ($vai_tro == 0) {
+                    ?>
+                        <li>
+                        <li><a href="index.php?act=editTK">Cập nhật tài khoản</a></li>
+                        </li>
+                    <?php     }
+
+                    ?>
                 </ul>
             </div>
 
             <style>
-                .box-content{
+                .box-content {
                     background-image: url('https://as1.ftcdn.net/v2/jpg/00/81/27/82/1000_F_81278278_KJxTGlpV9u3w67mKjlJfG8KGUyqS3HYD.jpg');
-                    background-size: 109vw , 100vh;
+                    background-size: 109vw, 100vh;
                     background-repeat: no-repeat;
-                
+
                 }
+
                 .user-info {
                     background-color: #f8f8f8;
                     border: 1px solid #ccc;
@@ -86,20 +100,24 @@
                     display: inline-block;
                     width: 150px;
                 }
+
                 .footer#footer {
                     position: relative;
                     bottom: -192px;
                 }
-                .text_user{
+
+                .text_user {
                     padding-top: 15px;
                     text-align: left;
                     text-transform: uppercase;
                 }
-                .text_user li{
+
+                .text_user li {
                     margin-top: 20px;
                 }
-                .text_user li a{
-                    
+
+                .text_user li a {
+
                     font-weight: 550;
                 }
             </style>
@@ -115,8 +133,9 @@
         ?>
     </div>
     <header>
-    <link rel="stylesheet" href="login/style.css">
+        <link rel="stylesheet" href="login/style.css">
     </header>
+
     <body>
         <div style="margin-top: -109px;" class="background"></div>
         <div class="container">
@@ -191,12 +210,19 @@
                             <span class="icon"> <i class="bx bxs-user"></i></span>
                             <input type="text" name="user" placeholder="Tên người dùng"> <br> <br>
                             <label for>Tên Đăng Nhập</label>
+                            
                         </div>
 
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-envelope"></i></span>
                             <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
                             <label for>Email</label>
+                            <?php
+                            if (!empty($errors)) : ?>
+                                <span style="color: red;">
+                                    <?= $errors['email'] ?>
+                                </span>
+                            <?php endif ?>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-map"></i></span>
@@ -207,6 +233,12 @@
                             <span class="icon"> <i class="bx bxs-phone"></i></span>
                             <input type="" name="sdt" placeholder="Số điện thoại"> <br> <br>
                             <label for>Số Điện Thoại</label>
+                            <?php
+                            if (!empty($errors)) : ?>
+                                <span style="color: red;">
+                                    <?= $errors['sdt'] ?>
+                                </span>
+                            <?php endif ?>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-lock-alt"></i></span>
@@ -239,38 +271,45 @@
     <section class="footer" id="footer">
 
     </section>
-<style>
-    body{
-        background: url('login/img/home.jpg');
-        background-size: cover;
-    }
-    .footer{
-        display: none;
-    }
-    header{
-        display: none;
-    }
-    .container{
-        height: 600px;
-    }
-    .input_box{
-        margin-top: 10px;
-    }
-    .remember-forgot {
-    font-size: 14.5px;
-    font-weight: 500;
-    margin: 16px 0 15px;
-    display: flex;
-    justify-content: space-between;
-}
-.btn{
-    cursor: pointer;
-}
+    <style>
+        body {
+            background: url('login/img/home.jpg');
+            background-size: cover;
+        }
 
-.login-register p{
-    margin-top: -15px;
-}
-</style>
+        .footer {
+            display: none;
+        }
+
+        header {
+            display: none;
+        }
+
+        .container {
+            height: 600px;
+        }
+
+        .input_box {
+            margin-top: 10px;
+        }
+
+        .remember-forgot {
+            font-size: 14.5px;
+            font-weight: 500;
+            margin: 16px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .login-register p {
+            margin-top: -15px;
+        }
+    </style>
+
     </html>
 <?php
         }

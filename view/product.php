@@ -21,36 +21,44 @@
     <link rel="stylesheet" href="show_pro/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="show_pro/assets/css/jquery-ui.css">
     <link rel="stylesheet" href="show_pro/assets/css/main.css">
-    <style>.pp__thumb--2 img{
-        width: 100%;
-        height: 250px;
-        border-radius: 5px;
-    }
-    .add-to-cart{
-        border: none;
-        padding: 6px 12px;
-        margin-top: 5px;
-        border-radius: 50px;
-        width: 90%;
-        font-weight: 550;
-        box-shadow: 1px 1px 10px 2px rgba(24 35 15 /35%);
-    }
-        .add-to-cart:hover{
+    <style>
+        .pp__thumb--2 img {
+            width: 100%;
+            height: 250px;
+            border-radius: 5px;
+        }
+
+        .add-to-cart {
+            border: none;
+            padding: 6px 12px;
+            margin-top: 5px;
+            border-radius: 50px;
+            width: 90%;
+            font-weight: 550;
+            box-shadow: 1px 1px 10px 2px rgba(24 35 15 /35%);
+        }
+
+        .add-to-cart:hover {
             transform: translateY(5px);
             transition: 0.1s all linear;
         }
+
         .navbar {
             margin-top: 16px;
 
         }
-        .navbar li a{
+
+        .navbar li a {
             text-decoration: none;
-            
+
         }
-        .footer-box a{
+
+        .footer-box a {
             text-decoration: none;
-        }
-        </style>
+        } 
+
+        a{text-decoration: none;}
+    </style>
 </head>
 
 <body>
@@ -134,7 +142,7 @@
                                             class="fas fa-list-ul"></i></a>
                                 </div>
                             </nav>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -152,48 +160,48 @@
                             <div class="row">
 
                                 <?php
-                                                $i =0;
-                                                foreach ($spnews as $sp) {
-                                                    extract($sp);
-                                                    $anh = $img_path.$hinh;
-                                                    $link_sp = "index.php?act=sanphamchitiet&idsp=".$ma_hh;
+                                $i = 0;
+                                foreach ($spnews as $sp) {
+                                    extract($sp);
+                                    $anh = $img_path . $hinh;
+                                    $link_sp = "index.php?act=sanphamchitiet&idsp=" . $ma_hh;
 
-                                                    if (($i==2) ||($i==5) ||  ($i==8) ){
-                                                        $mr="";
-                                                    }else{
-                                                        $mr="margin-right";
-                                                    }
+                                    if (($i == 2) || ($i == 5) || ($i == 8)) {
+                                        $mr = "";
+                                    } else {
+                                        $mr = "margin-right";
+                                    }
 
 
-                                                    echo '  <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
+                                    echo '  <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
                                                     <div class="pp__item pp__item--2 active text-center pt-20 pb-20">
                                                     <div class="pp__thumb pp__thumb--2 mt-35">
-                                                    <a href="'.$link_sp.'"> <img style="padding:30px" src="'.$anh.'" alt=""></a>
+                                                    <a href="' . $link_sp . '"> <img style="padding:30px" src="' . $anh . '" alt=""></a>
                                                     </div>
                                                     <div class="pp__content pp__content--2 mt-25">
 
                                                     <h4 class="pp__title pp__title--2">
-                                                    <a href="'.$link_sp.'">'.$te_hh.'</a>
+                                                    <a href="' . $link_sp . '">' . $te_hh . '</a>
                                                     </h4>
                                                     <div class="pp__price pp__price--2 d-flex align-items-center justify-content-center">
                                                     <h6 class="label">Price - </h6>
-                                                    <span>'.$don_gia.'VND</span>
+                                                    <span>' . $don_gia . 'VND</span>
                                                     </div>
                                                     </div>
                                                     <form action="index.php?act=addCART" method="post">
-                                                        <input type="hidden" name="id" value="'.$ma_hh.'">
-                                                        <input type="hidden" name="tensp" value="'.$te_hh.'">
-                                                        <input type="hidden" name="anh" value="'.$hinh.'">
-                                                        <input type="hidden" name="gia" value="'.$don_gia.'">
+                                                        <input type="hidden" name="id" value="' . $ma_hh . '">
+                                                        <input type="hidden" name="tensp" value="' . $te_hh . '">
+                                                        <input type="hidden" name="anh" value="' . $hinh . '">
+                                                        <input type="hidden" name="gia" value="' . $don_gia . '">
                                                         <input class="add-to-cart" type="submit" name="addCART" value="Add to Cart">
                                                     </form>
                                                     </div>
                                                     </div>
                                                     ';
-                                                    
-                                                            $i++;
-                                                    }
-                                                    ?>
+
+                                    $i++;
+                                }
+                                ?>
 
 
 
@@ -224,22 +232,26 @@
                         </div>
 
 
-                        <div  class="widget mt-30">
+                        <div class="widget mt-30">
                             <h2 class="title">Categories</h2>
                             <?php
-                                foreach ($dsdm as $dm) {
-                                    extract($dm);
+                            foreach ($dsdm as $dm) {
+                                extract($dm);
 
-                                    $link_dm = "index.php?act=sanpham&iddm=".$ma_loai;
+                                $link_dm = "index.php?act=sanpham&iddm=" . $ma_loai;
 
-                                    echo '<ul style="padding: 4px;">
-                                            <li class="cat-item">
-                                             <a style="margin-left:90px" href="'.$link_dm.'">'.$ten_loai.'</a>
-                                            </li>
-                                        </ul>
-                                        ';
-                                }
-                        ?>
+                                echo '
+                                <a  href="' . $link_dm . '">
+                                <ul style="padding: 4px; ">
+                                        <li class="cat-item">
+                                         <span style="margin-left:90px" >' . $ten_loai . '</span>
+                                        </li>
+                                </ul>
+                                </a>
+
+                                     ';
+                            }
+                            ?>
                         </div>
 
 
@@ -248,23 +260,23 @@
                             <div class="recent-posts top-products">
 
                                 <?php
-                                        foreach ($dstop10 as $ds) {
+                                foreach ($dstop10 as $ds) {
 
-                                            extract($ds);
+                                    extract($ds);
 
-                                            $anh = $img_path.$hinh;
-                                            $link_sp = "index.php?act=sanphamchitiet&idsp=".$ma_hh;
+                                    $anh = $img_path . $hinh;
+                                    $link_sp = "index.php?act=sanphamchitiet&idsp=" . $ma_hh;
 
-                                            echo'<div class="item d-flex align-items-center">
+                                    echo '<div class="item d-flex align-items-center">
                                             <div class="thumb">
-                                            <a href="'.$link_sp.'"><img src="'.$anh.'" alt=""></a>
+                                            <a href="' . $link_sp . '"><img src="' . $anh . '" alt=""></a>
                                                 </div>
                                                 <div class="content">
-                                                <h5 class="rp-title border-effect"><a href="'.$link_sp.'">'.$te_hh.'</a></h5>
+                                                <h5 class="rp-title border-effect"><a href="' . $link_sp . '">' . $te_hh . '</a></h5>
                                                 </div>
-                                                </div> ';   
-                                        }
-                                            ?>
+                                                </div> ';
+                                }
+                                ?>
 
 
                             </div>

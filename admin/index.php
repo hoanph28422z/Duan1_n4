@@ -17,9 +17,17 @@
                 // Kiểm tra xem người người dùng đã click vào nút add hay chưa?
                
                 if (isset($_POST['themmoi'])&&($_POST['themmoi'])) {
+                    $errors=[];
                     $tenloai = $_POST['tenloai'];
-                    insert_cate($tenloai);
-                    $thongbao = "Thêm thành công";
+                    if($tenloai == ""){
+                        $errors['tenloai']="Không được để trống";
+                    }
+                    if(!isset($errors)){
+
+                        insert_cate($tenloai);
+                        $thongbao = "Thêm thành công";
+                    }
+
                 }
                
                 
@@ -51,14 +59,22 @@
                 if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                     $tenloai = $_POST['tenloai'];
                     $maloai = $_POST['id'];
-                    update_cate($tenloai, $maloai);
-                    $thongbao = "Cập nhật thành công";
 
+                    $errors =[];
+                    if($tenloai == ""){
+                        $errors['tenloai']= "Không được để trống ";
+                    }
+                    if(!isset($errors)){
+                        update_cate($tenloai, $maloai);
+                        $thongbao = "Cập nhật thành công";
+                    }
+
+                    
                 }
+                $dsdanhmuc = selectall_cate();
+                    include_once "danhmuc/list.php";
 
                 
-                $dsdanhmuc = selectall_cate();
-                include_once "danhmuc/listdm.php";
                 break;
 
 
@@ -76,26 +92,59 @@
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
                     $chi_tiet = $_POST['chi_tiet'];
-                    $anh = $_FILES['hinhanh']['name'];
-                     
-                    $target_dir = "../upload/";
-                    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
-                    if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
-                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                      } else {
-                        // echo "Sorry, there was an error uploading your file.";
-                      }
+                    $anh = $_FILES['hinhanh'];
 
-                    
-                    insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
-                    $thongbao = "Thêm thành công";   
-                    
+
+                    $errors=[];
+                    if ($tensanpham == "") {
+                        $errors['tenhang'] = "Tên sản phẩm không được trống";
+                    }
+                    if ($cate == "") {
+                        $errors['loaihang'] = "Tên sản phẩm không được trống";
+                    }
+                    if ($giasanpham < 0) {
+                        $errors['giahang'] = "Giá không được âm";
+                    }
+                    if ($quantity < 0) {
+                        $errors['so_luong'] = "Số lượng không được âm";
+                    }if ($des == "") {
+                        $errors['mota'] = "Mo không được trống";
+                    }if ($chi_tiet == "") {
+                        $errors['chi_tiet'] = " không được trống";
+                    }
+                    //validate hình
+                    if ($anh['size'] <= 0) {
+                        $errors['hinhanh'] = "Bạn chưa nhập ảnh";
+                    } else {
+                        $img = ['jpg', 'png', 'gif' ,'PNG'];
+                        //Lấy phần mở rộng của file
+                        $ext = pathinfo($anh['name'], PATHINFO_EXTENSION);
+                        if (!in_array($ext, $img)) {
+                            $errors['hinhanh'] = "File của bạn không phải là hình";
+                        }
+                    }
+                
+                    //Nếu không có lỗi xảy ra mới thêm dữ liệu và database
+                    if (!isset($errors)) {
+                        $target_dir = "../upload/";
+                        $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+                        if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+                            // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                          } else {
+                            echo "Sorry, there was an error uploading your file.";
+                          }
+    
+                        
+                        insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
+                        $thongbao = "Thêm thành công";   
+                    }
+        
                 }
-               
                 $dsdanhmuc = selectall_cate();
                 // var_dump($dsdanhmuc);
                 include_once "sanpham/add.php";
                 break;
+               
 
             case 'listsp':
                 if (isset($_POST['listOK']) && ($_POST['listOK'])){
@@ -123,6 +172,7 @@
                 break;
             case 'suasp':
                 if (isset($_GET['id'])&&$_GET['id']>0) {
+                    
                 $sanpham = selectone_prod($_GET['id']);
                 }
 
@@ -141,23 +191,53 @@
                     $date = $_POST['ngay'];
                     $des = $_POST['mota'];
                     $chi_tiet= $_POST['chi_tiet'];
-                    $anh = $_FILES['hinhanh']['name'];
+                    $anh = $_FILES['hinhanh'];
 
-                    $target_dir = "../upload/";
-                    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
-                    if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
-                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                      } else {
-                        // echo "Sorry, there was an error uploading your file.";
-                      }
-                    update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet, $ma_hh);
-                    $thongbao = "Cập nhật thành công";
+                    $errors=[];
+                    if ($tensanpham == "") {
+                        $errors['tenhang'] = "Tên sản phẩm không được trống";
+                    }
+                    if ($cate == "") {
+                        $errors['loaihang'] = "Tên sản phẩm không được trống";
+                    }
+                    if ($giasanpham < 0) {
+                        $errors['giahang'] = "Giá không được âm";
+                    }
+                    if ($quantity < 0) {
+                        $errors['so_luong'] = "Số lượng không được âm";
+                    }if ($des == "") {
+                        $errors['mota'] = "Tên sản phẩm không được trống";
+                    }if ($chi_tiet == "") {
+                        $errors['chi_tiet'] = "Tên sản phẩm không được trống";
+                    }
+                    //validate hình
+                    if ($anh['size'] <= 0) {
+                        $errors['hinhanh'] = "Bạn chưa nhập ảnh";
+                    } else {
+                        $img = ['jpg', 'png', 'gif'];
+                        //Lấy phần mở rộng của file
+                        $ext = pathinfo($anh['name'], PATHINFO_EXTENSION);
+                        if (!in_array($ext, $img)) {
+                            $errors['hinhanh'] = "File của bạn không phải là hình";
+                        }
+                    }
+                    if (!isset($errors)) {
+                        $target_dir = "../upload/";
+                        $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+                        if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+                            // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                          } else {
+
+                          }
+                        update_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet, $ma_hh);
+                        $thongbao = "Cập nhật thành công";
+                    }
+                    $dssanpham = selectall_prod('', 0);
+                    include_once "sanpham/list.php";
 
                     }
 
                 
-                $dssanpham = selectall_prod('', 0);
-                include_once "sanpham/list.php";
                 break;
 
                 
@@ -278,25 +358,6 @@
                                 include_once "taikhoan/update.php";
                                 break;
                 
-                            // case 'capnhatKH':
-                
-                            //     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                            //         $ho_ten = $_POST['tenkh'];
-                            //         $email = $_POST['email'];
-                            //         $mat_khau = $_POST['pass'];
-                            //         $que_quan = $_POST['que_quan'];
-                            //         $sdt = $_POST['sdt'];
-                            //         $role = $_POST['role'];
-                            //         $id = $_POST['ma_kh'];
-                
-                            //         update_user_inADMIN($ho_ten, $email, $mat_khau,$que_quan,$sdt, $role, $id);
-                            //         $thongbao = "✔️ Cập nhật thành công!";
-                            //     }
-                
-                                
-                            //     $dsTK = selectall_TK();
-                            //     include_once "taikhoan/list.php";
-                            //     break;
 
             
             /* xong sản phẩm */

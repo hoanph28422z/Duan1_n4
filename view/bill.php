@@ -113,7 +113,7 @@
 
                         foreach ($_SESSION['mycart'] as $id => $cart) {
                           $hinh = $img_path . $cart[2];
-                          $ttien = intval($cart[3]) * intval($cart[4]);
+                          $ttien = intval( $cart[3]) * intval($cart[4]) ;
 
                           $html = "
         ";
@@ -128,7 +128,7 @@
            <td class="product-thumbnail"><img class="img" src="'.$hinh.'"></td>
            <td class="product-name">'.$cart[1].'</td>
            <td class="product-price">'.$cart[3].'</td>
-           <td class="product-quantity">'.$cart[4].'</td>
+           <td class="product-quantity"><input type="number" class="quantity" value="'.$cart[4].'"></td>
            <td class=\"product-subtotal\">'.$ttien.'</td>
 
        </tr>';
@@ -207,3 +207,10 @@
   
 </style>
 </div>
+<script>
+
+  var quantity =document.querySelector('.quantity');
+  if(quantity.value == ""){
+    quantity.value = 0;
+  }
+</script>

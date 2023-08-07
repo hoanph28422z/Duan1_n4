@@ -75,6 +75,12 @@
 
                         <div class="row margin-bottom10" id="form_group">
                                 <input type="text" class="name_tag" name="tenloai" placeholder="Mời Bạn Nhập Dữ Liệu">
+                                <?php
+                                if (!empty($errors)) : ?>
+                                    <span style="color: red;">
+                                        <?= $errors['tenloai'] ?>
+                                    </span>
+                                <?php endif ?>
 
 
                         </div>
