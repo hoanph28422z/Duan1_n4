@@ -1,4 +1,6 @@
 <?php
+
+
     include_once "../model/pdo.php";
     include_once "../model/loai.php";
     include_once "../model/sanpham.php";
@@ -93,30 +95,31 @@
                     $des = $_POST['mota'];
                     $chi_tiet = $_POST['chi_tiet'];
                     $anh = $_FILES['hinhanh'];
+                    //lấy ra tên ảnh lưu vào data
 
-
-                    $errors=[];
+                
+                    //Validate
                     if ($tensanpham == "") {
                         $errors['tenhang'] = "Tên sản phẩm không được trống";
                     }
-                    if ($cate == "") {
-                        $errors['loaihang'] = "Tên sản phẩm không được trống";
+                    if ( $giasanpham =="") {
+                        $errors['giahang'] = "Giá không được bỏ trống";
+                        if ($giasanpham < 0) {
+                            $errors['giahang'] = "Giá sản phẩm không được âm";
+                        }
                     }
-                    if ($giasanpham < 0) {
-                        $errors['giahang'] = "Giá không được âm";
+                    if ($quantity =="") {
+                        $errors['so_luong'] = "Số lượng không được bỏ trống";
+                        if ($quantity < 0) {
+                            $errors['so_luong'] = "Số lượng không được âm";
+                        }
                     }
-                    if ($quantity < 0) {
-                        $errors['so_luong'] = "Số lượng không được âm";
-                    }if ($des == "") {
-                        $errors['mota'] = "Mo không được trống";
-                    }if ($chi_tiet == "") {
-                        $errors['chi_tiet'] = " không được trống";
-                    }
+                    
                     //validate hình
                     if ($anh['size'] <= 0) {
                         $errors['hinhanh'] = "Bạn chưa nhập ảnh";
                     } else {
-                        $img = ['jpg', 'png', 'gif' ,'PNG'];
+                        $img = ['jpg', 'png', 'PNG'];
                         //Lấy phần mở rộng của file
                         $ext = pathinfo($anh['name'], PATHINFO_EXTENSION);
                         if (!in_array($ext, $img)) {
@@ -128,18 +131,18 @@
                     if (!isset($errors)) {
                         $target_dir = "../upload/";
                         $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
-                        if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
-                            // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                          } else {
-                            echo "Sorry, there was an error uploading your file.";
-                          }
-    
-                        
+                        move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
                         insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet);
                         $thongbao = "Thêm thành công";   
+                        header("location:index.php?act=listsp");
+                        die;
                     }
-        
                 }
+                
+
+
+        
+                
                 $dsdanhmuc = selectall_cate();
                 // var_dump($dsdanhmuc);
                 include_once "sanpham/add.php";

@@ -1,3 +1,8 @@
+
+
+
+
+
 <style>
     .main {
         position: relative;
@@ -59,6 +64,12 @@
         margin: 10px 15px;
     }
 </style>
+
+<?php
+
+
+
+?>
 <div class="main">
 
     <div class="row">
@@ -76,48 +87,29 @@
                 <div class="row margin-bottom10">
                     <label for="">Tên hàng hóa</label> <br>
                     <input type="text" class="id_product" name="tenhang">
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['tenhang'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['tenhang'] ?? '' ?></span>
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Đơn giá</label> <br>
                     <input type="text" class="id_product" name="giahang">
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['giahang'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['giahang'] ?? '' ?></span>
+
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Số lượng</label> <br>
                     <input type="text" class="id_product" name="so_luong">
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['so_luong'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['so_luong'] ?? '' ?></span>
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Hình ảnh</label> <br>
                     <input type="file" class="id_product" name="hinhanh">
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['hinhanh'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['hinhanh'] ?? '' ?></span>
                 </div>
 
 
@@ -167,23 +159,13 @@
                 <div class="row margin-bottom10 des">
                     <label for="">Mô tả</label>
                     <textarea name="mota" class="id_product"></textarea>
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['mota'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['mota'] ?? '' ?></span>
                 </div>
 
                 <div class="row margin-bottom10 des">
                     <label for="">Chi Tiet</label>
                     <textarea name="chi_tiet" class="id_product"></textarea>
-                    <?php
-                    if (!empty($errors)) : ?>
-                        <span style="color: red;">
-                            <?= $errors['chi_tiet'] ?>
-                        </span>
-                    <?php endif ?>
+                    <span style="color:red"><?= $errors['chi_tiet'] ?? '' ?></span>
                 </div>
                 <br>
                 <div class="row margin-bottom button ">

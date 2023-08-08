@@ -1,10 +1,10 @@
-<style>
+<!-- <style>
         #myChart {
                 width: 650px;
                 margin: 10px auto;
                 background: none;
         }
-</style>
+ </style>
 
 
 <div class="row">
@@ -46,4 +46,8 @@
                         var chart = new google.visualization.PieChart(document.getElementById('myChart'));
                         chart.draw(data, options);
                 }
-        </script>
+        </script> --> 
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.2.7/morris.min.js">
+        
