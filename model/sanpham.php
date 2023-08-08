@@ -4,7 +4,7 @@
 
     function insert_prod($tensanpham, $giasanpham, $quantity, $anh ,$cate, $date, $des, $chi_tiet){
         $sql = "insert into hang_hoa(te_hh, don_gia, so_luong, hinh, ma_loai, ngay_nhap, mo_ta, chi_tiet) values('$tensanpham', '$giasanpham', '$quantity', '$anh', '$cate', '$date', '$des','$chi_tiet')";
-        pdo_execute($sql);
+        pdo_execute($sql); 
     }
 
     function selectall_prod($kyw, $iddm){
