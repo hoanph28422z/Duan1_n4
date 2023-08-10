@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 
 include_once "../model/pdo.php";
 include_once "../model/loai.php";
@@ -93,7 +95,6 @@ if (isset($_GET['act'])) {
                 $anh = $_FILES['hinhanh'];
                 $image = $anh['name'];
 
-
                 if (empty($tensanpham)) {
                     $errors['tenhang'] = "Không được bỏ trống";
                 }
@@ -136,9 +137,10 @@ if (isset($_GET['act'])) {
                     $target_dir = "../upload/";
                     $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
                     move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-                    insert_prod($tensanpham, $giasanpham, $quantity, $anh, $cate, $date, $des, $chi_tiet);
+                    insert_prod($tensanpham, $giasanpham, $quantity, $target_file, $cate, $date, $des, $chi_tiet);
                     $thongbao = "Thêm thành công";
-                    die();
+
+                    header('location:index.php?act=listsp');
                 }
 
             }

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +27,7 @@
         <i class="bx bx-menu" id="menu-icon"></i>
         <ul class="navbar"> 
             <li><a href="index.php">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="index,php">About</a></li>
             <li><a href="index.php?act=product">Products</a></li>
             <li><a href="index.php?act=dangnhap">Login</a></li>
         </ul>
