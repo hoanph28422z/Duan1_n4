@@ -1,5 +1,3 @@
-
-
 <div style="margin-top: 100px;" class="row margin-bottom">
 
     <div class="box-content">
@@ -210,40 +208,45 @@
                             <span class="icon"> <i class="bx bxs-user"></i></span>
                             <input type="text" name="user" placeholder="Tên người dùng"> <br> <br>
                             <label for>Tên Đăng Nhập</label>
-                            
+                            <span style="color:red">
+                                <?= $errors['user'] ?? '' ?>
+                            </span>
                         </div>
 
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-envelope"></i></span>
                             <input type="email" name="email" placeholder="Địa chỉ email"> <br> <br>
                             <label for>Email</label>
-                            <?php
-                            if (!empty($errors)) : ?>
-                                <span style="color: red;">
-                                    <?= $errors['email'] ?>
-                                </span>
-                            <?php endif ?>
+                            <span style="color:red">
+                                <?= $errors['email'] ?? '' ?>
+                            </span>
+
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-map"></i></span>
                             <input type="text" name="que_quan" placeholder="Nhập Địa Chỉ"> <br> <br>
                             <label for>Địa Chỉ</label>
+                            <span style="color:red">
+                                <?= $errors['que_quan'] ?? '' ?>
+                            </span>
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-phone"></i></span>
                             <input type="" name="sdt" placeholder="Số điện thoại"> <br> <br>
                             <label for>Số Điện Thoại</label>
-                            <?php
-                            if (!empty($errors)) : ?>
-                                <span style="color: red;">
-                                    <?= $errors['sdt'] ?>
-                                </span>
-                            <?php endif ?>
+                            <span style="color:red">
+                                <?= $errors['sdt'] ?? '' ?>
+                            </span>
+
                         </div>
                         <div class="input_box">
                             <span class="icon"> <i class="bx bxs-lock-alt"></i></span>
                             <input type="password" name="pass" placeholder="Mật khẩu"> <br> <br>
                             <label for>Mật Khẩu</label>
+
+                            <span style="color:red">
+                                <?= $errors['pass'] ?? '' ?>
+                            </span>
                         </div>
                         <div class="remember-forgot">
                             <label for=""><input type="checkbox">Tôi đồng ý với các Điều khoản & Điều kiện</label>

@@ -36,16 +36,20 @@
                 if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
                     $ho_ten = $_POST['user'];
                     $mat_khau = $_POST['pass'];
-                    $email = $_POST['email'];
                     $check_user = check_user($ho_ten, $mat_khau);
-                    
+                                        
                     
 
                     if (is_array($check_user)) {
 
                         $_SESSION['info_user'] = $check_user;
-                        header('location:./index.php');
-                        $thongbao = "✔️ Đăng nhập thành công!";
+                        if($check_user['vai_tro'] ==0){
+                            header('location:index.php');
+                        }
+                        elseif($check_user['vai_tro']==1){
+                            header('location:admin/index.php');
+                        }
+
                     }else{
                         $thongbao = "❌ Tài khoản không tồn tại! Kiểm tra và lại!";
                     }
@@ -63,8 +67,7 @@
                         $mat_khau = $_POST['pass'];
                         $que_quan = $_POST['que_quan'];
                         $sdt = $_POST['sdt'];
-                        $errors=array();
-                        if(!empty($ho_ten)){
+                        if(empty($ho_ten)){
                             $errors['user'] = "Tên không được để giỗng";
                         }
                         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -73,19 +76,20 @@
                         if (!preg_match('/^[0-9]{10}$/', $sdt)) {
                             $errors['sdt'] = "Số điện thoại không hợp lệ";
                         } 
-                        if (strlen($string) >= 8) {
-                            $errors['user'] = "Tên không được để giỗng";
+                        if (empty($mat_khau)) {
+                            $errors['pass'] = "Mật khẩu không được để trống";
                         }
                         if (!isset($errors)){
                             insert_user($ho_ten, $email, $mat_khau,$que_quan,$sdt);
                             $thongbao = "✔️ Đăng ký thành công";
+
                         }
      
                      }
-     
+                     
                      include_once "./login/login.php";
                     break;
-        
+                    
 
                     case 'editTK':
 
@@ -96,10 +100,28 @@
                             $que_quan=$_POST['que_quan'];
                             $sdt=$_POST['sdt'];
                             $id = $_POST['id'];
-        
-                            update_user($ho_ten, $email, $mat_khau, $que_quan,$sdt,$id);
-                            $_SESSION['info_user'] = check_user($ho_ten, $mat_khau);
-                            header('location: index.php?act=editTK');
+                            
+                            if(empty($ho_ten)){
+                                $errors['user'] = "Tên không được để giỗng";
+                            }
+
+                            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                $errors['email'] = "Địa chỉ email không hợp lệ";
+                            }
+                            if (!preg_match('/^[0-9]{10}$/', $sdt)) {
+                                $errors['sdt'] = "Số điện thoại không hợp lệ";
+                            } 
+                            if (empty($mat_khau)) {
+                                $errors['pass'] = "Mật khẩu không được để trống";
+                            }
+                            if (!isset($errors)){
+                                update_user($ho_ten, $email, $mat_khau, $que_quan,$sdt,$id);
+                                $_SESSION['info_user'] = check_user($ho_ten, $mat_khau);
+                                header('location: index.php?act=editTK');
+                            }
+         
+                            
+
                         }
         
                         include_once "view/editTK.php";
@@ -126,7 +148,7 @@
         
                     case 'logout':
                         session_unset();
-                        header("Location:index.php");
+                        header("Location:index.php?act=dangnhap");
 
                         break;
         
@@ -258,7 +280,7 @@
                     $ngay_dh_bill = date('h:i:s a d/m/Y');
                     $tong_dh_bill= tongdonhang();
                     $pttt_bill = $_POST['pttt_bill'];
-
+                    
                     $id_donhang = insert_bill($idKH, $name_bill, $email_bill, $pttt_bill ,$ngay_dh_bill, $tong_dh_bill);
                     
                     // insert into cart với $_SESSION['mycart'] và $id_donhang
@@ -304,6 +326,5 @@
     include_once "view/home.php";
     }
     include_once "view/footer.php";
-
 
 ?>
