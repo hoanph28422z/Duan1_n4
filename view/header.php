@@ -1,8 +1,4 @@
-<?php
-  if(!isset($_SESSION['ho_ten'])){
-    header('location:../index.php?act=dangnhap');
-  }
-?>
+
 
 
 <!DOCTYPE html>
