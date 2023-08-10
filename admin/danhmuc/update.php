@@ -99,13 +99,10 @@ if (is_array($danhmuc)) {
             <div class="row margin-bottom10">
                 <label for="">Tên loại</label>
                 <input type="hidden" name="id" value="<?= $ma_loai ?>">
-                <input class="input-hoan" type="text" name="tenloai" value="<?= $ten_loai  ?>">
-                <?php
-                                if (!empty($errors)) : ?>
-                                    <span style="color: red;">
-                                        <?= $errors['tenloai'] ?>
-                                    </span>
-                                <?php endif ?>
+                <input class="input-hoan" type="text" name="tenloai" value="<?= $ten_loai ?>">
+                <span style="color:red">
+                    <?= $errors['tenloai'] ?? '' ?>
+                </span>
             </div>
 
             <div class="row margin-bottom">

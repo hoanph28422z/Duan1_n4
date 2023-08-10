@@ -87,14 +87,14 @@
                 <div class="row margin-bottom10">
                     <label for="">Tên hàng hóa</label> <br>
                     <input type="text" class="id_product" name="tenhang">
-                    <span style="color:red"><?= $errors['tenhang'] ?? '' ?></span>
+                    
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Đơn giá</label> <br>
                     <input type="text" class="id_product" name="giahang">
-                    <span style="color:red"><?= $errors['giahang'] ?? '' ?></span>
+                   
 
                 </div>
 
@@ -102,14 +102,14 @@
                 <div class="row margin-bottom10">
                     <label for="">Số lượng</label> <br>
                     <input type="text" class="id_product" name="so_luong">
-                    <span style="color:red"><?= $errors['so_luong'] ?? '' ?></span>
+                    
                 </div>
 
 
                 <div class="row margin-bottom10">
                     <label for="">Hình ảnh</label> <br>
                     <input type="file" class="id_product" name="hinhanh">
-                    <span style="color:red"><?= $errors['hinhanh'] ?? '' ?></span>
+                   
                 </div>
 
 
@@ -159,13 +159,13 @@
                 <div class="row margin-bottom10 des">
                     <label for="">Mô tả</label>
                     <textarea name="mota" class="id_product"></textarea>
-                    <span style="color:red"><?= $errors['mota'] ?? '' ?></span>
+                   
                 </div>
 
                 <div class="row margin-bottom10 des">
                     <label for="">Chi Tiet</label>
                     <textarea name="chi_tiet" class="id_product"></textarea>
-                    <span style="color:red"><?= $errors['chi_tiet'] ?? '' ?></span>
+                   
                 </div>
                 <br>
                 <div class="row margin-bottom button ">

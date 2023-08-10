@@ -1,3 +1,10 @@
+<?php
+  if(!isset($_SESSION['ho_ten'])){
+    header('location:../index.php?act=dangnhap');
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +14,7 @@
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="fame/style.css">
+
 
     <!-- <link rel="stylesheet" href="show_pro/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="show_pro/assets/css/font-awesome.min.css">
