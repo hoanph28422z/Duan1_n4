@@ -25,6 +25,7 @@
       box-shadow: 1px 1px 10px rgba(24 25 15 /15%);
       border: 15px;
     }
+
   </style>
 </head>
 
@@ -62,18 +63,13 @@
                   <tbody>
                     <?php
                     $tongtien = 0;
-
-                      foreach ($_SESSION['mycart'] as $id => $cart) {
-                        $hinh = $img_path . $cart[2];
-                        $ttien = intval($cart[3]) * intval($cart[4]);
-
-                      $html = "
-          ";
-                      $tongtien = intval($tongtien ) + intval($ttien );
+                    foreach ($_SESSION['mycart'] as $id => $cart) {
+                      $hinh = $img_path . $cart[2];
+                      $ttien = intval($cart[3]) * intval($cart[4]);
+                      $tongtien = intval($tongtien) + intval($ttien);
                       $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
                       echo "
               <tr>
-              
                   <td> $id </td>
                   <td class=\"product-thumbnail\"><img class=\"img\" src=\"$hinh\" alt=\"\" width=\"98%\" height=\"100px; padding-top: 3px;\"></td>
                   <td class=\"product-name\"> $cart[1] </td>
@@ -111,7 +107,7 @@
               </div>
             </div>
             <div class="cart-bottom-wrapper d-flex align-items-center">
-              <a class="site-btn site-btn__bghide" href="index.php?act=bill"><i class='bx bx-upvote bx-fade-up'></i>TIẾP TỤC ĐẶT HÀNG</a>
+              <a class="site-btn site-btn__bghide" href="index.php?act=bill"><i class='bx bx-upvote bx-fade-up'></i>ĐẶT HÀNG</a>
               <a class="site-btn site-btn__bghide" href="index.php?act=delcart"><i class='bx bxs-trash-alt'></i>XÓA GIỎ HÀNG </a>
             </div>
           </div>
@@ -126,8 +122,8 @@
 </div>
 
 <script>
-  var quantity =document.querySelector('.quantity');
-  if(quantity.value == ""){
-    quantity.value  = 0;
+  var quantity = document.querySelector('.quantity');
+  if (quantity.value == "") {
+    quantity.value = 0;
   }
 </script>

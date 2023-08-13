@@ -11,6 +11,7 @@ include_once "view/header.php";
 include_once "global.php";
 
 
+
 if (!isset($_SESSION['mycart']) || empty($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
@@ -31,34 +32,36 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
             include_once "view/product.php";
             break;
 
+        case 'about':
+            include_once "view/about/about.php";
+            break;
+
         case 'dangnhap':
-            
+
 
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
                 $ho_ten = $_POST['user'];
                 $mat_khau = $_POST['pass'];
                 $check_user = check_user($ho_ten, $mat_khau);
-                
+
                 if (is_array($check_user)) {
 
                     $_SESSION['info_user'] = $check_user;
 
-                    
-                      
-                      if ($check_user['vai_tro'] == 0) {
-                        header('location:index.php');
-                      }
-                     
-                      if ($check_user['vai_tro'] == 1) {
-                        header('location:admin/index.php');
-                      }
 
+
+                    if ($check_user['vai_tro'] == 0) {
+                        header('location:index.php');
+                    }
+
+                    if ($check_user['vai_tro'] == 1) {
+                        header('location:admin/index.php');
+                    }
                 } else {
                     $thongbao = "❌ Tài khoản không tồn tại! Kiểm tra và lại!";
                 }
-
             }
-            
+
 
             include_once "./login/login.php";
             break;
@@ -86,9 +89,7 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                 if (!isset($errors)) {
                     insert_user($ho_ten, $email, $mat_khau, $que_quan, $sdt);
                     $thongbao = "✔️ Đăng ký thành công";
-
                 }
-
             }
 
             include_once "./login/login.php";
@@ -123,9 +124,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                     $_SESSION['info_user'] = check_user($ho_ten, $mat_khau);
                     header('location: index.php?act=editTK');
                 }
-
-
-
             }
 
             include_once "view/editTK.php";
@@ -143,7 +141,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                 } else {
                     $thongbao = "Email không tồn tại trong hệ thống";
                 }
-
             }
 
             include_once "view/forget-pass.php";
@@ -158,7 +155,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
         case 'sanpham':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
-
             } else {
                 $kyw = "";
             }
@@ -167,7 +163,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
 
             if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
                 $iddm = $_GET['iddm'];
-
             } else {
                 $iddm = 0;
             }
@@ -190,7 +185,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                 $iddm = $ma_loai;
 
                 $spkhac = select_prod_same_kind($_GET['idsp'], $iddm);
-
             } else {
                 include_once "view/home.php";
             }
@@ -224,7 +218,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                     $_SESSION['mycart'][$id][4] += 1;
                     $_SESSION['mycart'][$id][5] = $_SESSION['mycart'][$id][4] * $_SESSION['mycart'][$id][3];
                 }
-
             }
 
             header('Location: index.php?act=viewcart');
@@ -242,20 +235,19 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
             if (isset($_GET['idcart'])) {
                 // hàm array_slice dùng để xoa mảng. Gồm 3 tham số: cái mảng, vị trí cần xóa, xóa bao nhiêu phần tử (ở đây 1 là chỉ xóa vị trí đó)
                 unset($_SESSION['mycart'][$_GET['idcart']]);
-
             } else {
                 $_SESSION['mycart'] = [];
             }
 
             header('Location:index.php?act=viewcart');
             break;
-        // echo "<pre>";
-        //     print_r($_GET['idcart']);
-        //     die;
+            // echo "<pre>";
+            //     print_r($_GET['idcart']);
+            //     die;
 
 
 
-        // Tiến hành đặt hàng
+            // Tiến hành đặt hàng
 
         case 'bill':
 
@@ -293,7 +285,6 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
                 // xóa session cart
 
                 $_SESSION['mycart'] = "";
-
             }
 
 
@@ -316,22 +307,13 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
         default:
             include_once "view/home.php";
             break;
-        
     }
-
-
-
-
-
-
 } else {
-    if(!isset($_SESSION['info_user'])){
+    if (!isset($_SESSION['info_user'])) {
         header('location:index.php?act=dangnhap');
     }
-    
-    include_once "view/home.php";
 
-    
+    include_once "view/home.php";
 }
 
 include_once "view/footer.php";
