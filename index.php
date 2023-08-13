@@ -43,14 +43,15 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
 
                     $_SESSION['info_user'] = $check_user;
 
-                    if ($check_user['vai_tro'] == 0) {
-                        header('location:index.php');            
-
-
-                    } else if ($check_user['vai_tro'] == 1) {
+                    
+                      
+                      if ($check_user['vai_tro'] == 0) {
+                        header('location:index.php');
+                      }
+                     
+                      if ($check_user['vai_tro'] == 1) {
                         header('location:admin/index.php');
-                    }
-
+                      }
 
                 } else {
                     $thongbao = "❌ Tài khoản không tồn tại! Kiểm tra và lại!";
@@ -151,14 +152,9 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
 
         case 'logout':
             session_unset();
-            session_destroy();
             header("Location:index.php?act=dangnhap");
 
             break;
-
-
-        // include "./view/login.php";
-        // trang sản phẩm chi tiết
         case 'sanpham':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
@@ -332,7 +328,9 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
     if(!isset($_SESSION['info_user'])){
         header('location:index.php?act=dangnhap');
     }
+    
     include_once "view/home.php";
+
     
 }
 

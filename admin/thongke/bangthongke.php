@@ -26,7 +26,7 @@
                             <table>
                                     <tr>
                                         <th>MÃ DANH MỤC</th>
-                                        <th>TÊN HÀNG</th>
+                                        <th>TÊN SẢN PHẨM</th>
                                         <th>SỐ LƯỢNG</th>
                                         <th>GIÁ CAO NHẤT</th>
                                         <th>GIÁ THẤP NHẤT</th>
