@@ -22,15 +22,17 @@
 
 </head>
 <style>
-  div{
-    font-family:Roboto;
+  div {
+    font-family: Roboto;
   }
 </style>
 <div class="box-left">
 
   <form action="index.php?act=billconfirm" method="post" class="billform">
 
-    <div   class="box-title"><h2>THÔNG TIN ĐẶT HÀNG</h2></div>
+    <div class="box-title">
+      <h2>THÔNG TIN ĐẶT HÀNG</h2>
+    </div>
 
     <div class="row box-content margin-bottom">
       <table>
@@ -104,7 +106,7 @@
                           <th style="color:#333;" class="product-price">Price</th>
                           <th style="color:#333;" class="product-quantity">Quantity</th>
                           <th style="color:#333;" class="product-subtotal">subTotal</th>
-                       
+
                         </tr>
                       </thead>
                       <tbody>
@@ -113,23 +115,20 @@
 
                         foreach ($_SESSION['mycart'] as $id => $cart) {
                           $hinh = $img_path . $cart[2];
-                          $ttien = intval( $cart[3]) * intval($cart[4]) ;
-
-                          $html = "
-        ";
+                          $ttien = intval($cart[3]) * intval($cart[4]);
                           $tongtien = $tongtien + $ttien;
                           $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
 
-        echo '
+                          echo '
 
         <tr>
         
-           <td>'.$id.'</td>
-           <td class="product-thumbnail"><img class="img" src="'.$hinh.'"></td>
-           <td class="product-name">'.$cart[1].'</td>
-           <td class="product-price">'.$cart[3].'</td>
-           <td class="product-quantity"><input type="number" class="quantity" value="'.$cart[4].'"></td>
-           <td class=\"product-subtotal\">'.$ttien.'</td>
+           <td>' . $id . '</td>
+           <td class="product-thumbnail"><img class="img" src="' . $hinh . '"></td>
+           <td class="product-name">' . $cart[1] . '</td>
+           <td class="product-price">' . $cart[3] . '</td>
+           <td class="product-quantity"><input type="number" class="quantity" value="' . $cart[4] . '"></td>
+           <td class=\"product-subtotal\">' . $ttien . '</td>
 
        </tr>';
                         }
@@ -165,7 +164,7 @@
       </div>
     </div>
 
-    <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-bottom:40px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"><i class='bx bxs-check-circle bx-tada' ></i></a>
+    <a href="index.php?act=billconfirm"><input type="submit" style="padding: 5px 10px; margin-bottom:40px; margin-right: 15px;" name="dongydathang" value="Đồng ý đặt hàng"><i class='bx bxs-check-circle bx-tada'></i></a>
 
 
 
@@ -187,7 +186,7 @@
   }
 
   input[type="submit"]:hover {
-    background-color:seagreen;
+    background-color: seagreen;
     /* màu nền khi hover */
     color: white;
     /* màu chữ khi hover */
@@ -204,13 +203,11 @@
     vertical-align: middle;
 
   }
-  
 </style>
 </div>
 <script>
-
-  var quantity =document.querySelector('.quantity');
-  if(quantity.value == ""){
+  var quantity = document.querySelector('.quantity');
+  if (quantity.value == "") {
     quantity.value = 0;
   }
 </script>

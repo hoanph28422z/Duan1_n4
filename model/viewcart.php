@@ -29,8 +29,8 @@
 
   
 
-    function insert_bill($idKH, $name_bill, $email_bill, $pttt_bill ,$ngay_dh_bill, $tong_dh_bill){
-        $sql = "insert into bill(idKH, name_bill, email_bill, pttt_bill, ngay_dh_bill, tong_dh_bill) values('$idKH', '$name_bill', '$email_bill', '$pttt_bill' ,'$ngay_dh_bill', '$tong_dh_bill')";
+    function insert_bill($idKH, $name_bill, $email_bill,$ngay_dh_bill, $tong_dh_bill){
+        $sql = "insert into bill(idKH, name_bill, email_bill, ngay_dh_bill, tong_dh_bill) values('$idKH', '$name_bill', '$email_bill','$ngay_dh_bill', '$tong_dh_bill')";
         return  pdo_execute_return_lastInsertId($sql);
     }
 

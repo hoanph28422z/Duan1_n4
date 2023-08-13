@@ -63,13 +63,13 @@
                     <?php
                     $tongtien = 0;
 
-                      foreach ($_SESSION['mycart'] as $id => $cart) {
-                        $hinh = $img_path . $cart[2];
-                        $ttien = intval($cart[3]) * intval($cart[4]);
+                    foreach ($_SESSION['mycart'] as $id => $cart) {
+                      $hinh = $img_path . $cart[2];
+                      $ttien = intval($cart[3]) * intval($cart[4]);
 
                       $html = "
           ";
-                      $tongtien = intval($tongtien ) + intval($ttien );
+                      $tongtien = intval($tongtien) + intval($ttien);
                       $xoasp = '<a href="index.php?act=delcart&idcart=' . $id . '"><i class="bx bx-message-alt-x"></i></a>';
                       echo "
               <tr>
@@ -126,8 +126,8 @@
 </div>
 
 <script>
-  var quantity =document.querySelector('.quantity');
-  if(quantity.value == ""){
-    quantity.value  = 0;
+  var quantity = document.querySelector('.quantity');
+  if (quantity.value == "") {
+    quantity.value = 0;
   }
 </script>

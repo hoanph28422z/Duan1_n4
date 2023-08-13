@@ -1,36 +1,38 @@
-
 <style>
-    .mycart{
-        
-        margin:100px 100px 150px 100px;
-        text-align: center;
-    }
-    table {
-  border-collapse: collapse; /* remove space between table cells */
-  width: 100%;
-  /* max-width: 800px; */
-  margin: 0 auto; /* center the table */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
+  .mycart {
 
-thead {
-  background-color: #333;
-  color: #fff;
-}
+    margin: 100px 100px 150px 100px;
+    text-align: center;
+  }
 
-th {
-  padding: 10px;
-  text-align: center;
-}
+  table {
+    border-collapse: collapse;
+    /* remove space between table cells */
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    /* center the table */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+  thead {
+    background-color: #333;
+    color: #fff;
+  }
 
-td {
-  padding: 10px;
-}
+  th {
+    padding: 10px;
+    text-align: center;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td {
+    padding: 10px;
+  }
 </style>
 
 
@@ -38,64 +40,63 @@ td {
 
 <div class="mycart">
 
-                    <div class="box-title">
-                        ĐƠN HÀNG CỦA TÔI
-                    </div>
+  <div class="box-title">
+    ĐƠN HÀNG CỦA TÔI
+  </div>
 
-                    <div class="box-bill">
-                            <table border="1">
+  <div class="box-bill">
+    <table border="1">
 
-                                    <tr>
-                                    <thead>
-                                    <th>STT</th>
-                                    <th>MÃ ĐH</th>
-                                    <th>NGÀY ĐẶT</th>
-                                    <th>SỐ LƯỢNG ĐH</th>
-                                    <th>TỔNG GIÁ TRỊ ĐH</th>
-                                    <th>TÌNH TRẠNG ĐH</th>
-                                    </thead>
-                                    </tr>
+      <tr>
+        <thead>
+          <th>STT</th>
+          <th>MÃ ĐH</th>
+          <th>NGÀY ĐẶT</th>
+          <th>SỐ LƯỢNG ĐH</th>
+          <th>TỔNG GIÁ TRỊ ĐH</th>
+          <th>TÌNH TRẠNG ĐH</th>
+        </thead>
+      </tr>
 
-                                    <?php
+      <?php
 
-                                    if (is_array($listbill)) {
-                                        $i=0;
-                                        foreach ($listbill as $bill) {
-                                            extract($bill);
-                                            $i++;
+      if (is_array($listbill)) {
+        $i = 0;
+        foreach ($listbill as $bill) {
+          extract($bill);
+          $i++;
 
-                                            $trangthaidonhang = get_ttdh($bill['bill_status']);
-                                            $countSP = demsoluongmathang($bill['id']);
+          $trangthaidonhang = get_ttdh($bill['bill_status']);
+          $countSP = demsoluongmathang($bill['id']);
 
-                                            echo '
+          echo '
                                             
                                             <tr style="text-align: center;">
 
-                                            <td>'.$i.'</td>
-                                            <td>DAM-'.$id.'</td>
-                                            <td>'.$bill['ngay_dh_bill'].'</td>
-                                            <td>'.$countSP.'</td>
-                                            <td>'.$bill['tong_dh_bill'].'</td>
-                                            <td>'.$trangthaidonhang.'</td>
+                                            <td>' . $i . '</td>
+                                            <td>DAM-' . $id . '</td>
+                                            <td>' . $bill['ngay_dh_bill'] . '</td>
+                                            <td>' . $countSP . '</td>
+                                            <td>' . $bill['tong_dh_bill'] . '</td>
+                                            <td>' . $trangthaidonhang . '</td>
     
                                             </tr>
                                                 ';
-                                           
-                                        }
-                                    }
-                                        
-                                    
-
-                                        ?>
+        }
+      }
 
 
 
+      ?>
 
-                                    
 
-                            </table>
-                       
-                    </div>
 
-                    
-             </div>
+
+
+
+    </table>
+
+  </div>
+
+
+</div>

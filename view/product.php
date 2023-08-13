@@ -55,9 +55,11 @@
 
         .footer-box a {
             text-decoration: none;
-        } 
+        }
 
-        a{text-decoration: none;}
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -76,8 +78,7 @@
                     <div class="viewcontent">
                         <div class="viewcontent__header">
                             <h2>VICARAGUA COFFEE BEANS</h2>
-                            <a class="view_close product-p-close" href="javascript:void(0)"><i
-                                    class="fal fa-times"></i></a>
+                            <a class="view_close product-p-close" href="javascript:void(0)"><i class="fal fa-times"></i></a>
                         </div>
                         <div class="viewcontent__rating">
                             <i class="fas fa-star"></i>
@@ -134,12 +135,8 @@
                         <div class="sf-right d-flex justify-content-end align-items-center">
                             <nav>
                                 <div class="nav" id="shop-filter-tab" role="tablist">
-                                    <a class="nav-link active" id="shop-tab-1-tab" data-bs-toggle="tab"
-                                        href="#shop-tab-1" role="tab" aria-controls="shop-tab-1" aria-selected="true"><i
-                                            class="fas fa-th"></i></a>
-                                    <a class="nav-link" id="shop-tab-2-tab" data-bs-toggle="tab" href="#shop-tab-2"
-                                        role="tab" aria-controls="shop-tab-2" aria-selected="false"><i
-                                            class="fas fa-list-ul"></i></a>
+                                    <a class="nav-link active" id="shop-tab-1-tab" data-bs-toggle="tab" href="#shop-tab-1" role="tab" aria-controls="shop-tab-1" aria-selected="true"><i class="fas fa-th"></i></a>
+                                    <a class="nav-link" id="shop-tab-2-tab" data-bs-toggle="tab" href="#shop-tab-2" role="tab" aria-controls="shop-tab-2" aria-selected="false"><i class="fas fa-list-ul"></i></a>
                                 </div>
                             </nav>
 
@@ -155,8 +152,7 @@
 
 
 
-                        <div class="tab-pane fade show mt-none-30 active" id="shop-tab-1" role="tabpanel"
-                            aria-labelledby="shop-tab-1-tab">
+                        <div class="tab-pane fade show mt-none-30 active" id="shop-tab-1" role="tabpanel" aria-labelledby="shop-tab-1-tab">
                             <div class="row">
 
                                 <?php

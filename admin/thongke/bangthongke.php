@@ -36,9 +36,9 @@
 
                                     <?php
 
-                                    foreach ($listthongke as $tk) {
+                                     foreach ($listthongke as $tk) {
                                        extract($tk);
-
+                                      
                                        echo '<tr>
                                        <td>'.$id_loai.'</td>
                                        <td>'.$name_loai.'</td>
