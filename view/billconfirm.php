@@ -12,7 +12,7 @@
 
             <div style="padding: 10px;" class="box-bill">
 
-                <h3>Cảm ơn quí khách đã đặt hàng</h3>
+                <h3>Cảm ơn quý khách đã đặt hàng</h3>
 
             </div>
 
