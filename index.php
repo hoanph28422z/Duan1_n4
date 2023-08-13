@@ -11,6 +11,7 @@ include_once "view/header.php";
 include_once "global.php";
 
 
+
 if (!isset($_SESSION['mycart']) || empty($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
@@ -31,6 +32,10 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
             include_once "view/product.php";
             break;
 
+        case 'about':
+            include_once "view/about/about.php";
+            break;
+
         case 'dangnhap':
 
 
@@ -43,8 +48,12 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
 
                     $_SESSION['info_user'] = $check_user;
 
+
+
                     if ($check_user['vai_tro'] == 0) {
-                        header('location:index.php');
+                        header('location:index.php');            
+
+
                     } else if ($check_user['vai_tro'] == 1) {
                         header('location:admin/index.php');
                     }
@@ -140,14 +149,13 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
 
         case 'logout':
             session_unset();
-            session_destroy();
             header("Location:index.php?act=dangnhap");
 
             break;
 
 
-            // include "./view/login.php";
-            // trang sản phẩm chi tiết
+        // include "./view/login.php";
+        // trang sản phẩm chi tiết
         case 'sanpham':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
@@ -308,6 +316,7 @@ if (isset($_GET['act']) && ($_GET['act']) != "") {
     if (!isset($_SESSION['info_user'])) {
         header('location:index.php?act=dangnhap');
     }
+
     include_once "view/home.php";
 }
 

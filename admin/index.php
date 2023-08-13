@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 
 
 include_once "../model/pdo.php";
@@ -125,7 +125,7 @@ if (isset($_GET['act'])) {
                 if ($anh['size'] <= 0) {
                     $errors['image'] = "Bạn chưa nhập ảnh";
                 } else {
-                    $img = ['jpg', 'png', 'gif'];
+                    $img = ['jpg', 'png', 'gif' ,'webp','svg' ,'PNG', 'JPEG' ,'JPEG', 'BMP' ,'SVG' ,'WEBP'];
                     //Lấy phần mở rộng của file
                     $ext = pathinfo($anh['name'], PATHINFO_EXTENSION);
                     if (!in_array($ext, $img)) {
@@ -316,17 +316,6 @@ if (isset($_GET['act'])) {
 
 
             include_once "taikhoan/list.php";
-            break;
-
-        case 'suatk':
-
-            if (isset($_GET['makh']) && ($_GET['makh']) > 0) {
-                $ma_kh = $_GET['makh'];
-                $dskh = selectone_TK($ma_kh);
-                extract($dskh);
-            }
-
-            include_once "taikhoan/update.php";
             break;
 
 

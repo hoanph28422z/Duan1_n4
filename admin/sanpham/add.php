@@ -63,6 +63,23 @@
         border-radius: 10px;
         margin: 10px 15px;
     }
+    input[type = "date"]{
+        width: 200px;
+        height: 30px;
+        border: none;
+        font-weight: 650;
+        text-align: center;
+        outline: none;
+        font-size: 0.996rem;
+    }
+    input:focus{
+        border: solid 1px #334756;
+    }
+    input[type="file" i]{
+        border: none;
+    }
+
+
 </style>
 
 <?php
@@ -131,21 +148,6 @@
                         ?>
                     </select>
 
-                </div>
-
-
-                <div class="row margin-bottom10">
-                    <label for="choose">Hàng đặc biệt</label> <br>
-                    <div class="padding">
-                        <div class="form_group_pro">
-                            <label for="binhthuong">Đặc Biệt</label>
-                            <input type="radio" name="choose" id="dacbiet" value="đặc biệt">
-                        </div>
-                        <div class="form_group_pro">
-                            <label for="binhthuong">Bình thường</label>
-                            <input type="radio" name="choose" id="binhthuong" value="bình thường">
-                        </div>
-                    </div>
                 </div>
 
 

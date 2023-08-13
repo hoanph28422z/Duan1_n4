@@ -66,7 +66,11 @@ var barColors = [
   "#00aba9",
   "#2b5797",
   "#e8c3b9",
-  "#1e7145"
+  "#1e7145",
+  "#FF7F50",
+  "#D2691E",
+  "#ADFF2F",
+  "#CD5C5C",
 ];
 
 new Chart("myChart", {

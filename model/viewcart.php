@@ -157,7 +157,7 @@
                 break;
 
             case '2':
-                $trangthaidonhang = "Đang giao";
+                $trangthaidonhang = "Đang giao hàng";
                 break;
 
 

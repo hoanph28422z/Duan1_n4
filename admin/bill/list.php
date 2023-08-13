@@ -64,8 +64,9 @@
                                     <td>' . $tong_dh_bill . '$</td>    
                                     <td><p style="padding: 3px 5px; color: yellow; border-radius:  2px 10px 2px 10px;background-color: green;">' . $ttdh . '</p></td>    
                                     <td>' . $ngay_dh_bill . '</td>    
-                                    <td><a href="' . $suadh . '"><input type="button" class="btn_list_bill" value="Sửa"></a> 
-                                      <a href="' . $xoadh . '"><input type="button" class="btn_list_bill" value="Xóa"></a></td>
+                                    <td style="display: flex;">
+                                    <a href="' . $suadh . '"><input type="button" class="btn_list_bill" value="Sửa"></a> 
+                                    <a href="' . $xoadh . '"><input type="button" class="btn_list_bill" value="Xóa"></a></td>
                                     </tr>';
                 }
 
